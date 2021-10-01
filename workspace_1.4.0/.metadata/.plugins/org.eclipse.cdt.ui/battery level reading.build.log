@@ -1,0 +1,27 @@
+20:24:29 **** Incremental Build of configuration Debug for project battery level reading ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F411xE -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:109:8: warning: unused variable 'y' [-Wunused-variable]
+    int y = 0;
+        ^
+../Core/Src/main.c:108:10: warning: unused variable 'Vbatt2' [-Wunused-variable]
+    float Vbatt2 = (raw / 4096.0) * 3 * 6;
+          ^~~~~~
+arm-none-eabi-gcc -o "battery level reading.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dell\STM32CubeIDE\workspace_1.4.0\battery level reading\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="battery level reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: battery level reading.elf
+ 
+arm-none-eabi-objdump -h -S  battery\ level\ reading.elf  > "battery level reading.list"
+arm-none-eabi-objcopy  -O binary  battery\ level\ reading.elf  "battery level reading.bin"
+arm-none-eabi-size   battery\ level\ reading.elf 
+   text	   data	    bss	    dec	    hex	filename
+  10000	     20	   1644	  11664	   2d90	battery level reading.elf
+Finished building: default.size.stdout
+ 
+Finished building: battery level reading.bin
+ 
+Finished building: battery level reading.list
+ 
+
+20:24:30 Build Finished. 0 errors, 2 warnings. (took 1s.367ms)
+
