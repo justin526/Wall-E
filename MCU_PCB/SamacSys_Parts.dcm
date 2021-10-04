@@ -1,0 +1,147 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP UJ2-MIBH-G-SMT-TR
+D USB Connectors
+K
+F 
+$ENDCMP
+#
+$CMP DRV8424PPWPR
+D Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125
+K
+F https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F
+$ENDCMP
+#
+$CMP D6R60F1LFS
+D Pushbutton Switches Key Switch SPST NO 100 mA
+K
+F https://www.mouser.co.uk/datasheet/2/60/d6-1382571.pdf
+$ENDCMP
+#
+$CMP C503B-BCN-CV0Z0461
+D Cree,LED,C503B-BCN-CV0Z0461
+K
+F https://componentsearchengine.com/Datasheets/1/C503B-BCN-CV0Z0461.pdf
+$ENDCMP
+#
+$CMP RS73F1JTTD3300D
+D Thick Film Resistors - SMD High Precision Flat Chip Resistor
+K
+F https://www.mouser.de/datasheet/2/219/RS73-1759534.pdf
+$ENDCMP
+#
+$CMP MCS04020D1001BE000
+D Vishay Resistor Chip 0402
+K
+F http://www.vishay.com/docs/28705/mcx0x0xpro.pdf
+$ENDCMP
+#
+$CMP UBT1C101MPD8TD
+D Aluminum Electrolytic Capacitors - Radial Leaded
+K
+F 
+$ENDCMP
+#
+$CMP HMK105B7103KVHFE
+D Multilayer Ceramic Capacitors MLCC - SMD/SMT 0402 100VDC 0.01uF 10% X7R AEC-Q200
+K
+F https://www.mouser.de/datasheet/2/396/taiyo_yuden_12132018_mlcc11_hq_e-1510082.pdf
+$ENDCMP
+#
+$CMP C1206C223KMRECTU
+D Multilayer Ceramic Capacitors MLCC - SMD/SMT 63V 0.022uF X7R 1206 10%
+K
+F https://ms.componentsearchengine.com/Datasheets/1/C1206C223KMRECTU.pdf
+$ENDCMP
+#
+$CMP C0402C224M4RACTU
+D Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 0.22uF X7R 0402 20%
+K
+F https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf
+$ENDCMP
+#
+$CMP MCS04020D4701BE000
+D Vishay Resistor Chip 0402
+K
+F http://www.vishay.com/docs/28705/mcx0x0xpro.pdf
+$ENDCMP
+#
+$CMP C0402C474K9RACTU
+D Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 0.47uF X7R 0402 10%
+K
+F https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf
+$ENDCMP
+#
+$CMP MAX44284FAUT+T
+D Current Sense Amplifiers -0.1~+36V, High Precision, Low Power Current-Sense Amplifier
+K
+F https://datasheets.maximintegrated.com/en/ds/MAX44284.pdf
+$ENDCMP
+#
+$CMP CSS2H-2512R-L300F
+D CURRENT SENSE SHUNT
+K
+F http://www.bourns.com/docs/Product-Datasheets/css2h-2512.pdf
+$ENDCMP
+#
+$CMP 1017521
+D Conn PC Terminal Block 2 POS 6.35mm Spring Clamp RA Thru-Hole 41A Cardboard
+K
+F https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1017521_Ds.pdf
+$ENDCMP
+#
+$CMP TPS7B8333QDCYRQ1
+D LDO Voltage Regulators Automotive 150-mA, 40-V, ultra-low-IQ, low-dropout (LDO) linear regulator 4-SOT-223 -40 to 125
+K
+F https://www.ti.com/lit/ds/symlink/tps7b83-q1.pdf?ts=1623315769706&ref_url=https%253A%252F%252Fwww.google.com%252F
+$ENDCMP
+#
+$CMP LTL2T3TGK6
+D Standard LEDs - Through Hole Green Clear 525nm
+K
+F https://componentsearchengine.com/Datasheets/1/LTL2T3TGK6.pdf
+$ENDCMP
+#
+$CMP 1988930
+D PCB Terminal Block 1988930
+K
+F https://www.mouser.it/datasheet/2/324/ItemDetail_1988930-923961.pdf
+$ENDCMP
+#
+$CMP TB006-508-05BE
+D Fixed Terminal Blocks Terminal block, screw type, 5.08 , horizontal, 5 poles, CUI Blue, slotted screw, PCB mount
+K
+F https://componentsearchengine.com/Datasheets/1/TB006-508-05BE.pdf
+$ENDCMP
+#
+$CMP 1715250000
+D WEIDMULLER - 1715250000 - TERMINAL BLOCK, PCB, 2 POSITION, 22-14AWG
+K
+F https://componentsearchengine.com/Datasheets/2/1715250000.pdf
+$ENDCMP
+#
+$CMP DMP3098LSS-13
+D MOSFET PMOS SINGLE P-CHANNL 30V 5.3A
+K
+F http://www.diodes.com/assets/Datasheets/ds31265.pdf
+$ENDCMP
+#
+$CMP USB3135-30-A
+D GCT (GLOBAL CONNECTOR TECHNOLOGY) - USB3135-30-A - USB Connector, Micro USB Type B, USB 2.0, Receptacle, 5 Ways, Surface Mount, Right Angle
+K
+F https://gct.co/Files/Drawings/USB3135.pdf?v=9f17ad4b-b3da-4f3d-b4d5-eb94b5d526c5
+$ENDCMP
+#
+$CMP NSR20F20NXT5G
+D Schottky Diodes & Rectifiers Schottky Diodes 20V 2A
+K
+F https://www.onsemi.com/pdf/datasheet/nsr20f20-d.pdf
+$ENDCMP
+#
+#End Doc Library
