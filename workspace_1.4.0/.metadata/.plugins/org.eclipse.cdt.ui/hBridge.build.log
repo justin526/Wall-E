@@ -1,0 +1,10 @@
+13:45:37 **** Incremental Build of configuration Debug for project hBridge ****
+make all 
+arm-none-eabi-size   hBridge.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7076	   4252	   1668	  12996	   32c4	hBridge.elf
+Finished building: default.size.stdout
+ 
+
+13:45:38 Build Finished. 0 errors, 0 warnings. (took 619ms)
+
