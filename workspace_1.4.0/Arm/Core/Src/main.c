@@ -32,6 +32,9 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define GET_LOW_BYTE(A) (uint8_t)((A))
+
+#define GET_HIGH_BYTE(A) (uint8_t)((A) >> 8)
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -51,12 +54,67 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
-
+void moveServos(uint8_t* servoNum, uint32_t* angles, uint8_t length);
+void resetServos();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+/* A function that moves the servos defined in servoNum to their corresponding index in angles.
+ * The parameters of values to send out are based on:
+ * 	https://www.dropbox.com/sh/ykbn480cpidmmej/AACul8lJTQXZdX2APnYCorRca?dl=0&preview=LSC+Series+Servo+Controller+Communication+Protocol+V1.2.pdf
+ *
+ * servoNum: Array of servo ID values. This doesn't need to be 6 long, just put the values you want to move
+ * 		- Servo 1 doesn't work
+ * 		- Servo 2 is the claw rotation
+ * 		- Servo 3 is the fine vertical pivot
+ * 		- Servo 4 is the medium vertical pivot
+ * 		- Servo 5 is the large vertical pivot
+ * 		- Servo 6 controls the claw's pinching
+ *
+ * 	angles: Array of angles for each corresponding servo in servoNum
+ * 		- 1000 = bottom of range
+ * 		- 2000 = top of range
+ *
+ * 	length: length of both servoNum array and angles array
+ */
+void moveServos(uint8_t* servos, uint32_t* angles, uint8_t length)
+{
+	uint16_t time = 1000; //default time because why not
+
+	uint8_t data[7 + (length * 3)];
+	data[0] = 0x55; //header 1
+	data[1] = 0x55; //header 2
+	data[2] = 0x05 + (length * 3); //length
+	data[3] = 0x03; //cmd
+	data[4] = length; //# servos
+	data[5] = GET_LOW_BYTE(time); //lower 8 time
+	data[6] = GET_HIGH_BYTE(time); //upper 8 time
+	for (int i = 0; i < length; i++)
+	{
+		data[7 + (i * 3)] = servos[i];
+		data[8 + (i * 3)] = GET_LOW_BYTE(angles[i]);
+		data[9 + (i * 3)] = GET_HIGH_BYTE(angles[i]);
+	}
+	HAL_UART_Transmit(&huart2, data, 7 + (length * 3), time + 250);
+	HAL_Delay(3000);
+}
+
+void resetServos()
+{
+	uint8_t length = 5;
+	uint8_t servos[length];
+	uint32_t angles[length];
+	for(int i = 0; i < length; i++)
+	{
+		servos[i] = i + 2;
+		angles[i] = 1500;
+	}
+//	angles[1] = 600;
+	angles[4] = 2000;
+	moveServos(servos, angles, length);
+}
 /* USER CODE END 0 */
 
 /**
@@ -90,27 +148,73 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  uint8_t length = 5;
+  uint8_t servos[length];
+  uint32_t angles[length];
+  for (int i = 0; i < length; i++)
+  {
+	  servos[i] = i + 2;
+	  angles[i] = 1500;
+  }
+
+  moveServos(servos, angles, length);
+  // Claw pivot servo - doesn't ever need to change
+  angles[0] = 1500;
+
+  //Top arm servo -
+  angles[1] = 1000;
+  //600 down straight
+  //1500 right angle
+
+  // Mid-arm servo
+  angles[2] = 400;
+  // 400 forwards down
+
+  // Base servo
+  angles[3] = 2200;
+  //2200 forwards down - BE CAREFUL THIS PUTS IT REALLY LOW
+  //800 backwards down
+
+  // Claw
+  // 1500 open completely
+  // 2500 closed with contact
+  angles[4] = 1500;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  uint8_t data[8];
+  moveServos(servos, angles, length);
+
+  //Grab the object
+  angles[4] = 2000;
+  moveServos(servos, angles, length);
+
+  //Move the arm backwards
+  angles[3] = 1500;
+  moveServos(servos, angles, length);
+  angles[1] = 1500;
+  angles[2] = 1500;
+  angles[3] = 1500;
+  angles[4] = 2000;
+  moveServos(servos, angles, length);
+
+  //Drop the item
+  angles[4] = 1500;
+  moveServos(servos, angles, length);
+
+
 
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  data[0] = 0x55;
-	  data[1] = 0x55;
-	  data[2] = 0x55;
-	  data[3] = 0x55;
-	  data[4] = 0x55;
-	  data[5] = 0x55;
-	  data[6] = 0x55;
-	  data[7] = 0x55;
-	  HAL_UART_Transmit(&huart2, data, 8, HAL_MAX_DELAY);
-	  //HAL_Delay(100);
+
+//	  moveServos(servos, angles, length);
+//	  HAL_Delay(3000);
+//	  angles[4] = angles[4] == 1500 ? 1500 : 2000;
+//	  moveServos(servos, angles, length);
+//	  HAL_Delay(3000);
   }
   /* USER CODE END 3 */
 }
