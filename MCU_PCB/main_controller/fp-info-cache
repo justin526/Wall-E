@@ -1,4 +1,4 @@
--9206387711821764594
+-9206379542148564767
 5to3.3
 ISE0512A-H
 
@@ -46122,6 +46122,13 @@ XTAL_ECS-120-18-4X-CKM
 0
 2
 2
+ECS-120-18-4X-CKM (1)
+XTAL_ECS-120-18-4X-CKM
+
+
+0
+2
+2
 EEEHA0J101WR
 CAP_EEEHA0J101WR
 
@@ -52212,6 +52219,13 @@ mounting hole 8.4mm m8
 0
 9
 1
+NEW5TO3V3
+VX7803-500
+
+
+0
+3
+3
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -75468,6 +75482,27 @@ Integrated Circuit
 22
 idk what this is
 RC0201FR-071KL
+
+
+0
+2
+2
+microusb_b
+2174507-2
+
+
+0
+11
+11
+newdcdc
+ISE0512A-H
+
+
+0
+5
+5
+pushbutton
+SW_147873-2
 
 
 0

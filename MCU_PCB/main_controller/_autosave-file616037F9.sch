@@ -68,22 +68,6 @@ Wire Wire Line
 Connection ~ 4950 6650
 Text Label 4950 6450 0    50   ~ 0
 5V
-$Comp
-L Connector:USB_B_Micro J8
-U 1 1 6157029C
-P 8600 5700
-F 0 "J8" H 8370 5597 50  0000 R CNN
-F 1 "USB_B_Micro" H 8370 5688 50  0000 R CNN
-F 2 "usbtomicro:J_SMD_2174507-2-5_7.8_5_2.71" H 8750 5650 50  0001 C CNN
-F 3 "~" H 8750 5650 50  0001 C CNN
-	1    8600 5700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8300 5900 8200 5900
-Wire Wire Line
-	8200 5900 8200 6050
-NoConn ~ 8300 5500
 Text Label 10950 6250 0    50   ~ 0
 GND
 $Comp
@@ -100,8 +84,6 @@ $EndComp
 Text Label 4950 6950 3    50   ~ 0
 GND
 Text Label 5400 6950 3    50   ~ 0
-GND
-Text Label 8600 5300 1    50   ~ 0
 GND
 $Comp
 L Device:R R7
@@ -484,8 +466,6 @@ F 3 "" H 7050 6050 50  0001 C CNN
 	1    7050 6050
 	1    0    0    -1  
 $EndComp
-Text Label 8200 6400 3    50   ~ 0
-5V
 $Comp
 L main_controller-rescue:USBLC6-2SC6-Power_Protection ESD?
 U 1 1 616D6E32
@@ -501,27 +481,10 @@ F 3 "https://www.st.com/resource/en/datasheet/usblc6-2.pdf" H 7250 5900 50  0001
 $EndComp
 Text GLabel 7450 5450 2    25   Input ~ 0
 USB_D+
-Text GLabel 8300 5700 0    25   Input ~ 0
-USB_CONN_D+
-Text GLabel 8300 5600 0    25   Input ~ 0
-USB_CONN_D-
 Text GLabel 5900 5650 2    25   Input ~ 0
 USB_D-
 Text GLabel 5900 5750 2    25   Input ~ 0
 USB_D+
-Wire Wire Line
-	8200 6350 8200 6400
-$Comp
-L Device:D_Schottky D3
-U 1 1 61572E44
-P 8200 6200
-F 0 "D3" V 8246 6121 50  0000 R CNN
-F 1 "D_Schottky" V 8155 6121 50  0000 R CNN
-F 2 "Diode 4007:1N4007G-T" H 8150 5650 50  0000 C CNN
-F 3 "~" H 8200 6200 50  0001 C CNN
-	1    8200 6200
-	0    -1   -1   0   
-$EndComp
 Text Label 10050 1450 0    50   ~ 0
 XI
 Wire Wire Line
@@ -658,5 +621,36 @@ Text GLabel 3850 3500 0    39   Input ~ 0
 Text GLabel 3850 3700 0    39   Input ~ 0
 3V3
 Text GLabel 3850 3600 0    39   Input ~ 0
+GND
+$Comp
+L microusb_b:2174507-2 J6
+U 1 1 6199C811
+P 9750 5350
+F 0 "J6" H 10478 4903 60  0000 L CNN
+F 1 "2174507-2" H 10478 4797 60  0000 L CNN
+F 2 "microusb_b:2174507-2" H 10150 5090 60  0001 C CNN
+F 3 "" H 9750 5350 60  0000 C CNN
+	1    9750 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D3
+U 1 1 619A2A55
+P 9600 5350
+F 0 "D3" V 9646 5271 50  0000 R CNN
+F 1 "D_Schottky" V 9555 5271 50  0000 R CNN
+F 2 "Diode 4007:1N4007G-T" H 9550 4800 50  0000 C CNN
+F 3 "~" H 9600 5350 50  0001 C CNN
+	1    9600 5350
+	1    0    0    -1  
+$EndComp
+Text GLabel 9450 5350 0    39   Input ~ 0
+5V
+Text GLabel 9750 5550 0    25   Input ~ 0
+USB_CONN_D+
+Text GLabel 9750 5450 0    25   Input ~ 0
+USB_CONN_D-
+NoConn ~ 9750 5650
+Text GLabel 9750 5750 0    39   Input ~ 0
 GND
 $EndSCHEMATC

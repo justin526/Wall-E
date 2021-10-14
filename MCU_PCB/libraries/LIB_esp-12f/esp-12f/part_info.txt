@@ -1,0 +1,9 @@
+Manufacturer=Ai-Thinker
+PartNumber=esp-12f
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=22
+Version=1.5
+Released=2021-07-06 10:24:34
+Downloaded=2021-09-29 01:00:39
+3D=Y

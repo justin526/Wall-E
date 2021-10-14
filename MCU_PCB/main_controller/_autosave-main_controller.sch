@@ -627,18 +627,6 @@ Wire Wire Line
 Wire Wire Line
 	10050 1400 10050 1250
 $Comp
-L power:GND #PWR0111
-U 1 1 6160194E
-P 10450 1400
-F 0 "#PWR0111" H 10450 1150 50  0001 C CNN
-F 1 "GND" H 10455 1227 50  0000 C CNN
-F 2 "" H 10450 1400 50  0001 C CNN
-F 3 "" H 10450 1400 50  0001 C CNN
-	1    10450 1400
-	1    0    0    -1  
-$EndComp
-Connection ~ 10450 1400
-$Comp
 L power:+3.3VA #PWR0112
 U 1 1 61602D74
 P 10450 950
@@ -699,7 +687,7 @@ Wire Wire Line
 Wire Wire Line
 	4050 7100 3850 7100
 Text GLabel 3850 6600 0    25   Input ~ 0
-3.3V_regulator
+3V3
 Text GLabel 3850 6700 0    25   Input ~ 0
 SWCLK
 Text GLabel 3850 6800 0    25   Input ~ 0
@@ -1218,17 +1206,6 @@ F 3 "" H 9100 5350 50  0001 C CNN
 	1    9100 5350
 	0    -1   -1   0   
 $EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 6191ED8D
-P 9650 5350
-F 0 "#PWR0117" H 9650 5100 50  0001 C CNN
-F 1 "GND" H 9655 5177 50  0000 C CNN
-F 2 "" H 9650 5350 50  0001 C CNN
-F 3 "" H 9650 5350 50  0001 C CNN
-	1    9650 5350
-	0    -1   -1   0   
-$EndComp
 Text Notes 9600 3000 0    50   ~ 0
 connect pin 39 to C7 (decoup cap)\n
 NoConn ~ 8950 4600
@@ -1463,4 +1440,23 @@ Wire Wire Line
 	1300 5150 1300 5250
 Text GLabel 1550 5150 2    25   Input ~ 0
 ADC3_IN5
+Text Label 9650 5350 0    39   ~ 0
+AGND
+Text Label 10450 1400 0    39   ~ 0
+AGND
+$Comp
+L Device:R R22
+U 1 1 619EA822
+P 9200 1300
+F 0 "R22" H 9270 1346 50  0000 L CNN
+F 1 "0" H 9270 1255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 9130 1300 50  0001 C CNN
+F 3 "~" H 9200 1300 50  0001 C CNN
+	1    9200 1300
+	1    0    0    -1  
+$EndComp
+Text Label 9200 1150 0    39   ~ 0
+AGND
+Text Label 9200 1450 0    39   ~ 0
+GND
 $EndSCHEMATC
