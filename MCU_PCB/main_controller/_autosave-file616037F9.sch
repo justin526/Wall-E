@@ -442,27 +442,6 @@ F 3 "~" H 8800 1600 50  0001 C CNN
 	1    8800 1600
 	1    0    0    -1  
 $EndComp
-$Comp
-L 5to3.3:ISE0512A-H U?
-U 1 1 615F56D6
-P 3100 3200
-AR Path="/61651051/615F56D6" Ref="U?"  Part="1" 
-AR Path="/616037FA/615F56D6" Ref="U5"  Part="1" 
-F 0 "U5" H 3900 3693 60  0000 C CNN
-F 1 "ISE0512A-H" H 3900 3587 60  0000 C CNN
-F 2 "5to3.3:ISE0512A-H" H 3900 3481 60  0000 C CNN
-F 3 "" H 3100 3200 60  0000 C CNN
-	1    3100 3200
-	1    0    0    -1  
-$EndComp
-Text GLabel 3100 3200 0    50   Input ~ 0
-5V
-Text GLabel 4700 3300 2    50   Input ~ 0
-3V3
-Text GLabel 4700 3400 2    50   Input ~ 0
-GND
-Text GLabel 3100 3300 0    50   Input ~ 0
-GND
 Text GLabel 5550 3850 0    50   Input ~ 0
 7.5V
 Text GLabel 7150 3850 2    50   Input ~ 0
@@ -663,4 +642,21 @@ F 3 "" H 5550 3850 60  0000 C CNN
 	1    5550 3850
 	1    0    0    -1  
 $EndComp
+$Comp
+L 5to3v3:VX7803-500 J3
+U 1 1 6198DC88
+P 3850 3500
+F 0 "J3" H 4378 3453 60  0000 L CNN
+F 1 "VX7803-500" H 4378 3347 60  0000 L CNN
+F 2 "NEW5TO3V3:VX7803-500" H 4250 3340 60  0001 C CNN
+F 3 "" H 3850 3500 60  0000 C CNN
+	1    3850 3500
+	1    0    0    -1  
+$EndComp
+Text GLabel 3850 3500 0    39   Input ~ 0
+5V
+Text GLabel 3850 3700 0    39   Input ~ 0
+3V3
+Text GLabel 3850 3600 0    39   Input ~ 0
+GND
 $EndSCHEMATC
