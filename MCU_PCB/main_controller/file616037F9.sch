@@ -589,7 +589,7 @@ F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 5300 50  0001 L CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L 7.5to5:R-78E5.0-0.5 U?
+L main_controller-rescue:R-78E5.0-0.5-7.5to5 U?
 U 1 1 615F56E0
 P 5550 3850
 AR Path="/61651051/615F56E0" Ref="U?"  Part="1" 
@@ -602,7 +602,7 @@ F 3 "" H 5550 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5to3v3:VX7803-500 J3
+L main_controller-rescue:VX7803-500-5to3v3 J3
 U 1 1 6198DC88
 P 3850 3500
 F 0 "J3" H 4378 3453 60  0000 L CNN
@@ -619,7 +619,7 @@ Text GLabel 3850 3700 0    39   Input ~ 0
 Text GLabel 3850 3600 0    39   Input ~ 0
 GND
 $Comp
-L microusb_b:2174507-2 J6
+L main_controller-rescue:2174507-2-microusb_b J6
 U 1 1 6199C811
 P 9750 5350
 F 0 "J6" H 10478 4903 60  0000 L CNN
