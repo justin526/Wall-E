@@ -1,11 +1,4 @@
--9206379542148564767
-5to3.3
-ISE0512A-H
-
-
-0
-5
-5
+16959825466537196
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44225,20 +44218,6 @@ THT ceramic resonator filter DSS6
 0
 3
 3
-DC 7.5 to 5
-R-78E5.0-0.5
-
-
-0
-3
-3
-Diode 4007
-1N4007G-T
-
-
-0
-2
-2
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -46108,34 +46087,6 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
-EA1620LA12-16.000M_TR
-EA1620LA1216000MTR
-EA1620LA12-16.000M TR-1
-Crystal or Oscillator
-0
-4
-4
-ECS-120-18-4X-CKM
-XTAL_ECS-120-18-4X-CKM
-
-
-0
-2
-2
-ECS-120-18-4X-CKM (1)
-XTAL_ECS-120-18-4X-CKM
-
-
-0
-2
-2
-EEEHA0J101WR
-CAP_EEEHA0J101WR
-
-
-0
-2
-2
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -51421,13 +51372,6 @@ Yellow 5381 Series LED
 0
 2
 2
-LM2651
-LM2651MTCX-3.3&slash_NOPB
-
-
-0
-16
-16
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -52219,13 +52163,6 @@ mounting hole 8.4mm m8
 0
 9
 1
-NEW5TO3V3
-VX7803-500
-
-
-0
-3
-3
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -68732,153 +68669,6 @@ rotary encoder
 0
 5
 4
-SamacSys_Parts
-1017521
-1017521-2
-Connector
-0
-5
-5
-SamacSys_Parts
-1988930
-1988930-1
-Connector
-0
-15
-15
-SamacSys_Parts
-1715250000
-1715250000-1
-Connector
-0
-2
-2
-SamacSys_Parts
-C503B-BCN
-C503B-BCN
-LED
-0
-2
-2
-SamacSys_Parts
-CAPC1005X55N
-C0402(BB)
-Capacitor
-0
-2
-2
-SamacSys_Parts
-CAPC3216X88N
-1206 (3216 metric)
-Capacitor
-0
-2
-2
-SamacSys_Parts
-CAPPRD350W60D840H1350
-8*11.5-
-Capacitor Polarised
-0
-2
-2
-SamacSys_Parts
-CSS2H2512RL300F
-CSS2H-2512R-L300F-5
-Resistor
-0
-2
-2
-SamacSys_Parts
-D6R40F1LFS
-D6R50F1LFS-2
-Switch
-0
-4
-4
-SamacSys_Parts
-LTL2T3TGK6
-LTL2T3TGK6-1
-LED
-0
-2
-2
-SamacSys_Parts
-NE555DR
-D (R-PDSO-G8)
-Integrated Circuit
-0
-8
-8
-SamacSys_Parts
-NSR20F20NXT5G
-NSR20F20NXT5G-3
-Schottky Diode
-0
-2
-2
-SamacSys_Parts
-RESC1005X37N
-MCS0402
-Resistor
-0
-2
-2
-SamacSys_Parts
-RESC1608X55N
-06034
-Resistor
-0
-2
-2
-SamacSys_Parts
-SHDR5W100P0X508_1X5_2540X820X1000P
-05BE
-Connector
-0
-5
-5
-SamacSys_Parts
-SOIC127P600X175-8N
-SOP-8L-1
-Integrated Circuit
-0
-8
-8
-SamacSys_Parts
-SOP65P640X120-29N
-PWP0028M
-Integrated Circuit
-0
-29
-29
-SamacSys_Parts
-SOT95P280X145-6N
-6 SOT23-6
-Integrated Circuit
-0
-6
-6
-SamacSys_Parts
-SOT230P700X180-4N
-DCY (R-PDSO-G4)
-Integrated Circuit
-0
-4
-4
-SamacSys_Parts
-UJ2MIBHGSMTTR
-UJ2-MIBH-G-SMT-TR-2
-Connector
-0
-9
-9
-SamacSys_Parts
-USB313530A
-USB3135-30-A-4
-Connector
-0
-7
-7
 Sensor
 Aosong_DHT11_5.5x12.0_P2.54mm
 Temperature and humidity module, http://akizukidenshi.com/download/ds/aosong/DHT11.pdf
@@ -75473,52 +75263,122 @@ varistor SIOV
 0
 2
 2
-esp-12f
-esp12f
-esp-12f-1
-Integrated Circuit
-0
-22
-22
-idk what this is
-RC0201FR-071KL
+walle_library
+1N4007G-T
 
 
 0
 2
 2
-microusb_b
+walle_library
+2491
+
+
+0
+33
+33
+walle_library
 2174507-2
 
 
 0
 11
 11
-newdcdc
-ISE0512A-H
-
-
-0
-5
-5
-pushbutton
-SW_147873-2
-
-
-0
-2
-2
-spdt switch
+walle_library
 118251376
 1-1825137-6-1
 Switch
 0
 3
 3
-usbtomicro
+walle_library
+CAP_EEEHA0J101WR
+
+
+0
+2
+2
+walle_library
+EA1620LA1216000MTR
+EA1620LA12-16.000M TR-1
+Crystal or Oscillator
+0
+4
+4
+walle_library
+ISE0512A-H
+
+
+0
+5
+5
+walle_library
 J_SMD_2174507-2-5_7.8_5_2.71
 
 
 0
 11
 11
+walle_library
+LM2651MTCX-3.3&slash_NOPB
+
+
+0
+16
+16
+walle_library
+R-78E5.0-0.5
+
+
+0
+3
+3
+walle_library
+RC0201FR-071KL
+
+
+0
+2
+2
+walle_library
+SW_147873-2
+
+
+0
+2
+2
+walle_library
+VX7803-500
+
+
+0
+3
+3
+walle_library
+XTAL_ECS-120-18-4X-CKM
+
+
+0
+2
+2
+walle_library
+esp12f
+esp-12f-1
+Integrated Circuit
+0
+22
+22
+walle_library
+microusb-b
+
+
+0
+11
+11
+walle_library
+walle
+
+
+0
+0
+0
