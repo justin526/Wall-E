@@ -420,11 +420,11 @@ F 3 "~" H 8800 1600 50  0001 C CNN
 	1    8800 1600
 	1    0    0    -1  
 $EndComp
-Text GLabel 5550 3850 0    50   Input ~ 0
+Text GLabel 5300 3800 0    50   Input ~ 0
 7.5V
-Text GLabel 7150 3850 2    50   Input ~ 0
+Text GLabel 5300 4000 0    50   Input ~ 0
 5V
-Text GLabel 7150 3950 2    50   Input ~ 0
+Text GLabel 5750 3900 0    50   Input ~ 0
 GND
 Text GLabel 5600 5450 0    25   Input ~ 0
 USB_D-
@@ -513,8 +513,6 @@ RXD0
 Wire Wire Line
 	2650 5300 4050 5300
 Connection ~ 2650 5300
-Wire Wire Line
-	3000 5250 4050 5250
 Text Label 1100 7050 0    50   ~ 0
 GPIO0
 Text Label 1100 4750 0    50   ~ 0
@@ -526,11 +524,6 @@ Wire Wire Line
 Wire Wire Line
 	1100 6050 2650 6050
 Wire Wire Line
-	2750 6250 3000 6250
-Connection ~ 2750 6250
-Wire Wire Line
-	2750 5500 2750 6250
-Wire Wire Line
 	1100 5500 2750 5500
 Wire Wire Line
 	2500 5300 2650 5300
@@ -538,8 +531,6 @@ Wire Wire Line
 	1400 5300 2200 5300
 Wire Wire Line
 	3000 6250 3000 5250
-Wire Wire Line
-	2500 6250 2750 6250
 Wire Wire Line
 	1400 6250 2200 6250
 $Comp
@@ -565,22 +556,11 @@ F 3 "~" H 2350 5300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 7.5to5:R-78E5.0-0.5 U?
-U 1 1 615F56E0
-P 5550 3850
-AR Path="/61651051/615F56E0" Ref="U?"  Part="1" 
-AR Path="/616037FA/615F56E0" Ref="U4"  Part="1" 
-F 0 "U4" H 6350 4237 60  0000 C CNN
-F 1 "R-78E5.0-0.5" H 6350 4131 60  0000 C CNN
-F 2 "walle_library:R-78E5.0-0.5" H 6350 4090 60  0001 C CNN
-F 3 "" H 5550 3850 60  0000 C CNN
-	1    5550 3850
-	1    0    0    -1  
-$EndComp
-$Comp
-L 5to3v3:VX7803-500 J3
+L main_controller-rescue:VX7803-500-5to3v3 J3
 U 1 1 6198DC88
 P 3850 3500
+AR Path="/6198DC88" Ref="J3"  Part="1" 
+AR Path="/616037FA/6198DC88" Ref="J3"  Part="1" 
 F 0 "J3" H 4378 3453 60  0000 L CNN
 F 1 "VX7803-500" H 4378 3347 60  0000 L CNN
 F 2 "walle_library:VX7803-500" H 4250 3340 60  0001 C CNN
@@ -588,14 +568,14 @@ F 3 "" H 3850 3500 60  0000 C CNN
 	1    3850 3500
 	1    0    0    -1  
 $EndComp
-Text GLabel 3850 3500 0    39   Input ~ 0
+Text GLabel 3350 3500 0    39   Input ~ 0
 5V
-Text GLabel 3850 3700 0    39   Input ~ 0
+Text GLabel 3400 3700 0    39   Input ~ 0
 3V3
 Text GLabel 3850 3600 0    39   Input ~ 0
 GND
 $Comp
-L microusb_b:2174507-2 J6
+L main_controller-rescue:2174507-2-microusb_b J6
 U 1 1 6199C811
 P 9750 5350
 F 0 "J6" H 10478 4903 60  0000 L CNN
@@ -696,13 +676,9 @@ F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1000 5300 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1100 5100 1100 4750
-Wire Wire Line
 	1400 5300 1400 5600
 Wire Wire Line
 	1400 5600 800  5600
-Wire Wire Line
-	800  5600 800  5300
 $Comp
 L Transistor_BJT:S8050 Q3
 U 1 1 6155F7AE
@@ -714,4 +690,106 @@ F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 6250 50  0001 L CNN
 	1    1200 6250
 	-1   0    0    1   
 $EndComp
+$Comp
+L Device:C C22
+U 1 1 6171223D
+P 3650 3350
+F 0 "C22" H 3765 3396 50  0000 L CNN
+F 1 "10uF" H 3765 3305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 3688 3200 50  0001 C CNN
+F 3 "~" H 3650 3350 50  0001 C CNN
+	1    3650 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3500 3650 3500
+Connection ~ 3650 3500
+Wire Wire Line
+	3650 3500 3850 3500
+Text GLabel 3650 3200 0    50   Input ~ 0
+GND
+$Comp
+L Device:C C27
+U 1 1 61719C85
+P 3650 3850
+F 0 "C27" H 3765 3896 50  0000 L CNN
+F 1 "22uF" H 3765 3805 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 3688 3700 50  0001 C CNN
+F 3 "~" H 3650 3850 50  0001 C CNN
+	1    3650 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 3700 3650 3700
+Connection ~ 3650 3700
+Wire Wire Line
+	3650 3700 3850 3700
+Text GLabel 3650 4000 0    50   Input ~ 0
+GND
+$Comp
+L R-78E5.0-1.0:R-78E5.0-1.0 PS1
+U 1 1 6171FA76
+P 5750 3800
+F 0 "PS1" H 6578 3746 50  0000 L CNN
+F 1 "R-78E5.0-1.0" H 6578 3655 50  0000 L CNN
+F 2 "R78E5010" H 6600 3900 50  0001 L CNN
+F 3 "http://www.recom-power.com/pdf/Innoline/R-78Exx-1.0.pdf" H 6600 3800 50  0001 L CNN
+F 4 "Non-Isolated DC/DC Converters 8-28Vin 5V 1.0A THRU" H 6600 3700 50  0001 L CNN "Description"
+F 5 "10.4" H 6600 3600 50  0001 L CNN "Height"
+F 6 "919-R-78E5.0-1.0" H 6600 3500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/RECOM-Power/R-78E50-10?qs=T0XSgvH75d4EsZCU9I5HVA%3D%3D" H 6600 3400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "RECOM Power" H 6600 3300 50  0001 L CNN "Manufacturer_Name"
+F 9 "R-78E5.0-1.0" H 6600 3200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5750 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C28
+U 1 1 61725B78
+P 5500 3650
+F 0 "C28" H 5615 3696 50  0000 L CNN
+F 1 "10uF" H 5615 3605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 5538 3500 50  0001 C CNN
+F 3 "~" H 5500 3650 50  0001 C CNN
+	1    5500 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C29
+U 1 1 617277D0
+P 5500 4150
+F 0 "C29" H 5615 4196 50  0000 L CNN
+F 1 "10uF" H 5615 4105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric" H 5538 4000 50  0001 C CNN
+F 3 "~" H 5500 4150 50  0001 C CNN
+	1    5500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 4000 5500 4000
+Connection ~ 5500 4000
+Wire Wire Line
+	5500 4000 5750 4000
+Wire Wire Line
+	5300 3800 5500 3800
+Connection ~ 5500 3800
+Wire Wire Line
+	5500 3800 5750 3800
+Text GLabel 5500 3500 0    50   Input ~ 0
+GND
+Text GLabel 5500 4300 0    50   Input ~ 0
+GND
+Wire Wire Line
+	1100 5100 1100 4750
+Wire Wire Line
+	800  5600 800  5300
+Wire Wire Line
+	4050 5250 3000 5250
+Wire Wire Line
+	3000 6250 2750 6250
+Wire Wire Line
+	2750 5500 2750 6250
+Connection ~ 2750 6250
+Wire Wire Line
+	2750 6250 2500 6250
 $EndSCHEMATC
