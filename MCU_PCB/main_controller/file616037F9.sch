@@ -520,8 +520,6 @@ GPIO0
 Text Label 1100 4750 0    50   ~ 0
 nRST
 Wire Wire Line
-	1100 5100 1100 4750
-Wire Wire Line
 	1100 6450 1100 7050
 Wire Wire Line
 	2650 6050 2650 5300
@@ -565,28 +563,6 @@ F 2 "Resistor_SMD:R_0805_2012Metric" V 2280 5300 50  0001 C CNN
 F 3 "~" H 2350 5300 50  0001 C CNN
 	1    2350 5300
 	0    1    1    0   
-$EndComp
-$Comp
-L Transistor_BJT:S8050 Q3
-U 1 1 6155F7AE
-P 1200 6250
-F 0 "Q3" H 1391 6204 50  0000 L CNN
-F 1 "S8050" H 1391 6295 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1400 6175 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 6250 50  0001 L CNN
-	1    1200 6250
-	-1   0    0    1   
-$EndComp
-$Comp
-L Transistor_BJT:S8050 Q2
-U 1 1 61561FA1
-P 1200 5300
-F 0 "Q2" H 1391 5254 50  0000 L CNN
-F 1 "S8050" H 1391 5345 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1400 5225 50  0001 L CIN
-F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 5300 50  0001 L CNN
-	1    1200 5300
-	-1   0    0    1   
 $EndComp
 $Comp
 L 7.5to5:R-78E5.0-0.5 U?
@@ -707,5 +683,35 @@ F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 3200 50  0001 C CNN
 F 3 "~" H 6200 3200 50  0001 C CNN
 	1    6200 3200
 	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:S8050 Q2
+U 1 1 61561FA1
+P 1000 5300
+F 0 "Q2" H 1191 5254 50  0000 L CNN
+F 1 "S8050" H 1191 5345 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1200 5225 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1000 5300 50  0001 L CNN
+	1    1000 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 5100 1100 4750
+Wire Wire Line
+	1400 5300 1400 5600
+Wire Wire Line
+	1400 5600 800  5600
+Wire Wire Line
+	800  5600 800  5300
+$Comp
+L Transistor_BJT:S8050 Q3
+U 1 1 6155F7AE
+P 1200 6250
+F 0 "Q3" H 1391 6204 50  0000 L CNN
+F 1 "S8050" H 1391 6295 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 1400 6175 50  0001 L CIN
+F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 6250 50  0001 L CNN
+	1    1200 6250
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC

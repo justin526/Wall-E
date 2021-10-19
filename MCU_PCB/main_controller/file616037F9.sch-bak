@@ -589,7 +589,7 @@ F 3 "http://www.unisonic.com.tw/datasheet/S8050.pdf" H 1200 5300 50  0001 L CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L main_controller-rescue:R-78E5.0-0.5-7.5to5 U?
+L 7.5to5:R-78E5.0-0.5 U?
 U 1 1 615F56E0
 P 5550 3850
 AR Path="/61651051/615F56E0" Ref="U?"  Part="1" 
@@ -602,7 +602,7 @@ F 3 "" H 5550 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L main_controller-rescue:VX7803-500-5to3v3 J3
+L 5to3v3:VX7803-500 J3
 U 1 1 6198DC88
 P 3850 3500
 F 0 "J3" H 4378 3453 60  0000 L CNN
@@ -619,7 +619,7 @@ Text GLabel 3850 3700 0    39   Input ~ 0
 Text GLabel 3850 3600 0    39   Input ~ 0
 GND
 $Comp
-L main_controller-rescue:2174507-2-microusb_b J6
+L microusb_b:2174507-2 J6
 U 1 1 6199C811
 P 9750 5350
 F 0 "J6" H 10478 4903 60  0000 L CNN
@@ -649,4 +649,63 @@ USB_CONN_D-
 NoConn ~ 9750 5650
 Text GLabel 9750 5750 0    39   Input ~ 0
 GND
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61A9A436
+P 2300 2850
+F 0 "TP1" H 2358 2968 50  0000 L CNN
+F 1 "TestPoint" H 2358 2877 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 2500 2850 50  0001 C CNN
+F 3 "~" H 2500 2850 50  0001 C CNN
+	1    2300 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2300 2850 3    39   Input ~ 0
+USART1_TX
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61A9BF95
+P 2950 2850
+F 0 "TP2" H 3008 2968 50  0000 L CNN
+F 1 "TestPoint" H 3008 2877 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Loop_D2.50mm_Drill1.0mm" H 3150 2850 50  0001 C CNN
+F 3 "~" H 3150 2850 50  0001 C CNN
+	1    2950 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2950 2850 3    39   Input ~ 0
+USART1_RX
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 61A9F739
+P 6200 2600
+F 0 "H1" H 6300 2646 50  0000 L CNN
+F 1 "MountingHole" H 6300 2555 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 2600 50  0001 C CNN
+F 3 "~" H 6200 2600 50  0001 C CNN
+	1    6200 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 61AA5D09
+P 6200 2900
+F 0 "H2" H 6300 2946 50  0000 L CNN
+F 1 "MountingHole" H 6300 2855 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 2900 50  0001 C CNN
+F 3 "~" H 6200 2900 50  0001 C CNN
+	1    6200 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 61AA7533
+P 6200 3200
+F 0 "H3" H 6300 3246 50  0000 L CNN
+F 1 "MountingHole" H 6300 3155 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.2mm_M2" H 6200 3200 50  0001 C CNN
+F 3 "~" H 6200 3200 50  0001 C CNN
+	1    6200 3200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
