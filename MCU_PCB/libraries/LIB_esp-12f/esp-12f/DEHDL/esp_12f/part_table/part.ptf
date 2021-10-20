@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'esp_12f'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "ARROW_PART_NUMBER", "ARROW_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Ai-Thinker", "esp-12f" (!) = "", "esp12f", "Other", "", "", "", "", "ESP-12F ESP8266 Wifi Wireless IoT Board Module , package 1 x ESP8266 Adapter Plate  1pcs", "https://docs.ai-thinker.com/_media/esp8266/docs/esp-12f_product_specification_en.pdf", "3.1 mm"
+END_PART
+
+END.

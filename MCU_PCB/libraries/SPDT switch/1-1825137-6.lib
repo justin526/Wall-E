@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model 1-1825137-6
+#/1178491/460052/2.49/3/2/Switch
+DEF 1-1825137-6 S 0 30 Y Y 1 F N
+F0 "S" 750 300 50 H V L CNN
+F1 "1-1825137-6" 750 200 50 H V L CNN
+F2 "118251376" 750 100 50 H I L CNN
+F3 "https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1825137%7FA8%7Fpdf%7FEnglish%7FENG_CD_1825137_A8.pdf%7F1-1825137-6" 750 0 50 H I L CNN
+F4 "Alcoswitch Gemini A Series, Toggle Switches, Single Pole - Double Throw Configuration (Pole-Throw), 1/4-40, Sealed Toggle Switch, Copper, Silver" 750 -100 50 H I L CNN "Description"
+F5 "28.194" 750 -200 50 H I L CNN "Height"
+F6 "506-A103SYCQ04" 750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/TE-Connectivity-PB/1-1825137-6?qs=GQ3BsEl46pk8vicKht%252BRUg%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "TE Connectivity" 750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "1-1825137-6" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X NC 1 0 0 200 R 50 50 0 0 N
+X COM 2 0 -100 200 R 50 50 0 0 P
+X NO 3 0 -200 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 700 100 700 -300 200 -300 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

@@ -9638,42 +9638,36 @@ Reason: (255) Unknown. Please check power and cabling to target.
 !SUBENTRY 2 com.st.stm32cube.ide.mcu.debug.stlink 4 0 2021-10-01 16:52:05.592
 !MESSAGE Error in initializing ST-LINK device.
 Reason: (255) Unknown. Please check power and cabling to target.
-!SESSION 2021-10-01 17:08:10.833 -----------------------------------------------
+
+!ENTRY org.eclipse.core.jobs 2 2 2021-10-01 17:08:10.534
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.debug.internal.ui.DebugUIPlugin$2
+!SESSION 2021-10-07 16:53:26.238 -----------------------------------------------
+eclipse.buildId=Version 1.4.0
+java.version=1.8.0_252
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-07 16:53:34.154
+!MESSAGE Log4j initialized with config file C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-07 16:53:40.606
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-10-07 16:53:42.679
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+!SESSION 2021-10-07 16:54:01.313 -----------------------------------------------
 eclipse.buildId=Version 1.4.0
 java.version=1.8.0_252
 java.vendor=AdoptOpenJDK
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0
 
-!ENTRY org.eclipse.core.resources 2 10035 2021-10-01 17:08:13.129
-!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
-
-!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-01 17:08:18.194
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-10-07 16:54:09.285
 !MESSAGE Log4j initialized with config file C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\.metadata\.log4j.xml
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-01 17:08:24.269
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-10-07 16:54:15.032
 !MESSAGE Started RMI Server, listening on port 41337
 
-!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-10-01 17:08:25.035
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-10-07 16:54:16.105
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
-
-!ENTRY org.eclipse.cdt.ui 4 0 2021-10-01 17:13:46.979
-!MESSAGE Error in CDT UI during reconcile
-!STACK 1
-C Model Exception: C Model Status [Element main.c does not exist.]
-	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:486)
-	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
-	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
-	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
-	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
-	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
-	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
-	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
-	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
-	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
-	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
-	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:76)
-	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
-	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:210)
-!SUBENTRY 1 org.eclipse.cdt.core 4 969 2021-10-01 17:13:46.983
-!MESSAGE Element main.c does not exist.
