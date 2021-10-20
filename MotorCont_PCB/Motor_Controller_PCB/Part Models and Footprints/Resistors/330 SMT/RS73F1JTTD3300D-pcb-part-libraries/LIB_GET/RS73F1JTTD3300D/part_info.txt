@@ -1,0 +1,9 @@
+Manufacturer=KOA Speer
+PartNumber=RS73F1JTTD3300D
+PartCategory=Resistor
+PackageCategory=Resistor Chip
+PinCount=2
+Version=1.1
+Released=2021-04-01 04:23:24
+Downloaded=2021-09-20 04:11:25
+3D=Y

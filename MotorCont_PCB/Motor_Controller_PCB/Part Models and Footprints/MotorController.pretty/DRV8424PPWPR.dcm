@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP DRV8424PPWPR
+D Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125
+K
+F https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F
+$ENDCMP
+#
+#End Doc Library

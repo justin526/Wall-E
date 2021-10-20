@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_2822966"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-08-06-10:12:31)
+    (utime 2021-08-07-06:25:47)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "UBT1C101MPD8TD")
+)
+
+
+(pinAssign "ECS_2822966"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-08-06-10:12:31)
+    (utime 2021-08-07-06:25:47)
+    (interface
+        (port "1" (symbPinId 1) (portName "+") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "-") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_2822966")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "UBT1C101MPD8TD")
+)
+
+
+(part "UBT1C101MPD8TD"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-08-06-10:12:31)
+    (utime 2021-08-07-06:25:47)
+    (packageRef "UBT1C101MPD8TD")
+    (pinAssignRef "ECS_2822966")
+    (interface
+        (port "1" (symbPinId 1) (portName "+") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "-") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "C")
+    (property "description" "Aluminum Electrolytic Capacitors - Radial Leaded")
+    (property "Mouser_Part_Number" "647-UBT1C101MPD8TD")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D")
+    (property "Manufacturer_Name" "Nichicon")
+    (property "Manufacturer_Part_Number" "UBT1C101MPD8TD")
+    (property "Datasheet_Link" "")
+    (property "compAreaTopHeight" 13.5)
+)
+
+

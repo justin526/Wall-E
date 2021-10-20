@@ -1,0 +1,7 @@
+(sym_lib_table
+  (lib (name DRV8424PPWPR)(type Legacy)(uri "C:/Users/rasha/OneDrive/Documents/Purdue Fall Semester 2021/Senior Design/Motor Controller PCB/Part Models and Footprints/DRV8424PWPR/LIB_GET/DRV8424PPWPR/KiCad/DRV8424PPWPR.lib")(options "")(descr "")(disabled))
+  (lib (name UBT1C101MPD8TD)(type Legacy)(uri "C:/Users/rasha/OneDrive/Documents/Purdue Fall Semester 2021/Senior Design/Motor Controller PCB/Part Models and Footprints/Capacitors/Electrolytic 100u/UBT1C101MPD8TD-pcb-part-libraries/LIB_GET/UBT1C101MPD8TD/KiCad/UBT1C101MPD8TD.lib")(options "")(descr ""))
+  (lib (name CSS2H-2512R-L300F)(type Legacy)(uri "C:/Users/rasha/OneDrive/Documents/Purdue Fall Semester 2021/Senior Design/Motor Controller PCB/Part Models and Footprints/Current Sensing/Shunt Resistor/CSS2H-2512R-L300F-pcb-part-libraries/LIB_GET/CSS2H-2512R-L300F/KiCad/CSS2H-2512R-L300F.lib")(options "")(descr ""))
+  (lib (name TPS7B8333QDCYRQ1)(type Legacy)(uri "C:/Users/rasha/OneDrive/Documents/Purdue Fall Semester 2021/Senior Design/Motor Controller PCB/Part Models and Footprints/3.3V regulator/LIB_GET/TPS7B8333QDCYRQ1/KiCad/TPS7B8333QDCYRQ1.lib")(options "")(descr ""))
+  (lib (name ECE477_motorcontroller-rescue)(type Legacy)(uri ${KIPRJMOD}/ECE477_motorcontroller-rescue.lib)(options "")(descr ""))
+)

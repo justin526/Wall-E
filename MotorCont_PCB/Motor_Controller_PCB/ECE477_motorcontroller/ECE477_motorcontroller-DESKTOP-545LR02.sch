@@ -1,0 +1,1560 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L DRV8424PPWPR:DRV8424PPWPR IC1
+U 1 1 614877CB
+P 1600 2800
+F 0 "IC1" H 2300 3065 50  0000 C CNN
+F 1 "DRV8424PPWPR" H 2300 2974 50  0000 C CNN
+F 2 "SOP65P640X120-29N" H 2850 2900 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F" H 2850 2800 50  0001 L CNN
+F 4 "Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125" H 2850 2700 50  0001 L CNN "Description"
+F 5 "1.2" H 2850 2600 50  0001 L CNN "Height"
+F 6 "595-DRV8424PPWPR" H 2850 2500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8424PPWPR?qs=CiayqK2gdcKHVqboqYVmRA%3D%3D" H 2850 2400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 2850 2300 50  0001 L CNN "Manufacturer_Name"
+F 9 "DRV8424PPWPR" H 2850 2200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1600 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 614896CC
+P 3400 4100
+F 0 "C2" V 3652 4100 50  0000 C CNN
+F 1 "0.47u" V 3561 4100 50  0000 C CNN
+F 2 "C0402C474K9RACTU:CAPC1005X55N" H 3438 3950 50  0001 C CNN
+F 3 "~" H 3400 4100 50  0001 C CNN
+	1    3400 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3550 4100 3800 4100
+$Comp
+L power:GND1 #PWR0102
+U 1 1 6148AA8D
+P 2300 4850
+F 0 "#PWR0102" H 2300 4600 50  0001 C CNN
+F 1 "GND1" H 2305 4677 50  0000 C CNN
+F 2 "" H 2300 4850 50  0001 C CNN
+F 3 "" H 2300 4850 50  0001 C CNN
+	1    2300 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2300 4600 2300 4850
+$Comp
+L Device:C C1
+U 1 1 6148CC77
+P 1150 2800
+F 0 "C1" V 898 2800 50  0000 C CNN
+F 1 "0.22u" V 989 2800 50  0000 C CNN
+F 2 "C0402C224M4RACTU:CAPC1005X55N" H 1188 2650 50  0001 C CNN
+F 3 "~" H 1150 2800 50  0001 C CNN
+	1    1150 2800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 2800 1600 2800
+Wire Wire Line
+	1000 2800 1000 2900
+Wire Wire Line
+	1000 2900 1600 2900
+Wire Wire Line
+	1600 4000 1250 4000
+Wire Wire Line
+	1250 4000 1250 4250
+Connection ~ 1250 4000
+Text Label 650  4000 0    50   ~ 0
+Vm
+Wire Wire Line
+	1000 2900 850  2900
+Connection ~ 1000 2900
+Wire Wire Line
+	850  2900 850  3100
+Text Label 850  2900 0    50   ~ 0
+Vm
+$Comp
+L Device:C C6
+U 1 1 6148F90F
+P 850 3250
+F 0 "C6" H 965 3296 50  0000 L CNN
+F 1 "0.01u" H 965 3205 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 888 3100 50  0001 C CNN
+F 3 "~" H 850 3250 50  0001 C CNN
+	1    850  3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  3400 850  3550
+Text Label 2300 4750 0    50   ~ 0
+AGND
+Text Label 3800 4100 0    50   ~ 0
+DGND
+$Comp
+L Device:C C4
+U 1 1 6149045E
+P 1250 4400
+F 0 "C4" H 1365 4446 50  0000 L CNN
+F 1 "0.01u" H 1365 4355 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 1288 4250 50  0001 C CNN
+F 3 "~" H 1250 4400 50  0001 C CNN
+	1    1250 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 4550 1250 4750
+Text Label 1250 4750 0    50   ~ 0
+AGND
+Text Label 900  4950 0    50   ~ 0
+AGND
+Wire Wire Line
+	3000 3800 3150 3800
+Wire Wire Line
+	3000 3900 3150 3900
+Wire Wire Line
+	3150 3900 3150 3800
+Wire Wire Line
+	3150 3800 3250 3800
+Connection ~ 3150 3800
+Text Label 3250 3800 0    50   ~ 0
+MCU_DAC
+Wire Wire Line
+	3000 3500 3200 3500
+Wire Wire Line
+	3000 3600 3200 3600
+Wire Wire Line
+	3000 3700 3200 3700
+Text Label 3200 3500 0    50   ~ 0
+DGND
+Text Label 3200 3600 0    50   ~ 0
+DGND
+Text Label 3200 3700 0    50   ~ 0
+DGND
+Text Notes 3900 650  0    50   ~ 0
+I still need to figure out whether I need to use the A/BDecay Pins and the use of Toff\n
+Wire Wire Line
+	3000 3100 3550 3100
+Text Label 3550 3100 0    50   ~ 0
+PWM1
+Wire Wire Line
+	3000 3200 3550 3200
+Text Label 3550 3200 0    50   ~ 0
+PWM2
+Wire Wire Line
+	3000 3000 3300 3000
+Text Label 3300 3000 0    50   ~ 0
+nsleep
+$Comp
+L Device:R R_sleep1
+U 1 1 61496DAE
+P 2000 1100
+F 0 "R_sleep1" H 2070 1146 50  0000 L CNN
+F 1 "1k" H 2070 1055 50  0000 L CNN
+F 2 "MCS04020D1001BE000:RESC1005X37N" V 1930 1100 50  0001 C CNN
+F 3 "~" H 2000 1100 50  0001 C CNN
+	1    2000 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 800  2000 950 
+Wire Wire Line
+	2100 2250 2100 2400
+Text Label 2100 2400 0    50   ~ 0
+DGND
+Wire Wire Line
+	2000 800  2300 800 
+Text Label 2300 800  0    50   ~ 0
+3.3V_regulator
+Wire Wire Line
+	2000 1250 2000 1350
+Connection ~ 2000 1350
+Wire Wire Line
+	2000 1350 2000 1450
+$Comp
+L ECE477_motorcontroller-rescue:STN1NK60Z-2021-09-20_01-44-05 U1
+U 1 1 6149836E
+P 1700 1850
+F 0 "U1" H 2330 1953 60  0000 L CNN
+F 1 "STN1NK60Z" H 2330 1847 60  0000 L CNN
+F 2 "STM MOSFET:STN1NK60Z" H 2150 1590 60  0001 C CNN
+F 3 "" H 1700 1850 60  0000 C CNN
+	1    1700 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1450 2500 1450
+Text Label 2500 1450 0    50   ~ 0
+nsleep
+Text Notes 1750 600  0    50   ~ 0
+This block is the reset block for all chips\n
+$Comp
+L Device:LED Blue_LED1
+U 1 1 614A5E46
+P 850 1450
+F 0 "Blue_LED1" V 889 1332 50  0000 R CNN
+F 1 "LED" V 798 1332 50  0000 R CNN
+F 2 "C503B-BCN-CV0Z0461:C503B-BCN" H 850 1450 50  0001 C CNN
+F 3 "~" H 850 1450 50  0001 C CNN
+	1    850  1450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	850  1100 850  1300
+$Comp
+L Device:R R_SleepLED1
+U 1 1 614A8292
+P 850 1850
+F 0 "R_SleepLED1" H 920 1896 50  0000 L CNN
+F 1 "330" H 920 1805 50  0000 L CNN
+F 2 "RS73F1JTTD3300D:RESC1608X55N" V 780 1850 50  0001 C CNN
+F 3 "~" H 850 1850 50  0001 C CNN
+	1    850  1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  1700 850  1600
+Wire Wire Line
+	850  2000 850  2150
+Text Label 850  2150 0    50   ~ 0
+DGND
+$Comp
+L D6R60F1LFS:D6R60F1LFS Switch1
+U 1 1 614AD3C3
+P 700 800
+F 0 "Switch1" H 1300 1065 50  0000 C CNN
+F 1 "D6R60F1LFS" H 1300 974 50  0000 C CNN
+F 2 "SamacSys_Parts:D6R40F1LFS" H 1750 900 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/60/d6-1382571.pdf" H 1750 800 50  0001 L CNN
+F 4 "Pushbutton Switches Key Switch SPST NO 100 mA" H 1750 700 50  0001 L CNN "Description"
+F 5 "14.3" H 1750 600 50  0001 L CNN "Height"
+F 6 "611-D6R60F1LFS" H 1750 500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/CK/D6R60F1LFS?qs=sb%252But3Lm4x0VR1WI58%252Bz2w%3D%3D" H 1750 400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "C & K COMPONENTS" H 1750 300 50  0001 L CNN "Manufacturer_Name"
+F 9 "D6R60F1LFS" H 1750 200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    700  800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 900  1900 1100
+Wire Wire Line
+	850  1100 1500 1100
+Wire Wire Line
+	700  800  600  800 
+Wire Wire Line
+	600  800  600  650 
+Text Label 600  650  0    50   ~ 0
+3.3V_regulator
+Wire Wire Line
+	1500 1100 1500 1850
+Wire Wire Line
+	1500 1850 1600 1850
+Connection ~ 1500 1100
+Wire Wire Line
+	1500 1100 1900 1100
+Wire Wire Line
+	3000 2800 3000 2700
+$Comp
+L Device:C C8
+U 1 1 614B3D7E
+P 3350 2700
+F 0 "C8" V 3098 2700 50  0000 C CNN
+F 1 "0.022u" V 3189 2700 50  0000 C CNN
+F 2 "C1206C223KMRECTU:CAPC3216X88N" H 3388 2550 50  0001 C CNN
+F 3 "~" H 3350 2700 50  0001 C CNN
+	1    3350 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 2700 3200 2700
+Wire Wire Line
+	3500 2700 3500 2900
+Wire Wire Line
+	3500 2900 3000 2900
+Wire Wire Line
+	3000 4000 3050 4000
+Wire Wire Line
+	1600 3100 1450 3100
+Text Label 1450 3100 0    50   ~ 0
+M1+
+Wire Wire Line
+	1600 3300 1450 3300
+Text Label 1450 3300 0    50   ~ 0
+M1-
+Wire Wire Line
+	1450 3900 1600 3900
+Connection ~ 1600 3900
+Wire Wire Line
+	1600 3900 1650 3900
+Text Label 1450 3900 0    50   ~ 0
+AGND
+Wire Wire Line
+	1600 4100 1450 4100
+Wire Wire Line
+	1450 4100 1450 4200
+Text Label 1450 4200 0    50   ~ 0
+DGND
+Wire Wire Line
+	850  3550 700  3550
+Text Label 700  3550 2    50   ~ 0
+AGND
+Wire Wire Line
+	900  4000 650  4000
+Wire Wire Line
+	1250 4000 900  4000
+Connection ~ 900  4000
+Wire Wire Line
+	900  4000 900  4250
+$Comp
+L UBT1C101MPD8TD:UBT1C101MPD8TD C3
+U 1 1 614C41B8
+P 900 4250
+F 0 "C3" V 1104 4380 50  0000 L CNN
+F 1 "100u" V 1195 4380 50  0000 L CNN
+F 2 "CAPPRD350W60D840H1350" H 1250 4300 50  0001 L CNN
+F 3 "" H 1250 4200 50  0001 L CNN
+F 4 "Aluminum Electrolytic Capacitors - Radial Leaded" H 1250 4100 50  0001 L CNN "Description"
+F 5 "13.5" H 1250 4000 50  0001 L CNN "Height"
+F 6 "647-UBT1C101MPD8TD" H 1250 3900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D" H 1250 3800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Nichicon" H 1250 3700 50  0001 L CNN "Manufacturer_Name"
+F 9 "UBT1C101MPD8TD" H 1250 3600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    900  4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	900  4950 900  4750
+Wire Wire Line
+	3000 4100 3200 4100
+$Comp
+L Device:R Rnfault1
+U 1 1 614D0F4A
+P 3150 4350
+F 0 "Rnfault1" V 2943 4350 50  0000 C CNN
+F 1 "4.7k" V 3034 4350 50  0000 C CNN
+F 2 "MCS04020D4701BE000:RESC1005X37N" V 3080 4350 50  0001 C CNN
+F 3 "~" H 3150 4350 50  0001 C CNN
+	1    3150 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 4000 3050 4250
+Wire Wire Line
+	3050 4250 3000 4250
+Wire Wire Line
+	3000 4250 3000 4350
+Wire Wire Line
+	3300 4350 3300 4250
+Wire Wire Line
+	3300 4250 3200 4250
+Wire Wire Line
+	3200 4250 3200 4100
+Connection ~ 3200 4100
+Wire Wire Line
+	3200 4100 3250 4100
+$Comp
+L SamacSys_Parts:MAX44284FAUT+T IC5
+U 1 1 614D85C8
+P 4600 1600
+F 0 "IC5" H 5150 1865 50  0000 C CNN
+F 1 "MAX44284FAUT+T" H 5150 1774 50  0000 C CNN
+F 2 "SOT95P280X145-6N" H 5550 1700 50  0001 L CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX44284.pdf" H 5550 1600 50  0001 L CNN
+F 4 "Current Sense Amplifiers -0.1~+36V, High Precision, Low Power Current-Sense Amplifier" H 5550 1500 50  0001 L CNN "Description"
+F 5 "1.45" H 5550 1400 50  0001 L CNN "Height"
+F 6 "700-MAX44284FAUT+T" H 5550 1300 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX44284FAUT%2bT/?qs=ZrtEiRxEuI5%2F3wig4C1EWg%3D%3D" H 5550 1200 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Maxim Integrated" H 5550 1100 50  0001 L CNN "Manufacturer_Name"
+F 9 "MAX44284FAUT+T" H 5550 1000 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CSS2H-2512R-L300F:CSS2H-2512R-L300F R1
+U 1 1 614D9FF2
+P 4800 2250
+F 0 "R1" H 5150 2475 50  0000 C CNN
+F 1 "CSS2H-2512R-L300F" H 5150 2384 50  0000 C CNN
+F 2 "CSS2H2512RL300F" H 5350 2300 50  0001 L CNN
+F 3 "http://www.bourns.com/docs/Product-Datasheets/css2h-2512.pdf" H 5350 2200 50  0001 L CNN
+F 4 "CURRENT SENSE SHUNT" H 5350 2100 50  0001 L CNN "Description"
+F 5 "1.75" H 5350 2000 50  0001 L CNN "Height"
+F 6 "652-CSS2H-2512RL300F" H 5350 1900 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Bourns/CSS2H-2512R-L300F?qs=5aG0NVq1C4z51we9vC1w9A%3D%3D" H 5350 1800 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Bourns" H 5350 1700 50  0001 L CNN "Manufacturer_Name"
+F 9 "CSS2H-2512R-L300F" H 5350 1600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4800 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2250 4450 2250
+Wire Wire Line
+	4450 2250 4450 1800
+Wire Wire Line
+	4450 1800 4600 1800
+Wire Wire Line
+	5500 2250 5850 2250
+Wire Wire Line
+	5850 2250 5850 1800
+Wire Wire Line
+	5850 1800 5700 1800
+Connection ~ 4450 2250
+Wire Wire Line
+	4250 2250 4450 2250
+Text Label 4250 2250 0    50   ~ 0
+12V_supply
+Wire Wire Line
+	5850 2250 6100 2250
+Connection ~ 5850 2250
+Text Label 6100 2250 0    50   ~ 0
+Vm
+Wire Wire Line
+	4600 1600 4450 1600
+Wire Wire Line
+	4450 1600 4450 1450
+Text Label 4450 1450 2    50   ~ 0
+3.3V_regulator
+Wire Wire Line
+	5700 1700 5900 1700
+Text Label 5900 1700 0    50   ~ 0
+Current_sense
+Wire Wire Line
+	5700 1550 5700 1600
+Wire Wire Line
+	5700 1550 5950 1550
+Text Label 5950 1550 0    50   ~ 0
+nsleep
+Wire Wire Line
+	4600 1700 4350 1700
+Text Label 4350 1700 0    50   ~ 0
+AGND
+$Comp
+L DRV8424PPWPR:DRV8424PPWPR IC2
+U 1 1 614F2DE9
+P 1600 5400
+F 0 "IC2" H 2300 5665 50  0000 C CNN
+F 1 "DRV8424PPWPR" H 2300 5574 50  0000 C CNN
+F 2 "SOP65P640X120-29N" H 2850 5500 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F" H 2850 5400 50  0001 L CNN
+F 4 "Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125" H 2850 5300 50  0001 L CNN "Description"
+F 5 "1.2" H 2850 5200 50  0001 L CNN "Height"
+F 6 "595-DRV8424PPWPR" H 2850 5100 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8424PPWPR?qs=CiayqK2gdcKHVqboqYVmRA%3D%3D" H 2850 5000 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 2850 4900 50  0001 L CNN "Manufacturer_Name"
+F 9 "DRV8424PPWPR" H 2850 4800 50  0001 L CNN "Manufacturer_Part_Number"
+	1    1600 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 614F2DEF
+P 3400 6700
+F 0 "C12" V 3652 6700 50  0000 C CNN
+F 1 "0.47u" V 3561 6700 50  0000 C CNN
+F 2 "C0402C474K9RACTU:CAPC1005X55N" H 3438 6550 50  0001 C CNN
+F 3 "~" H 3400 6700 50  0001 C CNN
+	1    3400 6700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 6700 3800 6800
+Wire Wire Line
+	3550 6700 3800 6700
+$Comp
+L power:GND #PWR0103
+U 1 1 614F2DF7
+P 3800 6800
+F 0 "#PWR0103" H 3800 6550 50  0001 C CNN
+F 1 "GND" H 3805 6627 50  0000 C CNN
+F 2 "" H 3800 6800 50  0001 C CNN
+F 3 "" H 3800 6800 50  0001 C CNN
+	1    3800 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR0104
+U 1 1 614F2DFD
+P 2300 7450
+F 0 "#PWR0104" H 2300 7200 50  0001 C CNN
+F 1 "GND1" H 2305 7277 50  0000 C CNN
+F 2 "" H 2300 7450 50  0001 C CNN
+F 3 "" H 2300 7450 50  0001 C CNN
+	1    2300 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 7200 2300 7450
+Connection ~ 2300 7450
+Wire Wire Line
+	2300 7450 2300 7650
+$Comp
+L Device:C C9
+U 1 1 614F2E06
+P 1150 5400
+F 0 "C9" V 898 5400 50  0000 C CNN
+F 1 "0.22u" V 989 5400 50  0000 C CNN
+F 2 "C0402C224M4RACTU:CAPC1005X55N" H 1188 5250 50  0001 C CNN
+F 3 "~" H 1150 5400 50  0001 C CNN
+	1    1150 5400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1300 5400 1600 5400
+Wire Wire Line
+	1000 5400 1000 5500
+Wire Wire Line
+	1000 5500 1600 5500
+Wire Wire Line
+	1600 6600 1250 6600
+Wire Wire Line
+	1250 6600 1250 6850
+Connection ~ 1250 6600
+Wire Wire Line
+	1000 5500 850  5500
+Connection ~ 1000 5500
+Wire Wire Line
+	850  5500 850  5700
+Text Label 850  5500 0    50   ~ 0
+Vm
+$Comp
+L Device:C C5
+U 1 1 614F2E16
+P 850 5850
+F 0 "C5" H 965 5896 50  0000 L CNN
+F 1 "0.01u" H 965 5805 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 888 5700 50  0001 C CNN
+F 3 "~" H 850 5850 50  0001 C CNN
+	1    850  5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  6000 850  6150
+Text Label 2300 7350 0    50   ~ 0
+AGND
+Text Label 3800 6700 0    50   ~ 0
+DGND
+$Comp
+L Device:C C10
+U 1 1 614F2E1F
+P 1250 7000
+F 0 "C10" H 1365 7046 50  0000 L CNN
+F 1 "0.01u" H 1365 6955 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 1288 6850 50  0001 C CNN
+F 3 "~" H 1250 7000 50  0001 C CNN
+	1    1250 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1250 7150 1250 7350
+Text Label 1250 7350 0    50   ~ 0
+AGND
+Text Label 900  7550 3    50   ~ 0
+AGND
+Wire Wire Line
+	3000 6400 3150 6400
+Wire Wire Line
+	3000 6500 3150 6500
+Wire Wire Line
+	3150 6500 3150 6400
+Wire Wire Line
+	3150 6400 3250 6400
+Connection ~ 3150 6400
+Text Label 3250 6400 0    50   ~ 0
+MCU_DAC
+Wire Wire Line
+	3000 6100 3200 6100
+Wire Wire Line
+	3000 6200 3200 6200
+Wire Wire Line
+	3000 6300 3200 6300
+Text Label 3200 6100 0    50   ~ 0
+DGND
+Text Label 3200 6200 0    50   ~ 0
+DGND
+Text Label 3200 6300 0    50   ~ 0
+DGND
+Wire Wire Line
+	3000 5700 3550 5700
+Text Label 3550 5700 0    50   ~ 0
+PWM3
+Wire Wire Line
+	3000 5800 3550 5800
+Text Label 3550 5800 0    50   ~ 0
+PWM4
+Wire Wire Line
+	3000 5600 3300 5600
+Text Label 3300 5600 0    50   ~ 0
+nsleep
+Wire Wire Line
+	3000 5400 3000 5300
+$Comp
+L Device:C C11
+U 1 1 614F2E3D
+P 3350 5300
+F 0 "C11" V 3098 5300 50  0000 C CNN
+F 1 "0.022u" V 3189 5300 50  0000 C CNN
+F 2 "C1206C223KMRECTU:CAPC3216X88N" H 3388 5150 50  0001 C CNN
+F 3 "~" H 3350 5300 50  0001 C CNN
+	1    3350 5300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3000 5300 3200 5300
+Wire Wire Line
+	3500 5300 3500 5500
+Wire Wire Line
+	3500 5500 3000 5500
+Wire Wire Line
+	3000 6600 3050 6600
+Wire Wire Line
+	1600 5700 1450 5700
+Text Label 1450 5700 0    50   ~ 0
+M2+
+Wire Wire Line
+	1600 5900 1450 5900
+Text Label 1450 5900 0    50   ~ 0
+M2-
+Wire Wire Line
+	1450 6500 1600 6500
+Connection ~ 1600 6500
+Wire Wire Line
+	1600 6500 1650 6500
+Text Label 1450 6500 0    50   ~ 0
+AGND
+Wire Wire Line
+	1600 6700 1450 6700
+Wire Wire Line
+	1450 6700 1450 6800
+Text Label 1450 6800 0    50   ~ 0
+DGND
+Wire Wire Line
+	850  6150 700  6150
+Wire Wire Line
+	900  6600 650  6600
+Wire Wire Line
+	1250 6600 900  6600
+Connection ~ 900  6600
+Wire Wire Line
+	900  6600 900  6850
+$Comp
+L UBT1C101MPD8TD:UBT1C101MPD8TD C7
+U 1 1 614F2E5D
+P 900 6850
+F 0 "C7" V 1104 6980 50  0000 L CNN
+F 1 "100u" V 1195 6980 50  0000 L CNN
+F 2 "CAPPRD350W60D840H1350" H 1250 6900 50  0001 L CNN
+F 3 "" H 1250 6800 50  0001 L CNN
+F 4 "Aluminum Electrolytic Capacitors - Radial Leaded" H 1250 6700 50  0001 L CNN "Description"
+F 5 "13.5" H 1250 6600 50  0001 L CNN "Height"
+F 6 "647-UBT1C101MPD8TD" H 1250 6500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D" H 1250 6400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Nichicon" H 1250 6300 50  0001 L CNN "Manufacturer_Name"
+F 9 "UBT1C101MPD8TD" H 1250 6200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    900  6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	900  7550 900  7350
+Wire Wire Line
+	3000 6700 3200 6700
+$Comp
+L Device:R Rnfault2
+U 1 1 614F2E65
+P 3150 6950
+F 0 "Rnfault2" V 2943 6950 50  0000 C CNN
+F 1 "4.7k" V 3034 6950 50  0000 C CNN
+F 2 "MCS04020D4701BE000:RESC1005X37N" V 3080 6950 50  0001 C CNN
+F 3 "~" H 3150 6950 50  0001 C CNN
+	1    3150 6950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 6600 3050 6850
+Wire Wire Line
+	3050 6850 3000 6850
+Wire Wire Line
+	3000 6850 3000 6950
+Wire Wire Line
+	3300 6950 3300 6850
+Wire Wire Line
+	3300 6850 3200 6850
+Wire Wire Line
+	3200 6850 3200 6700
+Connection ~ 3200 6700
+Wire Wire Line
+	3200 6700 3250 6700
+$Comp
+L DRV8424PPWPR:DRV8424PPWPR IC4
+U 1 1 61509ED6
+P 8700 950
+F 0 "IC4" H 9400 1215 50  0000 C CNN
+F 1 "DRV8424PPWPR" H 9400 1124 50  0000 C CNN
+F 2 "SOP65P640X120-29N" H 9950 1050 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F" H 9950 950 50  0001 L CNN
+F 4 "Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125" H 9950 850 50  0001 L CNN "Description"
+F 5 "1.2" H 9950 750 50  0001 L CNN "Height"
+F 6 "595-DRV8424PPWPR" H 9950 650 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8424PPWPR?qs=CiayqK2gdcKHVqboqYVmRA%3D%3D" H 9950 550 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 9950 450 50  0001 L CNN "Manufacturer_Name"
+F 9 "DRV8424PPWPR" H 9950 350 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8700 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C24
+U 1 1 61509EDC
+P 10500 2250
+F 0 "C24" V 10752 2250 50  0000 C CNN
+F 1 "0.47u" V 10661 2250 50  0000 C CNN
+F 2 "C0402C474K9RACTU:CAPC1005X55N" H 10538 2100 50  0001 C CNN
+F 3 "~" H 10500 2250 50  0001 C CNN
+	1    10500 2250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10900 2250 10900 2350
+Wire Wire Line
+	10650 2250 10900 2250
+$Comp
+L power:GND #PWR0105
+U 1 1 61509EE4
+P 10900 2350
+F 0 "#PWR0105" H 10900 2100 50  0001 C CNN
+F 1 "GND" H 10905 2177 50  0000 C CNN
+F 2 "" H 10900 2350 50  0001 C CNN
+F 3 "" H 10900 2350 50  0001 C CNN
+	1    10900 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR0106
+U 1 1 61509EEA
+P 9400 3000
+F 0 "#PWR0106" H 9400 2750 50  0001 C CNN
+F 1 "GND1" H 9405 2827 50  0000 C CNN
+F 2 "" H 9400 3000 50  0001 C CNN
+F 3 "" H 9400 3000 50  0001 C CNN
+	1    9400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2750 9400 3000
+Connection ~ 9400 3000
+Wire Wire Line
+	9400 3000 9400 3200
+$Comp
+L Device:C C19
+U 1 1 61509EF3
+P 8250 950
+F 0 "C19" V 7998 950 50  0000 C CNN
+F 1 "0.22u" V 8089 950 50  0000 C CNN
+F 2 "C0402C224M4RACTU:CAPC1005X55N" H 8288 800 50  0001 C CNN
+F 3 "~" H 8250 950 50  0001 C CNN
+	1    8250 950 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8400 950  8700 950 
+Wire Wire Line
+	8100 950  8100 1050
+Wire Wire Line
+	8100 1050 8700 1050
+Wire Wire Line
+	8700 2150 8350 2150
+Wire Wire Line
+	8350 2150 8350 2400
+Connection ~ 8350 2150
+Wire Wire Line
+	8100 1050 7950 1050
+Connection ~ 8100 1050
+Wire Wire Line
+	7950 1050 7950 1250
+Text Label 7950 1050 0    50   ~ 0
+Vm
+$Comp
+L Device:C C15
+U 1 1 61509F03
+P 7950 1400
+F 0 "C15" H 8065 1446 50  0000 L CNN
+F 1 "0.01u" H 8065 1355 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 7988 1250 50  0001 C CNN
+F 3 "~" H 7950 1400 50  0001 C CNN
+	1    7950 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1550 7950 1700
+Text Label 9400 2900 0    50   ~ 0
+AGND
+Text Label 10900 2250 0    50   ~ 0
+DGND
+$Comp
+L Device:C C21
+U 1 1 61509F0C
+P 8350 2550
+F 0 "C21" H 8465 2596 50  0000 L CNN
+F 1 "0.01u" H 8465 2505 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 8388 2400 50  0001 C CNN
+F 3 "~" H 8350 2550 50  0001 C CNN
+	1    8350 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 2700 8350 2900
+Text Label 8350 2900 0    50   ~ 0
+AGND
+Text Label 8000 3100 3    50   ~ 0
+AGND
+Wire Wire Line
+	10100 1950 10250 1950
+Wire Wire Line
+	10100 2050 10250 2050
+Wire Wire Line
+	10250 2050 10250 1950
+Wire Wire Line
+	10250 1950 10350 1950
+Connection ~ 10250 1950
+Text Label 10350 1950 0    50   ~ 0
+MCU_DAC
+Wire Wire Line
+	10100 1650 10300 1650
+Wire Wire Line
+	10100 1750 10300 1750
+Wire Wire Line
+	10100 1850 10300 1850
+Text Label 10300 1650 0    50   ~ 0
+DGND
+Text Label 10300 1750 0    50   ~ 0
+DGND
+Text Label 10300 1850 0    50   ~ 0
+DGND
+Wire Wire Line
+	10100 1450 10400 1450
+Wire Wire Line
+	10100 1550 10400 1550
+Wire Wire Line
+	10100 1250 10650 1250
+Text Label 10650 1250 0    50   ~ 0
+PWM3
+Wire Wire Line
+	10100 1350 10650 1350
+Text Label 10650 1350 0    50   ~ 0
+PWM4
+Wire Wire Line
+	10100 1150 10400 1150
+Text Label 10400 1150 0    50   ~ 0
+nsleep
+Wire Wire Line
+	10100 950  10100 850 
+$Comp
+L Device:C C23
+U 1 1 61509F2A
+P 10450 850
+F 0 "C23" V 10198 850 50  0000 C CNN
+F 1 "0.022u" V 10289 850 50  0000 C CNN
+F 2 "C1206C223KMRECTU:CAPC3216X88N" H 10488 700 50  0001 C CNN
+F 3 "~" H 10450 850 50  0001 C CNN
+	1    10450 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10100 850  10300 850 
+Wire Wire Line
+	10600 850  10600 1050
+Wire Wire Line
+	10600 1050 10100 1050
+Wire Wire Line
+	10100 2150 10150 2150
+Wire Wire Line
+	8700 1250 8550 1250
+Text Label 8550 1250 0    50   ~ 0
+M4+
+Wire Wire Line
+	8700 1450 8550 1450
+Text Label 8550 1450 0    50   ~ 0
+M4-
+Wire Wire Line
+	8550 2050 8700 2050
+Connection ~ 8700 2050
+Wire Wire Line
+	8700 2050 8750 2050
+Text Label 8550 2050 0    50   ~ 0
+AGND
+Wire Wire Line
+	8700 2250 8550 2250
+Wire Wire Line
+	8550 2250 8550 2350
+Text Label 8550 2350 0    50   ~ 0
+DGND
+Wire Wire Line
+	7950 1700 7800 1700
+Wire Wire Line
+	8000 2150 7750 2150
+Wire Wire Line
+	8350 2150 8000 2150
+Connection ~ 8000 2150
+Wire Wire Line
+	8000 2150 8000 2400
+$Comp
+L UBT1C101MPD8TD:UBT1C101MPD8TD C16
+U 1 1 61509F4A
+P 8000 2400
+F 0 "C16" V 8204 2530 50  0000 L CNN
+F 1 "100u" V 8295 2530 50  0000 L CNN
+F 2 "CAPPRD350W60D840H1350" H 8350 2450 50  0001 L CNN
+F 3 "" H 8350 2350 50  0001 L CNN
+F 4 "Aluminum Electrolytic Capacitors - Radial Leaded" H 8350 2250 50  0001 L CNN "Description"
+F 5 "13.5" H 8350 2150 50  0001 L CNN "Height"
+F 6 "647-UBT1C101MPD8TD" H 8350 2050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D" H 8350 1950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Nichicon" H 8350 1850 50  0001 L CNN "Manufacturer_Name"
+F 9 "UBT1C101MPD8TD" H 8350 1750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8000 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8000 3100 8000 2900
+Wire Wire Line
+	10100 2250 10300 2250
+$Comp
+L Device:R Rnfault4
+U 1 1 61509F52
+P 10250 2500
+F 0 "Rnfault4" V 10043 2500 50  0000 C CNN
+F 1 "4.7k" V 10134 2500 50  0000 C CNN
+F 2 "MCS04020D4701BE000:RESC1005X37N" V 10180 2500 50  0001 C CNN
+F 3 "~" H 10250 2500 50  0001 C CNN
+	1    10250 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10150 2150 10150 2400
+Wire Wire Line
+	10150 2400 10100 2400
+Wire Wire Line
+	10100 2400 10100 2500
+Wire Wire Line
+	10400 2500 10400 2400
+Wire Wire Line
+	10400 2400 10300 2400
+Wire Wire Line
+	10300 2400 10300 2250
+Connection ~ 10300 2250
+Wire Wire Line
+	10300 2250 10350 2250
+$Comp
+L DRV8424PPWPR:DRV8424PPWPR IC3
+U 1 1 6154646A
+P 8750 4100
+F 0 "IC3" H 9450 4365 50  0000 C CNN
+F 1 "DRV8424PPWPR" H 9450 4274 50  0000 C CNN
+F 2 "SOP65P640X120-29N" H 10000 4200 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F" H 10000 4100 50  0001 L CNN
+F 4 "Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125" H 10000 4000 50  0001 L CNN "Description"
+F 5 "1.2" H 10000 3900 50  0001 L CNN "Height"
+F 6 "595-DRV8424PPWPR" H 10000 3800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8424PPWPR?qs=CiayqK2gdcKHVqboqYVmRA%3D%3D" H 10000 3700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 10000 3600 50  0001 L CNN "Manufacturer_Name"
+F 9 "DRV8424PPWPR" H 10000 3500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 61546470
+P 10550 5400
+F 0 "C26" V 10802 5400 50  0000 C CNN
+F 1 "0.47u" V 10711 5400 50  0000 C CNN
+F 2 "C0402C474K9RACTU:CAPC1005X55N" H 10588 5250 50  0001 C CNN
+F 3 "~" H 10550 5400 50  0001 C CNN
+	1    10550 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10950 5400 10950 5500
+Wire Wire Line
+	10700 5400 10950 5400
+$Comp
+L power:GND #PWR0107
+U 1 1 61546478
+P 10950 5500
+F 0 "#PWR0107" H 10950 5250 50  0001 C CNN
+F 1 "GND" H 10955 5327 50  0000 C CNN
+F 2 "" H 10950 5500 50  0001 C CNN
+F 3 "" H 10950 5500 50  0001 C CNN
+	1    10950 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND1 #PWR0108
+U 1 1 6154647E
+P 9450 6150
+F 0 "#PWR0108" H 9450 5900 50  0001 C CNN
+F 1 "GND1" H 9455 5977 50  0000 C CNN
+F 2 "" H 9450 6150 50  0001 C CNN
+F 3 "" H 9450 6150 50  0001 C CNN
+	1    9450 6150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9450 5900 9450 6150
+Connection ~ 9450 6150
+Wire Wire Line
+	9450 6150 9450 6350
+$Comp
+L Device:C C20
+U 1 1 61546487
+P 8300 4100
+F 0 "C20" V 8048 4100 50  0000 C CNN
+F 1 "0.22u" V 8139 4100 50  0000 C CNN
+F 2 "C0402C224M4RACTU:CAPC1005X55N" H 8338 3950 50  0001 C CNN
+F 3 "~" H 8300 4100 50  0001 C CNN
+	1    8300 4100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8450 4100 8750 4100
+Wire Wire Line
+	8150 4100 8150 4200
+Wire Wire Line
+	8150 4200 8750 4200
+Wire Wire Line
+	8750 5300 8400 5300
+Wire Wire Line
+	8400 5300 8400 5550
+Connection ~ 8400 5300
+Wire Wire Line
+	8150 4200 8000 4200
+Connection ~ 8150 4200
+Wire Wire Line
+	8000 4200 8000 4400
+Text Label 8000 4200 0    50   ~ 0
+Vm
+$Comp
+L Device:C C17
+U 1 1 61546497
+P 8000 4550
+F 0 "C17" H 8115 4596 50  0000 L CNN
+F 1 "0.01u" H 8115 4505 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 8038 4400 50  0001 C CNN
+F 3 "~" H 8000 4550 50  0001 C CNN
+	1    8000 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8000 4700 8000 4850
+Text Label 9450 6050 0    50   ~ 0
+AGND
+Text Label 10950 5400 0    50   ~ 0
+DGND
+$Comp
+L Device:C C22
+U 1 1 615464A0
+P 8400 5700
+F 0 "C22" H 8515 5746 50  0000 L CNN
+F 1 "0.01u" H 8515 5655 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 8438 5550 50  0001 C CNN
+F 3 "~" H 8400 5700 50  0001 C CNN
+	1    8400 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 5850 8400 6050
+Text Label 8400 6050 0    50   ~ 0
+AGND
+Text Label 8050 6250 3    50   ~ 0
+AGND
+Wire Wire Line
+	10150 5100 10300 5100
+Wire Wire Line
+	10150 5200 10300 5200
+Wire Wire Line
+	10300 5200 10300 5100
+Wire Wire Line
+	10300 5100 10400 5100
+Connection ~ 10300 5100
+Text Label 10400 5100 0    50   ~ 0
+MCU_DAC
+Wire Wire Line
+	10150 4800 10350 4800
+Wire Wire Line
+	10150 4900 10350 4900
+Wire Wire Line
+	10150 5000 10350 5000
+Text Label 10350 4800 0    50   ~ 0
+DGND
+Text Label 10350 4900 0    50   ~ 0
+DGND
+Text Label 10350 5000 0    50   ~ 0
+DGND
+Wire Wire Line
+	10150 4400 10700 4400
+Text Label 10700 4400 0    50   ~ 0
+PWM1
+Wire Wire Line
+	10150 4500 10700 4500
+Text Label 10700 4500 0    50   ~ 0
+PWM2
+Wire Wire Line
+	10150 4300 10450 4300
+Text Label 10450 4300 0    50   ~ 0
+nsleep
+Wire Wire Line
+	10150 4100 10150 4000
+$Comp
+L Device:C C25
+U 1 1 615464BE
+P 10500 4000
+F 0 "C25" V 10248 4000 50  0000 C CNN
+F 1 "0.022u" V 10339 4000 50  0000 C CNN
+F 2 "C1206C223KMRECTU:CAPC3216X88N" H 10538 3850 50  0001 C CNN
+F 3 "~" H 10500 4000 50  0001 C CNN
+	1    10500 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10150 4000 10350 4000
+Wire Wire Line
+	10650 4000 10650 4200
+Wire Wire Line
+	10650 4200 10150 4200
+Wire Wire Line
+	10150 5300 10200 5300
+Wire Wire Line
+	8750 4400 8600 4400
+Text Label 8600 4400 0    50   ~ 0
+M3+
+Wire Wire Line
+	8750 4600 8600 4600
+Text Label 8600 4600 0    50   ~ 0
+M3-
+Wire Wire Line
+	8600 5200 8750 5200
+Connection ~ 8750 5200
+Wire Wire Line
+	8750 5200 8800 5200
+Text Label 8600 5200 0    50   ~ 0
+AGND
+Wire Wire Line
+	8750 5400 8600 5400
+Wire Wire Line
+	8600 5400 8600 5500
+Text Label 8600 5500 0    50   ~ 0
+DGND
+Wire Wire Line
+	8000 4850 7850 4850
+Wire Wire Line
+	8050 5300 7800 5300
+Wire Wire Line
+	8400 5300 8050 5300
+Connection ~ 8050 5300
+Wire Wire Line
+	8050 5300 8050 5550
+$Comp
+L UBT1C101MPD8TD:UBT1C101MPD8TD C18
+U 1 1 615464DE
+P 8050 5550
+F 0 "C18" V 8254 5680 50  0000 L CNN
+F 1 "100u" V 8345 5680 50  0000 L CNN
+F 2 "CAPPRD350W60D840H1350" H 8400 5600 50  0001 L CNN
+F 3 "" H 8400 5500 50  0001 L CNN
+F 4 "Aluminum Electrolytic Capacitors - Radial Leaded" H 8400 5400 50  0001 L CNN "Description"
+F 5 "13.5" H 8400 5300 50  0001 L CNN "Height"
+F 6 "647-UBT1C101MPD8TD" H 8400 5200 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D" H 8400 5100 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Nichicon" H 8400 5000 50  0001 L CNN "Manufacturer_Name"
+F 9 "UBT1C101MPD8TD" H 8400 4900 50  0001 L CNN "Manufacturer_Part_Number"
+	1    8050 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 6250 8050 6050
+Wire Wire Line
+	10150 5400 10350 5400
+$Comp
+L Device:R Rnfault3
+U 1 1 615464E6
+P 10300 5650
+F 0 "Rnfault3" V 10093 5650 50  0000 C CNN
+F 1 "4.7k" V 10184 5650 50  0000 C CNN
+F 2 "MCS04020D4701BE000:RESC1005X37N" V 10230 5650 50  0001 C CNN
+F 3 "~" H 10300 5650 50  0001 C CNN
+	1    10300 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	10200 5300 10200 5550
+Wire Wire Line
+	10200 5550 10150 5550
+Wire Wire Line
+	10150 5550 10150 5650
+Wire Wire Line
+	10450 5650 10450 5550
+Wire Wire Line
+	10450 5550 10350 5550
+Wire Wire Line
+	10350 5550 10350 5400
+Connection ~ 10350 5400
+Wire Wire Line
+	10350 5400 10400 5400
+Text Label 7850 4850 0    50   ~ 0
+AGND
+Text Label 7800 1700 2    50   ~ 0
+AGND
+Wire Wire Line
+	8500 1150 8700 1150
+Text Label 8500 1150 0    50   ~ 0
+AGND
+Wire Wire Line
+	8750 4300 8500 4300
+Text Label 8500 4300 0    50   ~ 0
+AGND
+Wire Wire Line
+	1600 5550 1600 5600
+Wire Wire Line
+	1600 5550 1300 5550
+Text Label 1300 5550 2    50   ~ 0
+AGND
+Text Label 650  6600 0    50   ~ 0
+Vm
+Text Label 700  6150 2    50   ~ 0
+AGND
+Text Label 7800 5300 2    50   ~ 0
+Vm
+Text Label 7750 2150 2    50   ~ 0
+Vm
+$Comp
+L TPS7B8333QDCYRQ1:TPS7B8333QDCYRQ1 IC6
+U 1 1 6164C5B3
+P 5000 5650
+F 0 "IC6" H 5600 5915 50  0000 C CNN
+F 1 "TPS7B8333QDCYRQ1" H 5600 5824 50  0000 C CNN
+F 2 "SOT230P700X180-4N" H 6050 5750 50  0001 L CNN
+F 3 "https://www.ti.com/lit/ds/symlink/tps7b83-q1.pdf?ts=1623315769706&ref_url=https%253A%252F%252Fwww.google.com%252F" H 6050 5650 50  0001 L CNN
+F 4 "LDO Voltage Regulators Automotive 150-mA, 40-V, ultra-low-IQ, low-dropout (LDO) linear regulator 4-SOT-223 -40 to 125" H 6050 5550 50  0001 L CNN "Description"
+F 5 "1.8" H 6050 5450 50  0001 L CNN "Height"
+F 6 "595-TPS7B8333QDCYRQ1" H 6050 5350 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS7B8333QDCYRQ1?qs=81r%252BiQLm7BRMqU6pzBTdwQ%3D%3D" H 6050 5250 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 6050 5150 50  0001 L CNN "Manufacturer_Name"
+F 9 "TPS7B8333QDCYRQ1" H 6050 5050 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5000 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 5650 4950 5650
+Text Label 4650 5650 0    50   ~ 0
+Vm
+Wire Wire Line
+	5000 5850 4850 5850
+Wire Wire Line
+	4850 5850 4850 6000
+Text Label 4850 6000 3    50   ~ 0
+3.3V_regulator
+Wire Wire Line
+	5000 5750 4800 5750
+Text Label 4800 5750 2    50   ~ 0
+AGND
+Wire Wire Line
+	6200 5650 6350 5650
+Text Label 6350 5650 0    50   ~ 0
+GND
+$Comp
+L SamacSys_Parts:LTL2T3TGK6 LED1
+U 1 1 6168C5E4
+P 5400 6850
+F 0 "LED1" V 5746 6720 50  0000 R CNN
+F 1 "LTL2T3TGK6" V 5655 6720 50  0000 R CNN
+F 2 "LTL2T3TGK6" H 5900 7000 50  0001 L BNN
+F 3 "https://componentsearchengine.com/Datasheets/1/LTL2T3TGK6.pdf" H 5900 6900 50  0001 L BNN
+F 4 "Standard LEDs - Through Hole Green Clear 525nm" H 5900 6800 50  0001 L BNN "Description"
+F 5 "9.2" H 5900 6700 50  0001 L BNN "Height"
+F 6 "859-LTL2T3TGK6" H 5900 6600 50  0001 L BNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=859-LTL2T3TGK6" H 5900 6500 50  0001 L BNN "Mouser Price/Stock"
+F 8 "Lite-On" H 5900 6400 50  0001 L BNN "Manufacturer_Name"
+F 9 "LTL2T3TGK6" H 5900 6300 50  0001 L BNN "Manufacturer_Part_Number"
+	1    5400 6850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R_SleepLED2
+U 1 1 6168ED78
+P 5400 7200
+F 0 "R_SleepLED2" H 5470 7246 50  0000 L CNN
+F 1 "330" H 5470 7155 50  0000 L CNN
+F 2 "RS73F1JTTD3300D:RESC1608X55N" V 5330 7200 50  0001 C CNN
+F 3 "~" H 5400 7200 50  0001 C CNN
+	1    5400 7200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 7350 5400 7500
+Text Label 5400 7500 0    50   ~ 0
+DGND
+Wire Wire Line
+	5400 7050 5400 6850
+Wire Wire Line
+	5400 6250 5400 6000
+Wire Wire Line
+	5400 6000 5050 6000
+Text Notes 5600 6800 0    50   ~ 0
+Board is ON indicator\n
+Wire Notes Line
+	3750 950  6750 950 
+Wire Notes Line
+	6750 950  6750 2400
+Wire Notes Line
+	6750 2400 3750 2400
+Wire Notes Line
+	3750 2400 3750 950 
+Wire Notes Line
+	3050 500  3050 2400
+Wire Notes Line
+	500  2400 500  500 
+Wire Notes Line
+	500  500  3050 500 
+Wire Notes Line
+	500  2400 3050 2400
+Wire Notes Line
+	500  5000 4050 5000
+Wire Notes Line
+	4050 5000 4050 7750
+Wire Notes Line
+	4050 7750 500  7750
+Wire Notes Line
+	500  7750 500  5000
+Wire Notes Line
+	4550 5300 6700 5300
+Wire Notes Line
+	6700 5300 6700 7600
+Wire Notes Line
+	6700 7600 4550 7600
+Wire Notes Line
+	4550 7600 4550 5300
+Wire Notes Line
+	4400 3150 6750 3150
+Wire Notes Line
+	6750 3150 6750 4850
+Wire Notes Line
+	6750 4850 4400 4850
+Wire Notes Line
+	4400 4850 4400 3150
+Wire Notes Line
+	7400 3700 11150 3700
+Wire Notes Line
+	11150 3700 11150 6500
+Wire Notes Line
+	11150 6500 7400 6500
+Wire Notes Line
+	7400 6500 7400 3700
+Wire Notes Line
+	7400 550  11200 550 
+Wire Notes Line
+	11200 550  11200 3400
+Wire Notes Line
+	11200 3400 7400 3400
+Wire Notes Line
+	7400 3400 7400 550 
+Text Notes 5400 3050 0    50   ~ 0
+Connectors\n
+Text Notes 2850 4750 0    50   ~ 0
+M1 driver\n
+Text Notes 3250 7600 0    50   ~ 0
+M2 Driver\n
+Text Notes 4900 1150 0    50   ~ 0
+Current Sensing
+Text Notes 7350 7500 0    50   ~ 0
+4-Channel Brushed DC Motor Controller
+Text Notes 8150 7650 0    50   ~ 0
+21st September 2021
+Text Notes 8450 7750 0    50   ~ 0
+Mohamed Ibrahim
+$Comp
+L Device:C C14
+U 1 1 61612080
+P 5050 6250
+F 0 "C14" H 5165 6296 50  0000 L CNN
+F 1 "0.01u" H 5165 6205 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 5088 6100 50  0001 C CNN
+F 3 "~" H 5050 6250 50  0001 C CNN
+	1    5050 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 6400 5050 6550
+Text Label 5050 6550 3    50   ~ 0
+AGND
+Wire Wire Line
+	5050 6100 5050 6000
+Connection ~ 5050 6000
+Wire Wire Line
+	5050 6000 4850 6000
+Wire Wire Line
+	4950 5600 4950 5650
+Connection ~ 4950 5650
+Wire Wire Line
+	4950 5650 4650 5650
+$Comp
+L Device:C C13
+U 1 1 6160201A
+P 4950 5450
+F 0 "C13" H 5065 5496 50  0000 L CNN
+F 1 "0.01u" H 5065 5405 50  0000 L CNN
+F 2 "HMK105B7103KVHFE:CAPC1005X55N" H 4988 5300 50  0001 C CNN
+F 3 "~" H 4950 5450 50  0001 C CNN
+	1    4950 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4950 5300 4950 5200
+Text Label 4950 5200 0    50   ~ 0
+AGND
+Wire Wire Line
+	3000 5900 3550 5900
+Wire Wire Line
+	3000 6000 3550 6000
+Wire Wire Line
+	10150 4600 10700 4600
+Wire Wire Line
+	10150 4700 10700 4700
+Text Label 10700 4600 0    50   ~ 0
+DGND
+Text Label 10700 4700 0    50   ~ 0
+DGND
+Text Label 3550 5900 0    50   ~ 0
+DGND
+Text Label 3550 6000 0    50   ~ 0
+DGND
+Wire Wire Line
+	3000 3300 3550 3300
+Wire Wire Line
+	3000 3400 3550 3400
+Text Label 3550 3300 0    50   ~ 0
+DGND
+Text Label 3550 3400 0    50   ~ 0
+DGND
+Text Label 10400 1450 0    50   ~ 0
+DGND
+Text Label 10400 1550 0    50   ~ 0
+DGND
+$Comp
+L 1988930:1988930 J1
+U 1 1 6161CABA
+P 5750 3250
+F 0 "J1" H 6378 2596 50  0000 L CNN
+F 1 "1988930" H 6378 2505 50  0000 L CNN
+F 2 "1988930:1988930" H 6400 3350 50  0001 L CNN
+F 3 "https://www.mouser.it/datasheet/2/324/ItemDetail_1988930-923961.pdf" H 6400 3250 50  0001 L CNN
+F 4 "PCB Terminal Block 1988930" H 6400 3150 50  0001 L CNN "Description"
+F 5 "12.05" H 6400 3050 50  0001 L CNN "Height"
+F 6 "651-1988930" H 6400 2950 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1988930?qs=eiqBpq341KUF0DIPygZiFg%3D%3D" H 6400 2850 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Phoenix Contact" H 6400 2750 50  0001 L CNN "Manufacturer_Name"
+F 9 "1988930" H 6400 2650 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 3250 5550 3250
+Wire Wire Line
+	5750 3350 5550 3350
+Text Label 5550 4350 2    50   ~ 0
+AGND
+Text Label 5550 4450 2    50   ~ 0
+DGND
+Wire Wire Line
+	5750 3450 5550 3450
+Wire Wire Line
+	5750 3550 5550 3550
+Wire Wire Line
+	5750 3650 5550 3650
+Wire Wire Line
+	5750 3750 5550 3750
+Wire Wire Line
+	5750 3850 5550 3850
+Wire Wire Line
+	5750 3950 5550 3950
+Wire Wire Line
+	5750 4050 5550 4050
+Wire Wire Line
+	5750 4150 5550 4150
+Wire Wire Line
+	5750 4250 5550 4250
+Wire Wire Line
+	5750 4350 5550 4350
+Wire Wire Line
+	5750 4450 5550 4450
+Wire Wire Line
+	5750 4550 5550 4550
+Wire Wire Line
+	5750 4650 5550 4650
+Text Label 5550 3550 2    50   ~ 0
+M1+
+Text Label 5550 3650 2    50   ~ 0
+M1-
+Text Label 5550 3750 2    50   ~ 0
+M2+
+Text Label 5550 3850 2    50   ~ 0
+M2-
+Text Label 5550 3950 2    50   ~ 0
+M3+
+Text Label 5550 4050 2    50   ~ 0
+M3-
+Text Label 5550 4150 2    50   ~ 0
+M4+
+Text Label 5550 4550 2    50   ~ 0
+M4-
+Text Label 5550 3250 2    50   ~ 0
+PWM1
+Text Label 5550 3350 2    50   ~ 0
+PWM2
+Text Label 5550 3450 2    50   ~ 0
+PWM3
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 6190909B
+P 4850 4000
+F 0 "J2" V 4950 4000 50  0000 R CNN
+F 1 "Conn_01x05_Female" V 5050 4350 50  0000 R CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical" H 4850 4000 50  0001 C CNN
+F 3 "~" H 4850 4000 50  0001 C CNN
+	1    4850 4000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4650 4200 4650 4350
+Text Label 4650 4350 3    50   ~ 0
+MCU_DAC
+Wire Wire Line
+	4750 4200 4750 4350
+Text Label 4750 4350 3    50   ~ 0
+Current_sense
+Wire Wire Line
+	4850 4200 4850 4350
+Text Label 4850 4350 3    50   ~ 0
+DGND
+Wire Wire Line
+	4950 4200 4950 4350
+Text Label 4950 4350 3    50   ~ 0
+DGND
+Wire Wire Line
+	5050 4200 5050 4350
+Text Label 5050 4350 3    50   ~ 0
+DGND
+Text Label 5550 4650 2    50   ~ 0
+PWM4
+Text Label 5550 4250 2    50   ~ 0
+12V_supply
+$EndSCHEMATC

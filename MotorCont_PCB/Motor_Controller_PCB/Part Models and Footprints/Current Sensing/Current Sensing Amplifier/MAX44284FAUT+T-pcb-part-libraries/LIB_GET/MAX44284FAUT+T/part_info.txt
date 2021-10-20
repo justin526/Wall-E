@@ -1,0 +1,9 @@
+Manufacturer=Maxim Integrated
+PartNumber=MAX44284FAUT+T
+PartCategory=Integrated Circuit
+PackageCategory=SOT23 (6-Pin)
+PinCount=6
+Version=1.1
+Released=2020-01-31 15:30:24
+Downloaded=2021-09-20 05:34:15
+3D=Y

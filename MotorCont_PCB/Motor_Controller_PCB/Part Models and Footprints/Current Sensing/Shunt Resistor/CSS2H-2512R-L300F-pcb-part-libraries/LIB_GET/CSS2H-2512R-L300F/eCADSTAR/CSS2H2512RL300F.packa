@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "CSS2H-2512R-L300F"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-02-16-18:31:42)
+    (mountForm default
+        (footprintRef "CSS2H2512RL300F")
+        (spec "System")
+    )
+)

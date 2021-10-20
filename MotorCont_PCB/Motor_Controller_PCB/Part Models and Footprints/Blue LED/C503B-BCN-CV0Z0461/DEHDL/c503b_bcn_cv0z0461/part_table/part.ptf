@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'C503B_BCN_CV0Z0461'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET";
+{========================================================================================}
+ "Cree, Inc.", "C503B-BCN-CV0Z0461" (!) = "", "C503B-BCN", "Other", "941-C503BBCNCV0Z0461", "https://www.mouser.com/Search/Refine.aspx?Keyword=941-C503BBCNCV0Z0461", "Cree,LED,C503B-BCN-CV0Z0461", "https://componentsearchengine.com/Datasheets/1/C503B-BCN-CV0Z0461.pdf"
+END_PART
+
+END.

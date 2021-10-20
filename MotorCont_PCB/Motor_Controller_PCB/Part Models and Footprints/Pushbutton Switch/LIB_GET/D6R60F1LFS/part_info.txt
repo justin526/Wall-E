@@ -1,0 +1,9 @@
+Manufacturer=C & K COMPONENTS
+PartNumber=D6R60F1LFS
+PartCategory=Switch
+PackageCategory=Other
+PinCount=4
+Version=2.4
+Released=2018-05-01 11:47:33
+Downloaded=2021-09-20 03:39:39
+3D=N

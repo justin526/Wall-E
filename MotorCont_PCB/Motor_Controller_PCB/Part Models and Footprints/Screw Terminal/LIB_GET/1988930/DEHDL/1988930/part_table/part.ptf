@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART '1988930'
+CLASS = IO
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Phoenix Contact", "1988930" (!) = "", "1988930", "Other", "651-1988930", "https://www.mouser.co.uk/ProductDetail/Phoenix-Contact/1988930?qs=eiqBpq341KUF0DIPygZiFg%3D%3D", "PCB Terminal Block 1988930", "https://www.mouser.it/datasheet/2/324/ItemDetail_1988930-923961.pdf", "12.05 mm"
+END_PART
+
+END.

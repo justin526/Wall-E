@@ -1,0 +1,9 @@
+Manufacturer=Vishay
+PartNumber=MCS04020D1001BE000
+PartCategory=Resistor
+PackageCategory=Resistor Chip
+PinCount=2
+Version=1.1
+Released=2020-09-21 23:30:50
+Downloaded=2021-09-20 04:17:30
+3D=Y

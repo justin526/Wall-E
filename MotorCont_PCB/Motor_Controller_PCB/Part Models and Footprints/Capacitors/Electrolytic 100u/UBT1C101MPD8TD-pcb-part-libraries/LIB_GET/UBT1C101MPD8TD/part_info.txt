@@ -1,0 +1,9 @@
+Manufacturer=Nichicon
+PartNumber=UBT1C101MPD8TD
+PartCategory=Capacitor Polarised
+PackageCategory=Capacitor, Polarized Radial Diameter
+PinCount=2
+Version=1.1
+Released=2021-08-06 10:12:31
+Downloaded=2021-09-20 03:36:01
+3D=Y

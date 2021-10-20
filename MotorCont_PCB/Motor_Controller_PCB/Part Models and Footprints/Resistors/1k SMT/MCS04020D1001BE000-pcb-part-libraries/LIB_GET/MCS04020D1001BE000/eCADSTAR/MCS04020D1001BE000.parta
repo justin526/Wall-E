@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_12927734"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-21-23:30:50)
+    (utime 2020-09-21-23:30:50)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "MCS04020D1001BE000")
+)
+
+
+(pinAssign "ECS_12927734"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-21-23:30:50)
+    (utime 2020-09-21-23:30:50)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_12927734")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "MCS04020D1001BE000")
+)
+
+
+(part "MCS04020D1001BE000"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-21-23:30:50)
+    (utime 2020-09-21-23:30:50)
+    (packageRef "MCS04020D1001BE000")
+    (pinAssignRef "ECS_12927734")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "Vishay Resistor Chip 0402")
+    (property "Mouser_Part_Number" "594-MCS04020D1001BE0")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Vishay-Beyschlag/MCS04020D1001BE000?qs=H5EaGE3Pc5m43MFwYZQH1Q%3D%3D")
+    (property "Manufacturer_Name" "Vishay")
+    (property "Manufacturer_Part_Number" "MCS04020D1001BE000")
+    (property "Datasheet_Link" "http://www.vishay.com/docs/28705/mcx0x0xpro.pdf")
+    (property "compAreaTopHeight" 0.37)
+)
+
+

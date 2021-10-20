@@ -1,0 +1,294 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# CSS2H-2512R-L300F_CSS2H-2512R-L300F
+#
+DEF CSS2H-2512R-L300F_CSS2H-2512R-L300F R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CSS2H-2512R-L300F_CSS2H-2512R-L300F" 550 150 50 H V L CNN
+F2 "CSS2H2512RL300F" 550 50 50 H I L CNN
+F3 "http://www.bourns.com/docs/Product-Datasheets/css2h-2512.pdf" 550 -50 50 H I L CNN
+F4 "CURRENT SENSE SHUNT" 550 -150 50 H I L CNN "Description"
+F5 "1.75" 550 -250 50 H I L CNN "Height"
+F6 "652-CSS2H-2512RL300F" 550 -350 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Bourns/CSS2H-2512R-L300F?qs=5aG0NVq1C4z51we9vC1w9A%3D%3D" 550 -450 50 H I L CNN "Mouser Price/Stock"
+F8 "Bourns" 550 -550 50 H I L CNN "Manufacturer_Name"
+F9 "CSS2H-2512R-L300F" 550 -650 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# Connector_TestPoint
+#
+DEF Connector_TestPoint TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "Connector_TestPoint" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_C
+#
+DEF Device_C C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "Device_C" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R
+#
+DEF Device_R R 0 0 N Y 1 F N
+F0 "R" 80 0 50 V V C CNN
+F1 "Device_R" 0 0 50 V V C CNN
+F2 "" -70 0 50 V I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -40 -100 40 100 0 1 10 N
+X ~ 1 0 150 50 D 50 50 1 1 P
+X ~ 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_POT_Small
+#
+DEF Device_R_POT_Small RV 0 40 Y N 1 F N
+F0 "RV" -175 0 50 V V C CNN
+F1 "Device_R_POT_Small" -100 0 50 V V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Potentiometer*
+$ENDFPLIST
+DRAW
+S 30 71 -30 -71 0 1 10 N
+P 6 0 1 0 35 0 25 0 65 15 65 -15 25 0 35 0 F
+X 1 1 0 100 25 D 25 25 1 1 P
+X 2 2 100 0 39 L 25 25 1 1 P
+X 3 3 0 -100 25 U 25 25 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Device_R_Small
+#
+DEF Device_R_Small R 0 10 N N 1 F N
+F0 "R" 30 20 50 H V L CNN
+F1 "Device_R_Small" 30 -40 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ R_*
+$ENDFPLIST
+DRAW
+S -30 70 30 -70 0 1 8 N
+X ~ 1 0 100 30 D 50 50 1 1 P
+X ~ 2 0 -100 30 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# ECE477_motorcontroller-rescue_DRV8424PPWPR-DRV8424PPWPR
+#
+DEF ECE477_motorcontroller-rescue_DRV8424PPWPR-DRV8424PPWPR IC 0 30 Y Y 1 F N
+F0 "IC" 1250 300 50 H V L CNN
+F1 "ECE477_motorcontroller-rescue_DRV8424PPWPR-DRV8424PPWPR" 1250 200 50 H V L CNN
+F2 "SOP65P640X120-29N" 1250 100 50 H I L CNN
+F3 "https://www.ti.com/lit/ds/symlink/drv8424e.pdf?ts=1621759599316&ref_url=https%253A%252F%252Fwww.mouser.de%252F" 1250 0 50 H I L CNN
+F4 "Motor / Motion / Ignition Controllers & Drivers 35-V, 2.5-A bipolar stepper or dual brushed motor driver with integrated current sensing 28-HTSSOP -40 to 125" 1250 -100 50 H I L CNN "Description"
+F5 "1.2" 1250 -200 50 H I L CNN "Height"
+F6 "595-DRV8424PPWPR" 1250 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/DRV8424PPWPR?qs=CiayqK2gdcKHVqboqYVmRA%3D%3D" 1250 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1250 -500 50 H I L CNN "Manufacturer_Name"
+F9 "DRV8424PPWPR" 1250 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1200 100 1200 -1600 200 -1600 200 100 N
+X VCP 1 0 0 200 R 50 50 0 0 P
+X BOUT1_1 10 0 -900 200 R 50 50 0 0 P
+X BOUT1_2 11 0 -1000 200 R 50 50 0 0 P
+X PGND_2 12 0 -1100 200 R 50 50 0 0 P
+X VM_2 13 0 -1200 200 R 50 50 0 0 P
+X GND 14 0 -1300 200 R 50 50 0 0 P
+X DVDD 15 1400 -1300 200 L 50 50 0 0 P
+X NFAULT 16 1400 -1200 200 L 50 50 0 0 P
+X VREFB 17 1400 -1100 200 L 50 50 0 0 P
+X VREFA 18 1400 -1000 200 L 50 50 0 0 P
+X TOFF 19 1400 -900 200 L 50 50 0 0 P
+X VM_1 2 0 -100 200 R 50 50 0 0 P
+X BDECAY 20 1400 -800 200 L 50 50 0 0 P
+X ADECAY 21 1400 -700 200 L 50 50 0 0 P
+X BIN2 22 1400 -600 200 L 50 50 0 0 P
+X BIN1 23 1400 -500 200 L 50 50 0 0 P
+X AIN2 24 1400 -400 200 L 50 50 0 0 P
+X AIN1 25 1400 -300 200 L 50 50 0 0 P
+X NSLEEP 26 1400 -200 200 L 50 50 0 0 P
+X CPL 27 1400 -100 200 L 50 50 0 0 P
+X CPH 28 1400 0 200 L 50 50 0 0 P
+X EP 29 700 -1800 200 U 50 50 0 0 P
+X PGND_1 3 0 -200 200 R 50 50 0 0 P
+X AOUT1_1 4 0 -300 200 R 50 50 0 0 P
+X AOUT1_2 5 0 -400 200 R 50 50 0 0 P
+X AOUT2_1 6 0 -500 200 R 50 50 0 0 P
+X AOUT2_2 7 0 -600 200 R 50 50 0 0 P
+X BOUT2_1 8 0 -700 200 R 50 50 0 0 P
+X BOUT2_2 9 0 -800 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# ECE477_motorcontroller-rescue_MAX44284FAUT+T-SamacSys_Parts
+#
+DEF ECE477_motorcontroller-rescue_MAX44284FAUT+T-SamacSys_Parts IC 0 30 Y Y 1 F N
+F0 "IC" 950 300 50 H V L CNN
+F1 "ECE477_motorcontroller-rescue_MAX44284FAUT+T-SamacSys_Parts" 950 200 50 H V L CNN
+F2 "SOT95P280X145-6N" 950 100 50 H I L CNN
+F3 "https://datasheets.maximintegrated.com/en/ds/MAX44284.pdf" 950 0 50 H I L CNN
+F4 "Current Sense Amplifiers -0.1~+36V, High Precision, Low Power Current-Sense Amplifier" 950 -100 50 H I L CNN "Description"
+F5 "1.45" 950 -200 50 H I L CNN "Height"
+F6 "700-MAX44284FAUT+T" 950 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX44284FAUT%2bT/?qs=ZrtEiRxEuI5%2F3wig4C1EWg%3D%3D" 950 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Maxim Integrated" 950 -500 50 H I L CNN "Manufacturer_Name"
+F9 "MAX44284FAUT+T" 950 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 900 100 900 -300 200 -300 200 100 N
+X VDD 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X RS+ 3 0 -200 200 R 50 50 0 0 P
+X RS- 4 1100 -200 200 L 50 50 0 0 P
+X OUT 5 1100 -100 200 L 50 50 0 0 P
+X ~SHDN 6 1100 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# Mechanical_MountingHole
+#
+DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+# TB006-508-05BE_TB006-508-05BE
+#
+DEF TB006-508-05BE_TB006-508-05BE J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "TB006-508-05BE_TB006-508-05BE" 650 200 50 H V L CNN
+F2 "SHDR5W100P0X508_1X5_2540X820X1000P" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/TB006-508-05BE.pdf" 650 0 50 H I L CNN
+F4 "Fixed Terminal Blocks Terminal block, screw type, 5.08 , horizontal, 5 poles, CUI Blue, slotted screw, PCB mount" 650 -100 50 H I L CNN "Description"
+F5 "10" 650 -200 50 H I L CNN "Height"
+F6 "490-TB006-508-05BE" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/CUI-Devices/TB006-508-05BE?qs=vLWxofP3U2zWp61Z63O%252BtQ%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "CUI Inc." 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TB006-508-05BE" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -500 200 -500 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+X 3 3 0 -200 200 R 50 50 0 0 P
+X 4 4 0 -300 200 R 50 50 0 0 P
+X 5 5 0 -400 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# TPS7B8333QDCYRQ1_TPS7B8333QDCYRQ1
+#
+DEF TPS7B8333QDCYRQ1_TPS7B8333QDCYRQ1 IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "TPS7B8333QDCYRQ1_TPS7B8333QDCYRQ1" 1050 200 50 H V L CNN
+F2 "SOT230P700X180-4N" 1050 100 50 H I L CNN
+F3 "https://www.ti.com/lit/ds/symlink/tps7b83-q1.pdf?ts=1623315769706&ref_url=https%253A%252F%252Fwww.google.com%252F" 1050 0 50 H I L CNN
+F4 "LDO Voltage Regulators Automotive 150-mA, 40-V, ultra-low-IQ, low-dropout (LDO) linear regulator 4-SOT-223 -40 to 125" 1050 -100 50 H I L CNN "Description"
+F5 "1.8" 1050 -200 50 H I L CNN "Height"
+F6 "595-TPS7B8333QDCYRQ1" 1050 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS7B8333QDCYRQ1?qs=81r%252BiQLm7BRMqU6pzBTdwQ%3D%3D" 1050 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Texas Instruments" 1050 -500 50 H I L CNN "Manufacturer_Name"
+F9 "TPS7B8333QDCYRQ1" 1050 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1000 100 1000 -300 200 -300 200 100 N
+X IN 1 0 0 200 R 50 50 0 0 P
+X GND_1 2 0 -100 200 R 50 50 0 0 P
+X OUT 3 0 -200 200 R 50 50 0 0 P
+X GND_2 4 1200 0 200 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# UBT1C101MPD8TD_UBT1C101MPD8TD
+#
+DEF UBT1C101MPD8TD_UBT1C101MPD8TD C 0 30 Y Y 1 F N
+F0 "C" 350 250 50 H V L CNN
+F1 "UBT1C101MPD8TD_UBT1C101MPD8TD" 350 150 50 H V L CNN
+F2 "CAPPRD350W60D840H1350" 350 50 50 H I L CNN
+F3 "" 350 -50 50 H I L CNN
+F4 "Aluminum Electrolytic Capacitors - Radial Leaded" 350 -150 50 H I L CNN "Description"
+F5 "13.5" 350 -250 50 H I L CNN "Height"
+F6 "647-UBT1C101MPD8TD" 350 -350 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Nichicon/UBT1C101MPD8TD?qs=16s%2F1Hm5%252BnesKtrYCNSh9w%3D%3D" 350 -450 50 H I L CNN "Mouser Price/Stock"
+F8 "Nichicon" 350 -550 50 H I L CNN "Manufacturer_Name"
+F9 "UBT1C101MPD8TD" 350 -650 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 160 70 160 30 N
+P 2 0 1 6 180 50 140 50 N
+P 2 0 1 6 300 0 400 0 N
+P 5 0 1 6 200 100 200 -100 230 -100 230 100 200 100 N
+P 5 0 1 10 300 100 300 -100 270 -100 270 100 300 100 F
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 500 0 100 L 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# power_GND1
+#
+DEF power_GND1 #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND1" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND1 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+#End Library

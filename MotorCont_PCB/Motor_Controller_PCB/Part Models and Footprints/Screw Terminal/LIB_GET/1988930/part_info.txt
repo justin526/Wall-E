@@ -1,0 +1,9 @@
+Manufacturer=Phoenix Contact
+PartNumber=1988930
+PartCategory=Connector
+PackageCategory=Other
+PinCount=15
+Version=1.2
+Released=2020-02-04 11:59:57
+Downloaded=2021-09-27 06:48:54
+3D=Y

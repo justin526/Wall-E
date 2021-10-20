@@ -1,0 +1,10 @@
+(unit MM)
+
+(package "CSS2H2512RL300F"
+    (type UNDEF)
+    (uver 2)
+    (mountForm default
+        (footprintRef "CSS2H2512RL300F")
+        (spec "default")
+    )
+)

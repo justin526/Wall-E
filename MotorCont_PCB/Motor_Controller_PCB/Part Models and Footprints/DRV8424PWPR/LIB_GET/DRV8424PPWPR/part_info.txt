@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=DRV8424PPWPR
+PartCategory=Integrated Circuit
+PackageCategory=Small Outline Packages
+PinCount=29
+Version=1.1
+Released=2021-08-05 10:15:38
+Downloaded=2021-09-20 01:46:05
+3D=Y

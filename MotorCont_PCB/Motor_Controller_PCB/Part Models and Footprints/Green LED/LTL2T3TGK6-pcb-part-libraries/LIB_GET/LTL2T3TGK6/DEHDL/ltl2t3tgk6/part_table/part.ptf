@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'LTL2T3TGK6'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Lite-On", "LTL2T3TGK6" (!) = "", "LTL2T3TGK6", "Other", "859-LTL2T3TGK6", "https://www.mouser.com/Search/Refine.aspx?Keyword=859-LTL2T3TGK6", "Standard LEDs - Through Hole Green Clear 525nm", "https://componentsearchengine.com/Datasheets/1/LTL2T3TGK6.pdf", "9.2 mm"
+END_PART
+
+END.

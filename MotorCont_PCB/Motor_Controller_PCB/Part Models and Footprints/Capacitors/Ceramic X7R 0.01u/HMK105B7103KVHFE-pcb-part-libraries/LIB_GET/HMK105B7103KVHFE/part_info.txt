@@ -1,0 +1,9 @@
+Manufacturer=TAIYO YUDEN
+PartNumber=HMK105B7103KVHFE
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.1
+Released=2021-08-27 06:36:50
+Downloaded=2021-09-20 04:41:47
+3D=Y

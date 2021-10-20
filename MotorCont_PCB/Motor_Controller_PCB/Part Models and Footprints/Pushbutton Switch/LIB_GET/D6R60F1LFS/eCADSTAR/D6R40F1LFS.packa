@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "D6R60F1LFS"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2021-05-02-15:28:42)
+    (mountForm default
+        (footprintRef "D6R40F1LFS")
+        (spec "System")
+    )
+)
