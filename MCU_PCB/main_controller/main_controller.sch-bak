@@ -1500,8 +1500,8 @@ Connection ~ 10300 3650
 Text GLabel 10550 3650 2    50   Input ~ 0
 NRST
 Wire Wire Line
-	10300 4050 10300 4150
-Text GLabel 10300 4150 3    50   Input ~ 0
+	10300 4350 10300 4450
+Text GLabel 10300 4450 3    50   Input ~ 0
 GND
 Text GLabel 1250 4450 1    50   Input ~ 0
 3V3
@@ -1580,4 +1580,15 @@ Text GLabel 6050 4500 3    50   Input ~ 0
 SPARE_6
 Text GLabel 6150 4500 3    50   Input ~ 0
 SPARE_7
+$Comp
+L Device:C C?
+U 1 1 6171B46B
+P 10300 4200
+F 0 "C?" H 10415 4246 50  0000 L CNN
+F 1 "C" H 10415 4155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10338 4050 50  0001 C CNN
+F 3 "~" H 10300 4200 50  0001 C CNN
+	1    10300 4200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
