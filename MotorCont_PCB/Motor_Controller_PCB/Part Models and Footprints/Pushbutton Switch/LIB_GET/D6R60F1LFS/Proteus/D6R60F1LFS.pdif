@@ -1,0 +1,119 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "D6R60F1LFS"
+   (description "Pushbutton Switches Key Switch SPST NO 100 mA")
+   (family "SWI")
+   (package "D6R40F1LFS")
+   (attribute "Datasheet Link" "https://www.mouser.co.uk/datasheet/2/60/d6-1382571.pdf")
+   (attribute "Geometry.Height" "14.3mm")
+   (attribute "Mouser Part Number" "611-D6R60F1LFS")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/CK/D6R60F1LFS?qs=sb%252But3Lm4x0VR1WI58%252Bz2w%3D%3D")
+   (attribute "Manufacturer_Name" "C & K COMPONENTS")
+   (attribute "Manufacturer_Part_Number" "D6R60F1LFS")
+   (gate
+    (symbol "D6R60F1LFS")
+    (pin "COM_1" 1 PS)
+    (pin "COM_2" 2 PS)
+    (pin "NO_1" 3 PS)
+    (pin "NO_2" 4 PS)
+   )
+  )
+  (symbol "D6R60F1LFS"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 200 100) (pt 1000 100) (pt 1000 -200) (pt 200 -200) (pt 200 100) (closed))
+   )
+   (terminal
+    (body (symbol "PIN") (pt 0 0) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 0) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 0 -100) (rot 0) (mir 0) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PIN") (pt 1200 -100) (rot 0) (mir X) (visible true))
+    (name (pt 230 0) (rot 0) (just MIDDLE LEFT) (visible true))
+    (number (pt 140 20) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "D6R40F1LFS"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -4.5 4.52)
+      (pt 9.5 4.52)
+      (pt 9.5 -9.48)
+      (pt -4.5 -9.48)
+      (pt -4.5 4.52))))
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed true)
+      (pt -3.5 -2.48)
+      (arc (pt -3.500 -2.480) (pt -3.500 -8.480) (pt 8.500 3.520) (start 180.0) (sweep -180.0))
+      (pt 8.5 -2.48)
+      (arc (pt 8.500 -2.480) (pt -3.500 -8.480) (pt 8.500 3.520) (start 180.0) (sweep .0))
+      (pt -3.5 -2.48))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -3.5 -2.48)
+      (arc (pt -3.500 -2.480) (pt -3.500 -8.480) (pt 8.500 3.520) (start 180.0) (sweep -180.0))
+      (pt 8.5 -2.48)
+      (arc (pt 8.500 -2.480) (pt -3.500 -8.480) (pt 8.500 3.520) (start 180.0) (sweep .0))
+      (pt -3.5 -2.48))))
+   (layer TASM
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2.9 0.12)
+      (pt -2.9 -5.08))))
+   (layer TSLK
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.9 0.12)
+      (pt -2.9 -5.08))))
+   (leg 1 (pt 0.000 0.020) (padstack 0))
+   (leg 2 (pt 5.000 0.020) (padstack 0))
+   (leg 3 (pt 0.000 -4.980) (padstack 0))
+   (leg 4 (pt 5.000 -4.980) (padstack 0))
+   (padstack 0
+    (hole 1.1)
+    (plated true)
+    (pad (layer TCOP) (round 2.200))
+    (pad (layer INNER) (round 2.200))
+    (pad (layer BCOP) (round 2.200))
+   )
+  )
+ )
+)

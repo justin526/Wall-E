@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_13195251"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-04-01-04:23:24)
+    (utime 2021-04-01-04:23:24)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "RS73F1JTTD3300D")
+)
+
+
+(pinAssign "ECS_13195251"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-04-01-04:23:24)
+    (utime 2021-04-01-04:23:24)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_13195251")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "RS73F1JTTD3300D")
+)
+
+
+(part "RS73F1JTTD3300D"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2021-04-01-04:23:24)
+    (utime 2021-04-01-04:23:24)
+    (packageRef "RS73F1JTTD3300D")
+    (pinAssignRef "ECS_13195251")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "Thick Film Resistors - SMD High Precision Flat Chip Resistor")
+    (property "Mouser_Part_Number" "660-RS73F1JTTD3300D")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/KOA-Speer/RS73F1JTTD3300D?qs=GBLSl2Akirv8vAcGYB65Vg%3D%3D")
+    (property "Manufacturer_Name" "KOA Speer")
+    (property "Manufacturer_Part_Number" "RS73F1JTTD3300D")
+    (property "Datasheet_Link" "https://www.mouser.de/datasheet/2/219/RS73-1759534.pdf")
+    (property "compAreaTopHeight" 0.55)
+)
+
+

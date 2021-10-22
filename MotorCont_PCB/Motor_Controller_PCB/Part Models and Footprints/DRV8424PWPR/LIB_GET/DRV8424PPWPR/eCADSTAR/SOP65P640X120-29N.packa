@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "DRV8424PPWPR"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-10-01-13:14:51)
+    (mountForm default
+        (footprintRef "SOP65P640X120-29N")
+        (spec "System")
+    )
+)

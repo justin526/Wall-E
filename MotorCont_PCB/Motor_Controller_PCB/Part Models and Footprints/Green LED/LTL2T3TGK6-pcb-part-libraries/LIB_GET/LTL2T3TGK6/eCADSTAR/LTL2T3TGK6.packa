@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "LTL2T3TGK6"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2020-09-20-18:30:45)
+    (mountForm default
+        (footprintRef "LTL2T3TGK6")
+        (spec "System")
+    )
+)

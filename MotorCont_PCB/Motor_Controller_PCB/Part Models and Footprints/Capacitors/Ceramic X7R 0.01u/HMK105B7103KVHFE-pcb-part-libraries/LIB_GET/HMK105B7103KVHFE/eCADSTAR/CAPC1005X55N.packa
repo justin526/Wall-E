@@ -1,0 +1,13 @@
+(unit MM)
+
+(package "HMK105B7103KVHFE"
+    (type UNDEF)
+    (uver 2)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (utime 2019-08-26-09:16:09)
+    (mountForm default
+        (footprintRef "CAPC1005X55N")
+        (spec "System")
+    )
+)

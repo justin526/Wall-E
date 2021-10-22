@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=C1206C223KMRECTU
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.2
+Released=2020-07-31 02:45:15
+Downloaded=2021-09-20 04:56:17
+3D=Y

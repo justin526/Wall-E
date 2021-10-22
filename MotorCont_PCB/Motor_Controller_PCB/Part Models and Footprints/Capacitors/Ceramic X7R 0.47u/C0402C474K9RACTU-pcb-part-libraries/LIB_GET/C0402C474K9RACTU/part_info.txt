@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=C0402C474K9RACTU
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.1
+Released=2021-05-22 04:25:22
+Downloaded=2021-09-20 05:23:34
+3D=Y

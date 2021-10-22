@@ -1,0 +1,9 @@
+Manufacturer=Texas Instruments
+PartNumber=TPS7B8333QDCYRQ1
+PartCategory=Integrated Circuit
+PackageCategory=SOT223 (3-Pin)
+PinCount=4
+Version=1.1
+Released=2021-06-11 05:31:38
+Downloaded=2021-09-20 06:46:18
+3D=Y

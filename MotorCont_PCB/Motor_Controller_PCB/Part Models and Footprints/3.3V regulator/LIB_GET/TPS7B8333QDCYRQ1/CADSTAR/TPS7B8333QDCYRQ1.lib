@@ -1,0 +1,16 @@
+.TPS7B8333QDCYRQ1 :1 ;LDO Voltage Regulators Automotive 150-mA, 40-V, ultra-low-IQ, low-dropout (LDO) linear regulator 4-SOT-223 -40 to 125
+SOT230P700X180-4N
+*STM IC
+*NGS
+*PLB 1="IN" 2="GND_1" 3="OUT" 4="GND_2"
+*MXP 4
+*DFN TPS7B8333QDCYRQ1
+~!Mouser Part Number (595-TPS7B8333QDCYRQ1)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS7B8333QDCYRQ1?qs=81r%252BiQLm7BRMqU6pzBTdwQ%3D%3D)
+~!Manufacturer_Name (Texas Instruments)
+~!Manufacturer_Part_Number (TPS7B8333QDCYRQ1)
+~!Link Datasheet (https://www.ti.com/lit/ds/symlink/tps7b83-q1.pdf?ts=1623315769706&ref_url=https%253A%252F%252Fwww.google.com%252F)
+~!Height (1.8mm)
+~!3D_Model (TPS7B8333QDCYRQ1)
+TPS7B8333QDCYRQ1
+1.1!U 2.1!U 3.1!U 4.1!U 

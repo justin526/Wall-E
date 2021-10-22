@@ -1,0 +1,9 @@
+Manufacturer=Cree, Inc.
+PartNumber=C503B-BCN-CV0Z0461
+PartCategory=LED
+PackageCategory=Other
+PinCount=2
+Version=1.2
+Released=2018-08-07 14:43:26
+Downloaded=2021-09-20 04:03:04
+3D=N

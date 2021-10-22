@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'TPS7B8333QDCYRQ1'
+CLASS = IC
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "Texas Instruments", "TPS7B8333QDCYRQ1" (!) = "", "SOT230P700X180-4N", "SOT223 (3-Pin)", "595-TPS7B8333QDCYRQ1", "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/TPS7B8333QDCYRQ1?qs=81r%252BiQLm7BRMqU6pzBTdwQ%3D%3D", "LDO Voltage Regulators Automotive 150-mA, 40-V, ultra-low-IQ, low-dropout (LDO) linear regulator 4-SOT-223 -40 to 125", "https://www.ti.com/lit/ds/symlink/tps7b83-q1.pdf?ts=1623315769706&ref_url=https%253A%252F%252Fwww.google.com%252F", "1.8 mm"
+END_PART
+
+END.

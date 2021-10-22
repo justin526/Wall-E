@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_1199045"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-20-18:30:45)
+    (utime 2020-09-21-06:26:37)
+    (interface
+        (port "1" (symbPinId 2) (portType INOUT))
+        (port "2" (symbPinId 1) (portType INOUT))
+    )
+    (property "symbolName" "LTL2T3TGK6")
+)
+
+
+(pinAssign "ECS_1199045"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-20-18:30:45)
+    (utime 2020-09-21-06:26:37)
+    (interface
+        (port "1" (symbPinId 2) (portName "A") (portType INOUT))
+        (port "2" (symbPinId 1) (portName "K") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_1199045")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "LTL2T3TGK6")
+)
+
+
+(part "LTL2T3TGK6"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-09-20-18:30:45)
+    (utime 2020-09-21-06:26:37)
+    (packageRef "LTL2T3TGK6")
+    (pinAssignRef "ECS_1199045")
+    (interface
+        (port "1" (symbPinId 2) (portName "A") (portType INOUT))
+        (port "2" (symbPinId 1) (portName "K") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "LED")
+    (property "description" "Standard LEDs - Through Hole Green Clear 525nm")
+    (property "Mouser_Part_Number" "859-LTL2T3TGK6")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=859-LTL2T3TGK6")
+    (property "Manufacturer_Name" "Lite-On")
+    (property "Manufacturer_Part_Number" "LTL2T3TGK6")
+    (property "Datasheet_Link" "https://componentsearchengine.com/Datasheets/1/LTL2T3TGK6.pdf")
+    (property "compAreaTopHeight" 9.2)
+)
+
+

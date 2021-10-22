@@ -1,0 +1,66 @@
+(Japanese_coding: sjis)
+(function "ECS_989872"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-02-16-18:31:42)
+    (utime 2020-02-17-07:04:13)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "CSS2H-2512R-L300F")
+)
+
+
+(pinAssign "ECS_989872"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-02-16-18:31:42)
+    (utime 2020-02-17-07:04:13)
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_989872")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "CSS2H-2512R-L300F")
+)
+
+
+(part "CSS2H-2512R-L300F"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2020-02-16-18:31:42)
+    (utime 2020-02-17-07:04:13)
+    (packageRef "CSS2H-2512R-L300F")
+    (pinAssignRef "ECS_989872")
+    (interface
+        (port "1" (symbPinId 1) (portName "1") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "2") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "NO")
+    (property "refDesPrefix" "R")
+    (property "description" "CURRENT SENSE SHUNT")
+    (property "Mouser_Part_Number" "652-CSS2H-2512RL300F")
+    (property "Mouser_Price/Stock" "https://www.mouser.co.uk/ProductDetail/Bourns/CSS2H-2512R-L300F?qs=5aG0NVq1C4z51we9vC1w9A%3D%3D")
+    (property "Manufacturer_Name" "Bourns")
+    (property "Manufacturer_Part_Number" "CSS2H-2512R-L300F")
+    (property "Datasheet_Link" "http://www.bourns.com/docs/Product-Datasheets/css2h-2512.pdf")
+    (property "compAreaTopHeight" 1.75)
+)
+
+

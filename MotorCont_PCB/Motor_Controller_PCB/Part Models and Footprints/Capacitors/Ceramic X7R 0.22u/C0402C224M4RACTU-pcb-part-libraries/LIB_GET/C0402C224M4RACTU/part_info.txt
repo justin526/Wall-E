@@ -1,0 +1,9 @@
+Manufacturer=Kemet
+PartNumber=C0402C224M4RACTU
+PartCategory=Capacitor
+PackageCategory=Capacitor Chip Non-polarised
+PinCount=2
+Version=1.1
+Released=2021-05-23 15:27:06
+Downloaded=2021-09-20 05:04:16
+3D=Y

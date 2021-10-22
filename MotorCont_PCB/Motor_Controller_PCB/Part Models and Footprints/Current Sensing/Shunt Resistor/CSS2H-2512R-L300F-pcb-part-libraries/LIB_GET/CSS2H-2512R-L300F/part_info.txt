@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=CSS2H-2512R-L300F
+PartCategory=Resistor
+PackageCategory=Other
+PinCount=2
+Version=1.4
+Released=2020-02-16 18:31:42
+Downloaded=2021-09-20 05:40:46
+3D=N

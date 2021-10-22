@@ -1,0 +1,11 @@
+FILE_TYPE = MULTI_PHYS_TABLE;
+
+PART 'D6R60F1LFS'
+CLASS = DISCRETE
+{========================================================================================}
+:"MANUFACTURER_NAME", "MANUFACTURER_PART_NUMBER"= "PART_NUMBER", "JEDEC_TYPE", "PACK_TYPE", "MOUSER_PART_NUMBER", "MOUSER_PRICE/STOCK", "DESCRIPTION", "DATASHEET", "HEIGHT";
+{========================================================================================}
+ "C & K COMPONENTS", "D6R60F1LFS" (!) = "", "D6R40F1LFS", "Other", "611-D6R60F1LFS", "https://www.mouser.co.uk/ProductDetail/CK/D6R60F1LFS?qs=sb%252But3Lm4x0VR1WI58%252Bz2w%3D%3D", "Pushbutton Switches Key Switch SPST NO 100 mA", "https://www.mouser.co.uk/datasheet/2/60/d6-1382571.pdf", "14.3 mm"
+END_PART
+
+END.

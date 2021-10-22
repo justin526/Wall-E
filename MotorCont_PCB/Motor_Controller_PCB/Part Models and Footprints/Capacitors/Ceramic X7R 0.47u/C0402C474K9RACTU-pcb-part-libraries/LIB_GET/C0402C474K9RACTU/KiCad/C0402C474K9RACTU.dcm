@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP C0402C474K9RACTU
+D Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 0.47uF X7R 0402 10%
+K
+F https://content.kemet.com/datasheets/KEM_C1002_X7R_SMD.pdf
+$ENDCMP
+#
+#End Doc Library

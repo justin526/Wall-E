@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MAX44284FAUT+T
+D Current Sense Amplifiers -0.1~+36V, High Precision, Low Power Current-Sense Amplifier
+K
+F https://datasheets.maximintegrated.com/en/ds/MAX44284.pdf
+$ENDCMP
+#
+#End Doc Library

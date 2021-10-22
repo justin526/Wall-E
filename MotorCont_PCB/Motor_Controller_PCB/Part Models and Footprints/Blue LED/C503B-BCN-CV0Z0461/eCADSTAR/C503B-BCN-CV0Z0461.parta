@@ -1,0 +1,65 @@
+(Japanese_coding: sjis)
+(function "ECS_665226"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-07-14:43:26)
+    (utime 2018-08-08-06:29:26)
+    (interface
+        (port "1" (symbPinId 1) (portType INOUT))
+        (port "2" (symbPinId 2) (portType INOUT))
+    )
+    (property "symbolName" "C503B-BCN-CV0Z0461")
+)
+
+
+(pinAssign "ECS_665226"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-07-14:43:26)
+    (utime 2018-08-08-06:29:26)
+    (interface
+        (port "1" (symbPinId 1) (portName "K") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "A") (portType INOUT))
+    )
+    (internal
+        (funcInst (functionRef "ECS_665226")
+                (port "1" (match "1"))
+                (port "2" (match "2"))
+        )
+    )
+    (property "usePowerBox" "No")
+    (property "symbolName" "C503B-BCN-CV0Z0461")
+)
+
+
+(part "C503B-BCN-CV0Z0461"
+    (uver 1)
+    (cuser "SamacSys")
+    (uuser "SamacSys")
+    (ctime 2018-08-07-14:43:26)
+    (utime 2018-08-08-06:29:26)
+    (packageRef "C503B-BCN-CV0Z0461")
+    (pinAssignRef "ECS_665226")
+    (interface
+        (port "1" (symbPinId 1) (portName "K") (portType INOUT))
+        (port "2" (symbPinId 2) (portName "A") (portType INOUT))
+    )
+    (partClass UNDEF)
+    (useInSchema Y)
+    (useInLayout Y)
+    (inPartsList Y)
+    (partType NORMAL)
+    (placeRestriction FREE)
+    (property "enetNonSeries" "YES")
+    (property "refDesPrefix" "LED")
+    (property "description" "Cree,LED,C503B-BCN-CV0Z0461")
+    (property "Mouser_Part_Number" "941-C503BBCNCV0Z0461")
+    (property "Mouser_Price/Stock" "https://www.mouser.com/Search/Refine.aspx?Keyword=941-C503BBCNCV0Z0461")
+    (property "Manufacturer_Name" "Cree, Inc.")
+    (property "Manufacturer_Part_Number" "C503B-BCN-CV0Z0461")
+    (property "Datasheet_Link" "https://componentsearchengine.com/Datasheets/1/C503B-BCN-CV0Z0461.pdf")
+)
+
+

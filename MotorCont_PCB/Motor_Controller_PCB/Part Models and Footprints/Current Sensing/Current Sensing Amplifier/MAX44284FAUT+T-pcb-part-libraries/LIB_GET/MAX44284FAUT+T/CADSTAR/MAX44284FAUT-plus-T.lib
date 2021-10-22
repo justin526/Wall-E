@@ -1,0 +1,16 @@
+.MAX44284FAUT-plus-T :1 ;Current Sense Amplifiers -0.1~+36V, High Precision, Low Power Current-Sense Amplifier
+SOT95P280X145-6N
+*STM IC
+*NGS
+*PLB 1="VDD" 2="GND" 3="RS+" 4="RS-" 5="OUT" 6="'SHDN'"
+*MXP 6
+*DFN MAX44284FAUT-plus-T
+~!Mouser Part Number (700-MAX44284FAUT+T)
+~!Link Mouser Price/Stock (https://www.mouser.co.uk/ProductDetail/Maxim-Integrated/MAX44284FAUT%2bT/?qs=ZrtEiRxEuI5%2F3wig4C1EWg%3D%3D)
+~!Manufacturer_Name (Maxim Integrated)
+~!Manufacturer_Part_Number (MAX44284FAUT+T)
+~!Link Datasheet (https://datasheets.maximintegrated.com/en/ds/MAX44284.pdf)
+~!Height (1.45mm)
+~!3D_Model (MAX44284FAUT+T)
+MAX44284FAUT-plus-T
+1.1!U 2.1!U 3.1!U 6.1!U 5.1!U 4.1!U 
