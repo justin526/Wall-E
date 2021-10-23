@@ -22,7 +22,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 3600 9450 3600
 $Comp
-L MCU_ST_STM32F4:STM32F446ZETx U1
+L main_controller-rescue:STM32F446ZETx-MCU_ST_STM32F4 U1
 U 1 1 61C19CF1
 P 5750 3300
 F 0 "U1" V 4150 3350 50  0000 R CNN
@@ -117,7 +117,7 @@ Wire Wire Line
 	9450 2700 9450 2600
 Connection ~ 9450 2700
 $Comp
-L power:+3.3V #PWR0101
+L main_controller-rescue:+3.3V-power #PWR0101
 U 1 1 61565A54
 P 9450 2600
 F 0 "#PWR0101" H 9450 2450 50  0001 C CNN
@@ -130,7 +130,7 @@ $EndComp
 Wire Wire Line
 	9350 3900 9450 3900
 $Comp
-L power:+3.3VA #PWR0102
+L main_controller-rescue:+3.3VA-power #PWR0102
 U 1 1 61566D94
 P 9450 3900
 F 0 "#PWR0102" H 9450 3750 50  0001 C CNN
@@ -141,7 +141,7 @@ F 3 "" H 9450 3900 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C_Small C17
+L main_controller-rescue:C_Small-Device C17
 U 1 1 61567A75
 P 8600 1900
 F 0 "C17" H 8450 2000 50  0000 L CNN
@@ -152,7 +152,7 @@ F 3 "~" H 8600 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C16
+L main_controller-rescue:C_Small-Device C16
 U 1 1 61568BB4
 P 8400 1900
 F 0 "C16" H 8100 1900 50  0000 L CNN
@@ -182,7 +182,7 @@ Wire Wire Line
 	2000 3700 1800 3700
 Connection ~ 2000 3700
 $Comp
-L power:GND #PWR0103
+L main_controller-rescue:GND-power #PWR0103
 U 1 1 61574799
 P 1800 3700
 F 0 "#PWR0103" H 1800 3450 50  0001 C CNN
@@ -193,7 +193,7 @@ F 3 "" H 1800 3700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0104
+L main_controller-rescue:GND-power #PWR0104
 U 1 1 61574E44
 P 8400 1700
 F 0 "#PWR0104" H 8400 1450 50  0001 C CNN
@@ -204,7 +204,7 @@ F 3 "" H 8400 1700 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0105
+L main_controller-rescue:GND-power #PWR0105
 U 1 1 615757E4
 P 8600 1700
 F 0 "#PWR0105" H 8600 1450 50  0001 C CNN
@@ -219,7 +219,7 @@ NRST
 Text GLabel 8750 2100 1    50   Input ~ 0
 BOOT0
 $Comp
-L Switch:SW_SPDT SW1
+L main_controller-rescue:SW_SPDT-Switch SW1
 U 1 1 615A5636
 P 7400 950
 F 0 "SW1" H 7400 1235 50  0000 C CNN
@@ -230,7 +230,7 @@ F 3 "~" H 7400 950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R1
+L main_controller-rescue:R_Small-Device R1
 U 1 1 615A77F7
 P 6900 950
 F 0 "R1" V 6704 950 50  0000 C CNN
@@ -247,7 +247,7 @@ Wire Wire Line
 Wire Wire Line
 	7600 850  7750 850 
 $Comp
-L power:GND #PWR0106
+L main_controller-rescue:GND-power #PWR0106
 U 1 1 615ACF23
 P 7750 1050
 F 0 "#PWR0106" H 7750 800 50  0001 C CNN
@@ -258,7 +258,7 @@ F 3 "" H 7750 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0107
+L main_controller-rescue:+3.3V-power #PWR0107
 U 1 1 615AD4AD
 P 7750 850
 F 0 "#PWR0107" H 7750 700 50  0001 C CNN
@@ -275,7 +275,7 @@ BOOT0
 Text Notes 6150 600  0    50   ~ 0
 Boot0 Pin Wiring. This affects programming the microcontroller.
 $Comp
-L Device:C_Small C1
+L main_controller-rescue:C_Small-Device C1
 U 1 1 615AF671
 P 7250 5800
 F 0 "C1" H 7342 5846 50  0000 L CNN
@@ -286,7 +286,7 @@ F 3 "~" H 7250 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C2
+L main_controller-rescue:C_Small-Device C2
 U 1 1 615B01A2
 P 7600 5800
 F 0 "C2" H 7692 5846 50  0000 L CNN
@@ -297,7 +297,7 @@ F 3 "~" H 7600 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C3
+L main_controller-rescue:C_Small-Device C3
 U 1 1 615B04AF
 P 8000 5800
 F 0 "C3" H 8092 5846 50  0000 L CNN
@@ -308,7 +308,7 @@ F 3 "~" H 8000 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C4
+L main_controller-rescue:C_Small-Device C4
 U 1 1 615B07D3
 P 8450 5800
 F 0 "C4" H 8542 5846 50  0000 L CNN
@@ -319,7 +319,7 @@ F 3 "~" H 8450 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C5
+L main_controller-rescue:C_Small-Device C5
 U 1 1 615B09E9
 P 9500 5400
 F 0 "C5" H 9592 5446 50  0000 L CNN
@@ -330,7 +330,7 @@ F 3 "~" H 9500 5400 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C_Small C6
+L main_controller-rescue:C_Small-Device C6
 U 1 1 615B14D3
 P 9050 5800
 F 0 "C6" H 9142 5846 50  0000 L CNN
@@ -341,7 +341,7 @@ F 3 "~" H 9050 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C7
+L main_controller-rescue:C_Small-Device C7
 U 1 1 615B184B
 P 9300 5800
 F 0 "C7" H 9392 5846 50  0000 L CNN
@@ -352,7 +352,7 @@ F 3 "~" H 9300 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C8
+L main_controller-rescue:C_Small-Device C8
 U 1 1 615B1A03
 P 9650 5800
 F 0 "C8" H 9742 5846 50  0000 L CNN
@@ -363,7 +363,7 @@ F 3 "~" H 9650 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C9
+L main_controller-rescue:C_Small-Device C9
 U 1 1 615B1D50
 P 9950 5800
 F 0 "C9" H 10042 5846 50  0000 L CNN
@@ -374,7 +374,7 @@ F 3 "~" H 9950 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C10
+L main_controller-rescue:C_Small-Device C10
 U 1 1 615B21D4
 P 10200 5800
 F 0 "C10" H 10292 5846 50  0000 L CNN
@@ -385,7 +385,7 @@ F 3 "~" H 10200 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C11
+L main_controller-rescue:C_Small-Device C11
 U 1 1 615B249C
 P 10450 5800
 F 0 "C11" H 10542 5846 50  0000 L CNN
@@ -396,7 +396,7 @@ F 3 "~" H 10450 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C12
+L main_controller-rescue:C_Small-Device C12
 U 1 1 615B2707
 P 10700 5800
 F 0 "C12" H 10792 5846 50  0000 L CNN
@@ -407,7 +407,7 @@ F 3 "~" H 10700 5800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C13
+L main_controller-rescue:C_Small-Device C13
 U 1 1 615B295A
 P 8750 5800
 F 0 "C13" H 8842 5846 50  0000 L CNN
@@ -537,7 +537,7 @@ Wire Wire Line
 Text Notes 8050 6250 0    50   ~ 0
 This is a set of decoupling capacitors per power pin pair
 $Comp
-L power:+3.3V #PWR0108
+L main_controller-rescue:+3.3V-power #PWR0108
 U 1 1 615E3CD3
 P 7250 5550
 F 0 "#PWR0108" H 7250 5400 50  0001 C CNN
@@ -553,7 +553,7 @@ Connection ~ 7250 5600
 Wire Wire Line
 	10950 6050 10950 6200
 $Comp
-L power:GND #PWR0109
+L main_controller-rescue:GND-power #PWR0109
 U 1 1 615EAA15
 P 10950 6200
 F 0 "#PWR0109" H 10950 5950 50  0001 C CNN
@@ -564,7 +564,7 @@ F 3 "" H 10950 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR0110
+L main_controller-rescue:+3.3V-power #PWR0110
 U 1 1 615EBEEB
 P 9400 850
 F 0 "#PWR0110" H 9400 700 50  0001 C CNN
@@ -575,7 +575,7 @@ F 3 "" H 9400 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L_Small L1
+L main_controller-rescue:L_Small-Device L1
 U 1 1 615EC99D
 P 9700 950
 F 0 "L1" V 9885 950 50  0000 C CNN
@@ -590,7 +590,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 950  9600 950 
 $Comp
-L Device:C_Small C14
+L main_controller-rescue:C_Small-Device C14
 U 1 1 615F51D3
 P 10050 1150
 F 0 "C14" H 9900 1200 50  0000 L CNN
@@ -601,7 +601,7 @@ F 3 "~" H 10050 1150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C15
+L main_controller-rescue:C_Small-Device C15
 U 1 1 615F5E22
 P 10450 1150
 F 0 "C15" H 10542 1196 50  0000 L CNN
@@ -627,7 +627,7 @@ Wire Wire Line
 Wire Wire Line
 	10050 1400 10050 1250
 $Comp
-L power:+3.3VA #PWR0112
+L main_controller-rescue:+3.3VA-power #PWR0112
 U 1 1 61602D74
 P 10450 950
 F 0 "#PWR0112" H 10450 800 50  0001 C CNN
@@ -649,7 +649,7 @@ Note: Need to check whether an oscillator is needed for MCU
 Wire Wire Line
 	700  6850 700  7050
 $Comp
-L Device:Polyfuse_Small F1
+L main_controller-rescue:Polyfuse_Small-Device F1
 U 1 1 61659C37
 P 1250 7050
 F 0 "F1" V 1045 7050 50  0000 C CNN
@@ -666,7 +666,7 @@ Wire Wire Line
 Text Notes 850  7350 0    25   ~ 0
 Filters the 7.5V
 $Comp
-L Connector:Conn_01x06_Female SWD1
+L main_controller-rescue:Conn_01x06_Female-Connector SWD1
 U 1 1 6167806A
 P 4250 6800
 F 0 "SWD1" H 4278 6776 50  0000 L CNN
@@ -697,7 +697,7 @@ SWDIO
 Text Notes 3300 6450 0    25   ~ 0
 This is based on the ST-Link Connector on the Dev board which can be used to program the microcontroller
 $Comp
-L Device:R_Small R3
+L main_controller-rescue:R_Small-Device R3
 U 1 1 6169F2BE
 P 3700 6900
 F 0 "R3" V 3500 6650 50  0000 C CNN
@@ -1003,7 +1003,7 @@ SWCLK
 Text GLabel 7750 4600 3    25   Input ~ 0
 SWDIO
 $Comp
-L Device:Ferrite_Bead_Small FB1
+L main_controller-rescue:Ferrite_Bead_Small-Device FB1
 U 1 1 6166E711
 P 1450 7050
 F 0 "FB1" V 1213 7050 50  0000 C CNN
@@ -1018,7 +1018,7 @@ Wire Notes Line
 Wire Notes Line
 	3150 4850 5600 4850
 $Comp
-L Device:LED D2
+L main_controller-rescue:LED-Device D2
 U 1 1 616FF460
 P 3400 5450
 F 0 "D2" V 3439 5332 50  0000 R CNN
@@ -1033,7 +1033,7 @@ Decoupling Capacitors
 Wire Wire Line
 	3400 5300 3400 5150
 $Comp
-L power:GND #PWR0121
+L main_controller-rescue:GND-power #PWR0121
 U 1 1 61724BA1
 P 3400 6000
 F 0 "#PWR0121" H 3400 5750 50  0001 C CNN
@@ -1048,7 +1048,7 @@ Wire Wire Line
 Wire Wire Line
 	3400 5600 3400 5750
 $Comp
-L Device:R_Small R4
+L main_controller-rescue:R_Small-Device R4
 U 1 1 6171293D
 P 3400 5850
 F 0 "R4" H 3341 5804 50  0000 R CNN
@@ -1059,7 +1059,7 @@ F 3 "~" H 3400 5850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+3.3V #PWR0120
+L main_controller-rescue:+3.3V-power #PWR0120
 U 1 1 617069B7
 P 3400 5150
 F 0 "#PWR0120" H 3400 5000 50  0001 C CNN
@@ -1070,7 +1070,7 @@ F 3 "" H 3400 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:Crystal_GND24_Small Y1
+L main_controller-rescue:Crystal_GND24_Small-Device Y1
 U 1 1 617F7C95
 P 1050 3200
 F 0 "Y1" H 1194 3200 50  0000 L CNN
@@ -1081,7 +1081,7 @@ F 3 "~" H 1050 3200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0113
+L main_controller-rescue:GND-power #PWR0113
 U 1 1 618093BF
 P 1050 3450
 F 0 "#PWR0113" H 1050 3200 50  0001 C CNN
@@ -1110,7 +1110,7 @@ HSE_OUT
 Text GLabel 850  3000 1    50   Input ~ 0
 HSE_IN
 $Comp
-L Device:C_Small C21
+L main_controller-rescue:C_Small-Device C21
 U 1 1 6183BBDD
 P 1350 3300
 F 0 "C21" H 1442 3346 50  0000 L CNN
@@ -1121,7 +1121,7 @@ F 3 "~" H 1350 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C20
+L main_controller-rescue:C_Small-Device C20
 U 1 1 61856B6F
 P 850 3300
 F 0 "C20" H 942 3346 50  0000 L CNN
@@ -1149,7 +1149,7 @@ Text GLabel 1700 7050 2    50   Input ~ 0
 Text Label 1300 3400 3    50   ~ 0
 GND
 $Comp
-L power:+3.3VA #PWR0114
+L main_controller-rescue:+3.3VA-power #PWR0114
 U 1 1 61945CC0
 P 8250 2050
 F 0 "#PWR0114" H 8250 1900 50  0001 C CNN
@@ -1186,7 +1186,7 @@ TIM3_CH1
 Wire Wire Line
 	9400 5400 9200 5400
 $Comp
-L power:+3.3VA #PWR0115
+L main_controller-rescue:+3.3VA-power #PWR0115
 U 1 1 6191D399
 P 9200 5400
 F 0 "#PWR0115" H 9200 5250 50  0001 C CNN
@@ -1210,7 +1210,7 @@ GPIO_LED3
 Text GLabel 3350 2100 1    39   Input ~ 0
 GPIO_LED5
 $Comp
-L Device:LED D1
+L main_controller-rescue:LED-Device D1
 U 1 1 61864B33
 P 3950 800
 F 0 "D1" H 3943 545 50  0000 C CNN
@@ -1221,7 +1221,7 @@ F 3 "~" H 3950 800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D5
+L main_controller-rescue:LED-Device D5
 U 1 1 61865595
 P 3950 1150
 F 0 "D5" H 3943 895 50  0000 C CNN
@@ -1232,7 +1232,7 @@ F 3 "~" H 3950 1150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D6
+L main_controller-rescue:LED-Device D6
 U 1 1 6186DE85
 P 3950 1500
 F 0 "D6" H 3943 1245 50  0000 C CNN
@@ -1243,7 +1243,7 @@ F 3 "~" H 3950 1500 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D7
+L main_controller-rescue:LED-Device D7
 U 1 1 618810D9
 P 5250 800
 F 0 "D7" H 5243 545 50  0000 C CNN
@@ -1254,7 +1254,7 @@ F 3 "~" H 5250 800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:LED D8
+L main_controller-rescue:LED-Device D8
 U 1 1 618810DF
 P 5250 1150
 F 0 "D8" H 5243 895 50  0000 C CNN
@@ -1265,7 +1265,7 @@ F 3 "~" H 5250 1150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R2
+L main_controller-rescue:R-Device R2
 U 1 1 61889A98
 P 4250 800
 F 0 "R2" V 4043 800 50  0000 C CNN
@@ -1276,7 +1276,7 @@ F 3 "~" H 4250 800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R5
+L main_controller-rescue:R-Device R5
 U 1 1 6188A1FE
 P 4250 1150
 F 0 "R5" V 4043 1150 50  0000 C CNN
@@ -1287,7 +1287,7 @@ F 3 "~" H 4250 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R6
+L main_controller-rescue:R-Device R6
 U 1 1 618926A7
 P 4250 1500
 F 0 "R6" V 4043 1500 50  0000 C CNN
@@ -1298,7 +1298,7 @@ F 3 "~" H 4250 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R15
+L main_controller-rescue:R-Device R15
 U 1 1 6189AE41
 P 5550 800
 F 0 "R15" V 5343 800 50  0000 C CNN
@@ -1309,7 +1309,7 @@ F 3 "~" H 5550 800 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R16
+L main_controller-rescue:R-Device R16
 U 1 1 618A33D8
 P 5550 1150
 F 0 "R16" V 5343 1150 50  0000 C CNN
@@ -1330,7 +1330,7 @@ GPIO_LED4
 Text GLabel 5100 1150 0    39   Input ~ 0
 GPIO_LED5
 $Comp
-L power:GND #PWR0119
+L main_controller-rescue:GND-power #PWR0119
 U 1 1 618F429E
 P 4400 800
 F 0 "#PWR0119" H 4400 550 50  0001 C CNN
@@ -1341,7 +1341,7 @@ F 3 "" H 4400 800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0122
+L main_controller-rescue:GND-power #PWR0122
 U 1 1 618FDBC2
 P 4400 1150
 F 0 "#PWR0122" H 4400 900 50  0001 C CNN
@@ -1352,7 +1352,7 @@ F 3 "" H 4400 1150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0123
+L main_controller-rescue:GND-power #PWR0123
 U 1 1 6190629C
 P 4400 1500
 F 0 "#PWR0123" H 4400 1250 50  0001 C CNN
@@ -1363,7 +1363,7 @@ F 3 "" H 4400 1500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0124
+L main_controller-rescue:GND-power #PWR0124
 U 1 1 6190E7B5
 P 5700 800
 F 0 "#PWR0124" H 5700 550 50  0001 C CNN
@@ -1374,7 +1374,7 @@ F 3 "" H 5700 800 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0125
+L main_controller-rescue:GND-power #PWR0125
 U 1 1 61916CDB
 P 5700 1150
 F 0 "#PWR0125" H 5700 900 50  0001 C CNN
@@ -1385,7 +1385,7 @@ F 3 "" H 5700 1150 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:R R18
+L main_controller-rescue:R-Device R18
 U 1 1 6193B4E2
 P 750 4600
 F 0 "R18" H 820 4646 50  0000 L CNN
@@ -1396,7 +1396,7 @@ F 3 "~" H 750 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R21
+L main_controller-rescue:R-Device R21
 U 1 1 6193B99E
 P 750 5100
 F 0 "R21" H 820 5146 50  0000 L CNN
@@ -1411,7 +1411,7 @@ Wire Wire Line
 Wire Wire Line
 	750  4450 750  4300
 $Comp
-L power:GND #PWR01
+L main_controller-rescue:GND-power #PWR01
 U 1 1 6195F3F7
 P 750 5250
 F 0 "#PWR01" H 750 5000 50  0001 C CNN
@@ -1433,7 +1433,7 @@ AGND
 Text Label 10450 1400 0    39   ~ 0
 AGND
 $Comp
-L Device:R R22
+L main_controller-rescue:R-Device R22
 U 1 1 619EA822
 P 9200 1300
 F 0 "R22" H 9270 1346 50  0000 L CNN
@@ -1451,7 +1451,7 @@ Connection ~ 850  3200
 Wire Wire Line
 	750  4850 1250 4850
 $Comp
-L Device:D D9
+L main_controller-rescue:D-Device D9
 U 1 1 61731FF7
 P 1250 4700
 F 0 "D9" V 1204 4779 50  0000 L CNN
@@ -1471,7 +1471,7 @@ Wire Wire Line
 Text GLabel 10300 3150 0    50   Input ~ 0
 3V3
 $Comp
-L Device:R R23
+L main_controller-rescue:R-Device R23
 U 1 1 6174F725
 P 10300 3500
 F 0 "R23" H 10370 3546 50  0000 L CNN
@@ -1482,7 +1482,7 @@ F 3 "~" H 10300 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Switch:SW_Push SW?
+L main_controller-rescue:SW_Push-Switch SW?
 U 1 1 6175137A
 P 10300 3850
 AR Path="/616037FA/6175137A" Ref="SW?"  Part="1" 
@@ -1512,7 +1512,7 @@ Text GLabel 9500 4000 2    50   Input ~ 0
 Text GLabel 8950 2100 1    50   Input ~ 0
 3V3
 $Comp
-L Device:CP1 C?
+L main_controller-rescue:CP1-Device C?
 U 1 1 617A3D21
 P 1600 7250
 AR Path="/616037FA/617A3D21" Ref="C?"  Part="1" 
@@ -1532,7 +1532,7 @@ Connection ~ 1600 7050
 Wire Wire Line
 	1600 7050 1700 7050
 $Comp
-L Device:R_Small R26
+L main_controller-rescue:R_Small-Device R26
 U 1 1 617DDDFC
 P 3700 6700
 F 0 "R26" V 3500 6450 50  0000 C CNN
@@ -1545,7 +1545,7 @@ $EndComp
 Wire Wire Line
 	3800 6700 4050 6700
 $Comp
-L Device:R R24
+L main_controller-rescue:R-Device R24
 U 1 1 61804E56
 P 750 1450
 F 0 "R24" H 820 1496 50  0000 L CNN
@@ -1556,7 +1556,7 @@ F 3 "~" H 750 1450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R25
+L main_controller-rescue:R-Device R25
 U 1 1 61805DBC
 P 850 1450
 F 0 "R25" H 920 1496 50  0000 L CNN
@@ -1581,7 +1581,7 @@ SPARE_6
 Text GLabel 6150 4500 3    50   Input ~ 0
 SPARE_7
 $Comp
-L Device:C C?
+L main_controller-rescue:C-Device C?
 U 1 1 6171B46B
 P 10050 3850
 F 0 "C?" H 10165 3896 50  0000 L CNN

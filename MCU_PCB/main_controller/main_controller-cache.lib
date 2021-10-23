@@ -1,11 +1,160 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# 2021-10-20_16-14-19_ABM3B-12.000MHZ
+# esp-12f_esp-12f
 #
-DEF 2021-10-20_16-14-19_ABM3B-12.000MHZ Y 0 20 Y N 1 L N
+DEF esp-12f_esp-12f IC 0 30 Y Y 1 F N
+F0 "IC" 1150 300 50 H V L CNN
+F1 "esp-12f_esp-12f" 1150 200 50 H V L CNN
+F2 "esp12f" 1150 100 50 H I L CNN
+F3 "https://docs.ai-thinker.com/_media/esp8266/docs/esp-12f_product_specification_en.pdf" 1150 0 50 H I L CNN
+F4 "ESP-12F ESP8266 Wifi Wireless IoT Board Module , package 1 x ESP8266 Adapter Plate  1pcs" 1150 -100 50 H I L CNN "Description"
+F5 "3.1" 1150 -200 50 H I L CNN "Height"
+F6 "Ai-Thinker" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "esp-12f" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 1100 100 1100 -1100 200 -1100 200 100 N
+X RST 1 0 0 200 R 50 50 0 0 P
+X MISO 10 0 -900 200 R 50 50 0 0 P
+X GPIO9 11 0 -1000 200 R 50 50 0 0 P
+X GPIO10 12 1300 0 200 L 50 50 0 0 P
+X MOSI 13 1300 -100 200 L 50 50 0 0 P
+X SCLK 14 1300 -200 200 L 50 50 0 0 P
+X GND 15 1300 -300 200 L 50 50 0 0 P
+X GPIO15 16 1300 -400 200 L 50 50 0 0 P
+X GPIO2 17 1300 -500 200 L 50 50 0 0 P
+X GPIO0 18 1300 -600 200 L 50 50 0 0 P
+X GPIO4 19 1300 -700 200 L 50 50 0 0 P
+X ADC 2 0 -100 200 R 50 50 0 0 P
+X GPIO5 20 1300 -800 200 L 50 50 0 0 P
+X RXD0 21 1300 -900 200 L 50 50 0 0 P
+X TXD0 22 1300 -1000 200 L 50 50 0 0 P
+X EN 3 0 -200 200 R 50 50 0 0 P
+X GPIO16 4 0 -300 200 R 50 50 0 0 P
+X GPIO14 5 0 -400 200 R 50 50 0 0 P
+X GPIO12 6 0 -500 200 R 50 50 0 0 P
+X GPIO13 7 0 -600 200 R 50 50 0 0 P
+X VCC 8 0 -700 200 R 50 50 0 0 P
+X CS0 9 0 -800 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_+3.3V-power
+#
+DEF main_controller-rescue_+3.3V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "main_controller-rescue_+3.3V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3V3 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_+3.3VA-power
+#
+DEF main_controller-rescue_+3.3VA-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "main_controller-rescue_+3.3VA-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +3.3VA 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_+5V-power
+#
+DEF main_controller-rescue_+5V-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "main_controller-rescue_+5V-power" 0 140 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -30 50 0 100 N
+P 2 0 1 0 0 0 0 100 N
+P 2 0 1 0 0 100 30 50 N
+X +5V 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_1715250000-SamacSys_Parts
+#
+DEF main_controller-rescue_1715250000-SamacSys_Parts J 0 30 Y Y 1 F N
+F0 "J" 650 300 50 H V L CNN
+F1 "main_controller-rescue_1715250000-SamacSys_Parts" 650 200 50 H V L CNN
+F2 "1715250000" 650 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/1715250000.pdf" 650 0 50 H I L CNN
+F4 "WEIDMULLER - 1715250000 - TERMINAL BLOCK, PCB, 2 POSITION, 22-14AWG" 650 -100 50 H I L CNN "Description"
+F5 "13.8" 650 -200 50 H I L CNN "Height"
+F6 "470-1715250000" 650 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Weidmuller/1715250000?qs=WJDKaGZ8K%252B711AVQDPCg%2Fw%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Weidmuller" 650 -500 50 H I L CNN "Manufacturer_Name"
+F9 "1715250000" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
+X 1 1 0 0 200 R 50 50 0 0 P
+X 2 2 0 -100 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_2174507-2-microusb_b
+#
+DEF main_controller-rescue_2174507-2-microusb_b J 0 10 Y N 1 L N
+F0 "J" 350 250 60 H V C CNN
+F1 "main_controller-rescue_2174507-2-microusb_b" 400 -200 60 H V C CNN
+F2 "CON5_USB2174507_TEC" 400 -260 60 H I C CNN
+F3 "" 0 0 60 H V C CNN
+$FPLIST
+ CON5_USB2174507_TEC
+$ENDFPLIST
+DRAW
+C 600 -275 25 1 1 5 N
+C 662 -88 12 1 1 5 N
+P 2 1 1 5 200 -1100 600 -1100 N
+P 2 1 1 5 200 100 200 -1100 N
+P 2 1 1 5 525 -150 525 -125 N
+P 2 1 1 5 525 -125 550 -125 N
+P 2 1 1 5 538 -162 600 -200 N
+P 2 1 1 5 538 -138 538 -162 N
+P 2 1 1 5 550 -150 525 -150 N
+P 2 1 1 5 550 -125 550 -150 N
+P 2 1 1 5 562 -62 638 -62 N
+P 2 1 1 5 600 -275 600 -62 N
+P 2 1 1 5 600 -12 562 -62 N
+P 2 1 1 5 600 100 200 100 N
+P 2 1 1 5 600 100 700 0 N
+P 2 1 1 5 638 -62 600 -12 N
+P 2 1 1 5 662 -112 600 -150 N
+P 2 1 1 5 662 -100 662 -112 N
+P 2 1 1 5 700 -1000 600 -1100 N
+P 2 1 1 5 700 -1000 700 0 N
+P 4 1 1 0 600 -12 562 -62 638 -62 600 -12 F
+X 1 1 0 0 200 R 59 59 1 1 U
+X SHIELD 10 0 -900 200 R 59 59 1 1 U
+X SHIELD 11 0 -1000 200 R 59 59 1 1 U
+X 2 2 0 -100 200 R 59 59 1 1 U
+X 3 3 0 -200 200 R 59 59 1 1 U
+X 4 4 0 -300 200 R 59 59 1 1 U
+X 5 5 0 -400 200 R 59 59 1 1 U
+X SHIELD 6 0 -500 200 R 59 59 1 1 U
+X SHIELD 7 0 -600 200 R 59 59 1 1 U
+X SHIELD 8 0 -700 200 R 59 59 1 1 U
+X SHIELD 9 0 -800 200 R 59 59 1 1 U
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_ABM3B-12.000MHZ-2021-10-20_16-14-19
+#
+DEF main_controller-rescue_ABM3B-12.000MHZ-2021-10-20_16-14-19 Y 0 20 Y N 1 L N
 F0 "Y" 125 250 60 H V C CNN
-F1 "2021-10-20_16-14-19_ABM3B-12.000MHZ" 200 -300 60 H V C CNN
+F1 "main_controller-rescue_ABM3B-12.000MHZ-2021-10-20_16-14-19" 200 -300 60 H V C CNN
 F2 "CRYSTAL_ABM3B_ABR" 200 -360 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -25,11 +174,98 @@ X GND 4 200 200 100 D 59 59 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_01x06_Female
+# main_controller-rescue_C-Device
 #
-DEF Connector_Conn_01x06_Female J 0 40 Y N 1 F N
+DEF main_controller-rescue_C-Device C 0 10 N Y 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "main_controller-rescue_C-Device" 25 -100 50 H V L CNN
+F2 "" 38 -150 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 20 -80 -30 80 -30 N
+P 2 0 1 20 -80 30 80 30 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 110 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_CH340G-Interface_USB
+#
+DEF main_controller-rescue_CH340G-Interface_USB U 0 20 Y Y 1 F N
+F0 "U" -200 550 50 H V R CNN
+F1 "main_controller-rescue_CH340G-Interface_USB" 50 550 50 H V L CNN
+F2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" 50 -550 50 H I L CNN
+F3 "" -350 800 50 H I C CNN
+$FPLIST
+ SOIC*3.9x9.9mm*P1.27mm*
+$ENDFPLIST
+DRAW
+S -300 500 300 -500 0 1 10 f
+X GND 1 0 -600 100 U 50 50 1 1 W
+X ~DSR 10 400 0 100 L 50 50 1 1 I
+X ~RI 11 400 -100 100 L 50 50 1 1 I
+X ~DCD 12 400 -200 100 L 50 50 1 1 I
+X ~DTR 13 400 -300 100 L 50 50 1 1 O
+X ~RTS 14 400 -400 100 L 50 50 1 1 O
+X R232 15 -400 300 100 R 50 50 1 1 I
+X VCC 16 0 600 100 D 50 50 1 1 W
+X TXD 2 400 400 100 L 50 50 1 1 O
+X RXD 3 400 300 100 L 50 50 1 1 I
+X V3 4 -100 600 100 D 50 50 1 1 P
+X UD+ 5 -400 100 100 R 50 50 1 1 B
+X UD- 6 -400 0 100 R 50 50 1 1 B
+X XI 7 -400 -200 100 R 50 50 1 1 I
+X XO 8 -400 -400 100 R 50 50 1 1 O
+X ~CTS 9 400 100 100 L 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_CP1-Device
+#
+DEF main_controller-rescue_CP1-Device C 0 10 N N 1 F N
+F0 "C" 25 100 50 H V L CNN
+F1 "main_controller-rescue_CP1-Device" 25 -100 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ CP_*
+$ENDFPLIST
+DRAW
+A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
+P 2 0 1 20 -80 30 80 30 N
+P 2 0 1 0 -70 90 -30 90 N
+P 2 0 1 0 -50 70 -50 110 N
+X ~ 1 0 150 110 D 50 50 1 1 P
+X ~ 2 0 -150 130 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_C_Small-Device
+#
+DEF main_controller-rescue_C_Small-Device C 0 10 N N 1 F N
+F0 "C" 10 70 50 H V L CNN
+F1 "main_controller-rescue_C_Small-Device" 10 -80 50 H V L CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ C_*
+$ENDFPLIST
+DRAW
+P 2 0 1 13 -60 -20 60 -20 N
+P 2 0 1 12 -60 20 60 20 N
+X ~ 1 0 100 80 D 50 50 1 1 P
+X ~ 2 0 -100 80 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_Conn_01x06_Female-Connector
+#
+DEF main_controller-rescue_Conn_01x06_Female-Connector J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "Connector_Conn_01x06_Female" 0 -400 50 H V C CNN
+F1 "main_controller-rescue_Conn_01x06_Female-Connector" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -57,84 +293,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_TestPoint
+# main_controller-rescue_Crystal_GND24_Small-Device
 #
-DEF Connector_TestPoint TP 0 30 N N 1 F N
-F0 "TP" 0 270 50 H V C CNN
-F1 "Connector_TestPoint" 0 200 50 H V C CNN
-F2 "" 200 0 50 H I C CNN
-F3 "" 200 0 50 H I C CNN
-$FPLIST
- Pin*
- Test*
-$ENDFPLIST
-DRAW
-C 0 130 30 0 1 0 N
-X 1 1 0 0 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C
-#
-DEF Device_C C 0 10 N Y 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "Device_C" 25 -100 50 H V L CNN
-F2 "" 38 -150 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 20 -80 -30 80 -30 N
-P 2 0 1 20 -80 30 80 30 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 110 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_CP1
-#
-DEF Device_CP1 C 0 10 N N 1 F N
-F0 "C" 25 100 50 H V L CNN
-F1 "Device_CP1" 25 -100 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- CP_*
-$ENDFPLIST
-DRAW
-A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
-P 2 0 1 20 -80 30 80 30 N
-P 2 0 1 0 -70 90 -30 90 N
-P 2 0 1 0 -50 70 -50 110 N
-X ~ 1 0 150 110 D 50 50 1 1 P
-X ~ 2 0 -150 130 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_C_Small
-#
-DEF Device_C_Small C 0 10 N N 1 F N
-F0 "C" 10 70 50 H V L CNN
-F1 "Device_C_Small" 10 -80 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- C_*
-$ENDFPLIST
-DRAW
-P 2 0 1 13 -60 -20 60 -20 N
-P 2 0 1 12 -60 20 60 20 N
-X ~ 1 0 100 80 D 50 50 1 1 P
-X ~ 2 0 -100 80 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Crystal_GND24_Small
-#
-DEF Device_Crystal_GND24_Small Y 0 40 Y N 1 F N
+DEF main_controller-rescue_Crystal_GND24_Small-Device Y 0 40 Y N 1 F N
 F0 "Y" 50 175 50 H V L CNN
-F1 "Device_Crystal_GND24_Small" 50 100 50 H V L CNN
+F1 "main_controller-rescue_Crystal_GND24_Small-Device" 50 100 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -153,11 +316,11 @@ X 4 4 0 100 25 D 30 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D
+# main_controller-rescue_D-Device
 #
-DEF Device_D D 0 40 N N 1 F N
+DEF main_controller-rescue_D-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D" 0 -100 50 H V C CNN
+F1 "main_controller-rescue_D-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -175,11 +338,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_D_Schottky
+# main_controller-rescue_D_Schottky-Device
 #
-DEF Device_D_Schottky D 0 40 N N 1 F N
+DEF main_controller-rescue_D_Schottky-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_D_Schottky" 0 -100 50 H V C CNN
+F1 "main_controller-rescue_D_Schottky-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -197,11 +360,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Ferrite_Bead_Small
+# main_controller-rescue_Ferrite_Bead_Small-Device
 #
-DEF Device_Ferrite_Bead_Small FB 0 0 N Y 1 F N
+DEF main_controller-rescue_Ferrite_Bead_Small-Device FB 0 0 N Y 1 F N
 F0 "FB" 75 50 50 H V L CNN
-F1 "Device_Ferrite_Bead_Small" 75 -50 50 H V L CNN
+F1 "main_controller-rescue_Ferrite_Bead_Small-Device" 75 -50 50 H V L CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -218,11 +381,24 @@ X ~ 2 0 -100 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_LED
+# main_controller-rescue_GND-power
 #
-DEF Device_LED D 0 40 N N 1 F N
+DEF main_controller-rescue_GND-power #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "main_controller-rescue_GND-power" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_LED-Device
+#
+DEF main_controller-rescue_LED-Device D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "Device_LED" 0 -100 50 H V C CNN
+F1 "main_controller-rescue_LED-Device" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -241,11 +417,11 @@ X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_L_Small
+# main_controller-rescue_L_Small-Device
 #
-DEF Device_L_Small L 0 10 N N 1 F N
+DEF main_controller-rescue_L_Small-Device L 0 10 N N 1 F N
 F0 "L" 30 40 50 H V L CNN
-F1 "Device_L_Small" 30 -40 50 H V L CNN
+F1 "main_controller-rescue_L_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -264,11 +440,26 @@ X ~ 2 0 -100 20 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_Polyfuse_Small
+# main_controller-rescue_MountingHole-Mechanical
 #
-DEF Device_Polyfuse_Small F 0 0 N Y 1 F N
+DEF main_controller-rescue_MountingHole-Mechanical H 0 40 Y Y 1 F N
+F0 "H" 0 200 50 H V C CNN
+F1 "main_controller-rescue_MountingHole-Mechanical" 0 125 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ MountingHole*
+$ENDFPLIST
+DRAW
+C 0 0 50 0 1 50 N
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_Polyfuse_Small-Device
+#
+DEF main_controller-rescue_Polyfuse_Small-Device F 0 0 N Y 1 F N
 F0 "F" -75 0 50 V V C CNN
-F1 "Device_Polyfuse_Small" 75 0 50 V V C CNN
+F1 "main_controller-rescue_Polyfuse_Small-Device" 75 0 50 V V C CNN
 F2 "" 50 -200 50 H I L CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -284,11 +475,32 @@ X ~ 2 0 -100 25 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R
+# main_controller-rescue_R-78E5.0-1.0-R-78E5.0-1.0
 #
-DEF Device_R R 0 0 N Y 1 F N
+DEF main_controller-rescue_R-78E5.0-1.0-R-78E5.0-1.0 PS 0 30 Y Y 1 F N
+F0 "PS" 850 300 50 H V L CNN
+F1 "main_controller-rescue_R-78E5.0-1.0-R-78E5.0-1.0" 850 200 50 H V L CNN
+F2 "R78E5010" 850 100 50 H I L CNN
+F3 "http://www.recom-power.com/pdf/Innoline/R-78Exx-1.0.pdf" 850 0 50 H I L CNN
+F4 "Non-Isolated DC/DC Converters 8-28Vin 5V 1.0A THRU" 850 -100 50 H I L CNN "Description"
+F5 "10.4" 850 -200 50 H I L CNN "Height"
+F6 "919-R-78E5.0-1.0" 850 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/RECOM-Power/R-78E50-10?qs=T0XSgvH75d4EsZCU9I5HVA%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "RECOM Power" 850 -500 50 H I L CNN "Manufacturer_Name"
+F9 "R-78E5.0-1.0" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+P 5 0 1 6 200 100 800 100 800 -300 200 -300 200 100 N
+X +VIN 1 0 0 200 R 50 50 0 0 P
+X GND 2 0 -100 200 R 50 50 0 0 P
+X +VOUT 3 0 -200 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_R-Device
+#
+DEF main_controller-rescue_R-Device R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
-F1 "Device_R" 0 0 50 V V C CNN
+F1 "main_controller-rescue_R-Device" 0 0 50 V V C CNN
 F2 "" -70 0 50 V I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -301,11 +513,11 @@ X ~ 2 0 -150 50 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Device_R_Small
+# main_controller-rescue_R_Small-Device
 #
-DEF Device_R_Small R 0 10 N N 1 F N
+DEF main_controller-rescue_R_Small-Device R 0 10 N N 1 F N
 F0 "R" 30 20 50 H V L CNN
-F1 "Device_R_Small" 30 -40 50 H V L CNN
+F1 "main_controller-rescue_R_Small-Device" 30 -40 50 H V L CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -318,45 +530,36 @@ X ~ 2 0 -100 30 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Interface_USB_CH340G
+# main_controller-rescue_S8050-Transistor_BJT
 #
-DEF Interface_USB_CH340G U 0 20 Y Y 1 F N
-F0 "U" -200 550 50 H V R CNN
-F1 "Interface_USB_CH340G" 50 550 50 H V L CNN
-F2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" 50 -550 50 H I L CNN
-F3 "" -350 800 50 H I C CNN
+DEF main_controller-rescue_S8050-Transistor_BJT Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "main_controller-rescue_S8050-Transistor_BJT" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_THT:TO-92_Inline" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
 $FPLIST
- SOIC*3.9x9.9mm*P1.27mm*
+ TO?92*
 $ENDFPLIST
 DRAW
-S -300 500 300 -500 0 1 10 f
-X GND 1 0 -600 100 U 50 50 1 1 W
-X ~DSR 10 400 0 100 L 50 50 1 1 I
-X ~RI 11 400 -100 100 L 50 50 1 1 I
-X ~DCD 12 400 -200 100 L 50 50 1 1 I
-X ~DTR 13 400 -300 100 L 50 50 1 1 O
-X ~RTS 14 400 -400 100 L 50 50 1 1 O
-X R232 15 -400 300 100 R 50 50 1 1 I
-X VCC 16 0 600 100 D 50 50 1 1 W
-X TXD 2 400 400 100 L 50 50 1 1 O
-X RXD 3 400 300 100 L 50 50 1 1 I
-X V3 4 -100 600 100 D 50 50 1 1 P
-X UD+ 5 -400 100 100 R 50 50 1 1 B
-X UD- 6 -400 0 100 R 50 50 1 1 B
-X XI 7 -400 -200 100 R 50 50 1 1 I
-X XO 8 -400 -400 100 R 50 50 1 1 O
-X ~CTS 9 400 100 100 L 50 50 1 1 I
+C 50 0 111 0 1 10 N
+P 2 0 1 0 0 0 25 0 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
+X E 1 100 -200 100 U 50 50 1 1 P
+X B 2 -200 0 200 R 50 50 1 1 I
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# MCU_ST_STM32F4_STM32F446ZETx
+# main_controller-rescue_STM32F446ZETx-MCU_ST_STM32F4
 #
-DEF MCU_ST_STM32F4_STM32F446ZETx U 0 20 Y Y 1 F N
+DEF main_controller-rescue_STM32F446ZETx-MCU_ST_STM32F4 U 0 20 Y Y 1 F N
 F0 "U" -1000 3450 50 H V L CNN
-F1 "MCU_ST_STM32F4_STM32F446ZETx" 800 3450 50 H V L CNN
+F1 "main_controller-rescue_STM32F446ZETx-MCU_ST_STM32F4" 800 3450 50 H V L CNN
 F2 "Package_QFP:LQFP-144_20x20mm_P0.5mm" -1000 -3400 50 H I R CNN
 F3 "" 0 0 50 H I C CNN
-ALIAS STM32F446ZETx
 $FPLIST
  LQFP*20x20mm*P0.5mm*
 $ENDFPLIST
@@ -509,47 +712,11 @@ X PC9 99 1200 -1000 200 L 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Mechanical_MountingHole
+# main_controller-rescue_SW_Push-Switch
 #
-DEF Mechanical_MountingHole H 0 40 Y Y 1 F N
-F0 "H" 0 200 50 H V C CNN
-F1 "Mechanical_MountingHole" 0 125 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- MountingHole*
-$ENDFPLIST
-DRAW
-C 0 0 50 0 1 50 N
-ENDDRAW
-ENDDEF
-#
-# R-78E5.0-1.0_R-78E5.0-1.0
-#
-DEF R-78E5.0-1.0_R-78E5.0-1.0 PS 0 30 Y Y 1 F N
-F0 "PS" 850 300 50 H V L CNN
-F1 "R-78E5.0-1.0_R-78E5.0-1.0" 850 200 50 H V L CNN
-F2 "R78E5010" 850 100 50 H I L CNN
-F3 "http://www.recom-power.com/pdf/Innoline/R-78Exx-1.0.pdf" 850 0 50 H I L CNN
-F4 "Non-Isolated DC/DC Converters 8-28Vin 5V 1.0A THRU" 850 -100 50 H I L CNN "Description"
-F5 "10.4" 850 -200 50 H I L CNN "Height"
-F6 "919-R-78E5.0-1.0" 850 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.co.uk/ProductDetail/RECOM-Power/R-78E50-10?qs=T0XSgvH75d4EsZCU9I5HVA%3D%3D" 850 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "RECOM Power" 850 -500 50 H I L CNN "Manufacturer_Name"
-F9 "R-78E5.0-1.0" 850 -600 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-P 5 0 1 6 200 100 800 100 800 -300 200 -300 200 100 N
-X +VIN 1 0 0 200 R 50 50 0 0 P
-X GND 2 0 -100 200 R 50 50 0 0 P
-X +VOUT 3 0 -200 200 R 50 50 0 0 P
-ENDDRAW
-ENDDEF
-#
-# Switch_SW_Push
-#
-DEF Switch_SW_Push SW 0 40 N N 1 F N
+DEF main_controller-rescue_SW_Push-Switch SW 0 40 N N 1 F N
 F0 "SW" 50 100 50 H V L CNN
-F1 "Switch_SW_Push" 0 -60 50 H V C CNN
+F1 "main_controller-rescue_SW_Push-Switch" 0 -60 50 H V C CNN
 F2 "" 0 200 50 H I C CNN
 F3 "" 0 200 50 H I C CNN
 DRAW
@@ -562,11 +729,11 @@ X 2 2 200 0 100 L 50 50 0 1 P
 ENDDRAW
 ENDDEF
 #
-# Switch_SW_SPDT
+# main_controller-rescue_SW_SPDT-Switch
 #
-DEF Switch_SW_SPDT SW 0 0 Y N 1 F N
+DEF main_controller-rescue_SW_SPDT-Switch SW 0 0 Y N 1 F N
 F0 "SW" 0 170 50 H V C CNN
-F1 "Switch_SW_SPDT" 0 -200 50 H V C CNN
+F1 "main_controller-rescue_SW_SPDT-Switch" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -577,133 +744,6 @@ P 2 0 1 0 -60 10 65 90 N
 X A 1 200 100 100 L 50 50 1 1 P
 X B 2 -200 0 100 R 50 50 1 1 P
 X C 3 200 -100 100 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Transistor_BJT_S8050
-#
-DEF Transistor_BJT_S8050 Q 0 0 Y N 1 F N
-F0 "Q" 200 75 50 H V L CNN
-F1 "Transistor_BJT_S8050" 200 0 50 H V L CNN
-F2 "Package_TO_SOT_THT:TO-92_Inline" 200 -75 50 H I L CIN
-F3 "" 0 0 50 H I L CNN
-$FPLIST
- TO?92*
-$ENDFPLIST
-DRAW
-C 50 0 111 0 1 10 N
-P 2 0 1 0 0 0 25 0 N
-P 2 0 1 0 25 25 100 100 N
-P 3 0 1 0 25 -25 100 -100 100 -100 N
-P 3 0 1 20 25 75 25 -75 25 -75 N
-P 5 0 1 0 50 -70 70 -50 90 -90 50 -70 50 -70 F
-X E 1 100 -200 100 U 50 50 1 1 P
-X B 2 -200 0 200 R 50 50 1 1 I
-X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# esp-12f_esp-12f
-#
-DEF esp-12f_esp-12f IC 0 30 Y Y 1 F N
-F0 "IC" 1150 300 50 H V L CNN
-F1 "esp-12f_esp-12f" 1150 200 50 H V L CNN
-F2 "esp12f" 1150 100 50 H I L CNN
-F3 "https://docs.ai-thinker.com/_media/esp8266/docs/esp-12f_product_specification_en.pdf" 1150 0 50 H I L CNN
-F4 "ESP-12F ESP8266 Wifi Wireless IoT Board Module , package 1 x ESP8266 Adapter Plate  1pcs" 1150 -100 50 H I L CNN "Description"
-F5 "3.1" 1150 -200 50 H I L CNN "Height"
-F6 "Ai-Thinker" 1150 -300 50 H I L CNN "Manufacturer_Name"
-F7 "esp-12f" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-P 5 0 1 6 200 100 1100 100 1100 -1100 200 -1100 200 100 N
-X RST 1 0 0 200 R 50 50 0 0 P
-X MISO 10 0 -900 200 R 50 50 0 0 P
-X GPIO9 11 0 -1000 200 R 50 50 0 0 P
-X GPIO10 12 1300 0 200 L 50 50 0 0 P
-X MOSI 13 1300 -100 200 L 50 50 0 0 P
-X SCLK 14 1300 -200 200 L 50 50 0 0 P
-X GND 15 1300 -300 200 L 50 50 0 0 P
-X GPIO15 16 1300 -400 200 L 50 50 0 0 P
-X GPIO2 17 1300 -500 200 L 50 50 0 0 P
-X GPIO0 18 1300 -600 200 L 50 50 0 0 P
-X GPIO4 19 1300 -700 200 L 50 50 0 0 P
-X ADC 2 0 -100 200 R 50 50 0 0 P
-X GPIO5 20 1300 -800 200 L 50 50 0 0 P
-X RXD0 21 1300 -900 200 L 50 50 0 0 P
-X TXD0 22 1300 -1000 200 L 50 50 0 0 P
-X EN 3 0 -200 200 R 50 50 0 0 P
-X GPIO16 4 0 -300 200 R 50 50 0 0 P
-X GPIO14 5 0 -400 200 R 50 50 0 0 P
-X GPIO12 6 0 -500 200 R 50 50 0 0 P
-X GPIO13 7 0 -600 200 R 50 50 0 0 P
-X VCC 8 0 -700 200 R 50 50 0 0 P
-X CS0 9 0 -800 200 R 50 50 0 0 P
-ENDDRAW
-ENDDEF
-#
-# main_controller-rescue_1715250000-SamacSys_Parts
-#
-DEF main_controller-rescue_1715250000-SamacSys_Parts J 0 30 Y Y 1 F N
-F0 "J" 650 300 50 H V L CNN
-F1 "main_controller-rescue_1715250000-SamacSys_Parts" 650 200 50 H V L CNN
-F2 "1715250000" 650 100 50 H I L CNN
-F3 "https://componentsearchengine.com/Datasheets/2/1715250000.pdf" 650 0 50 H I L CNN
-F4 "WEIDMULLER - 1715250000 - TERMINAL BLOCK, PCB, 2 POSITION, 22-14AWG" 650 -100 50 H I L CNN "Description"
-F5 "13.8" 650 -200 50 H I L CNN "Height"
-F6 "470-1715250000" 650 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.co.uk/ProductDetail/Weidmuller/1715250000?qs=WJDKaGZ8K%252B711AVQDPCg%2Fw%3D%3D" 650 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "Weidmuller" 650 -500 50 H I L CNN "Manufacturer_Name"
-F9 "1715250000" 650 -600 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-P 5 0 1 6 200 100 600 100 600 -200 200 -200 200 100 N
-X 1 1 0 0 200 R 50 50 0 0 P
-X 2 2 0 -100 200 R 50 50 0 0 P
-ENDDRAW
-ENDDEF
-#
-# main_controller-rescue_2174507-2-microusb_b
-#
-DEF main_controller-rescue_2174507-2-microusb_b J 0 10 Y N 1 L N
-F0 "J" 350 250 60 H V C CNN
-F1 "main_controller-rescue_2174507-2-microusb_b" 400 -200 60 H V C CNN
-F2 "CON5_USB2174507_TEC" 400 -260 60 H I C CNN
-F3 "" 0 0 60 H V C CNN
-$FPLIST
- CON5_USB2174507_TEC
-$ENDFPLIST
-DRAW
-C 600 -275 25 1 1 5 N
-C 662 -88 12 1 1 5 N
-P 2 1 1 5 200 -1100 600 -1100 N
-P 2 1 1 5 200 100 200 -1100 N
-P 2 1 1 5 525 -150 525 -125 N
-P 2 1 1 5 525 -125 550 -125 N
-P 2 1 1 5 538 -162 600 -200 N
-P 2 1 1 5 538 -138 538 -162 N
-P 2 1 1 5 550 -150 525 -150 N
-P 2 1 1 5 550 -125 550 -150 N
-P 2 1 1 5 562 -62 638 -62 N
-P 2 1 1 5 600 -275 600 -62 N
-P 2 1 1 5 600 -12 562 -62 N
-P 2 1 1 5 600 100 200 100 N
-P 2 1 1 5 600 100 700 0 N
-P 2 1 1 5 638 -62 600 -12 N
-P 2 1 1 5 662 -112 600 -150 N
-P 2 1 1 5 662 -100 662 -112 N
-P 2 1 1 5 700 -1000 600 -1100 N
-P 2 1 1 5 700 -1000 700 0 N
-P 4 1 1 0 600 -12 562 -62 638 -62 600 -12 F
-X 1 1 0 0 200 R 59 59 1 1 U
-X SHIELD 10 0 -900 200 R 59 59 1 1 U
-X SHIELD 11 0 -1000 200 R 59 59 1 1 U
-X 2 2 0 -100 200 R 59 59 1 1 U
-X 3 3 0 -200 200 R 59 59 1 1 U
-X 4 4 0 -300 200 R 59 59 1 1 U
-X 5 5 0 -400 200 R 59 59 1 1 U
-X SHIELD 6 0 -500 200 R 59 59 1 1 U
-X SHIELD 7 0 -600 200 R 59 59 1 1 U
-X SHIELD 8 0 -700 200 R 59 59 1 1 U
-X SHIELD 9 0 -800 200 R 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
@@ -727,6 +767,23 @@ X 2 2 0 -100 200 R 50 50 0 0 P
 X 3 3 0 -200 200 R 50 50 0 0 P
 X 4 4 0 -300 200 R 50 50 0 0 P
 X 5 5 0 -400 200 R 50 50 0 0 P
+ENDDRAW
+ENDDEF
+#
+# main_controller-rescue_TestPoint-Connector
+#
+DEF main_controller-rescue_TestPoint-Connector TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "main_controller-rescue_TestPoint-Connector" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -807,65 +864,6 @@ P 2 1 1 5 500 100 200 100 N
 X 1 1 0 0 200 R 59 59 1 1 U
 X 2 2 0 -100 200 R 59 59 1 1 U
 X 3 3 0 -200 200 R 59 59 1 1 U
-ENDDRAW
-ENDDEF
-#
-# power_+3.3V
-#
-DEF power_+3.3V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3.3V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-ALIAS +3.3V
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3V3 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+3.3VA
-#
-DEF power_+3.3VA #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+3.3VA" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +3.3VA 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_+5V
-#
-DEF power_+5V #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "power_+5V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 2 0 1 0 -30 50 0 100 N
-P 2 0 1 0 0 0 0 100 N
-P 2 0 1 0 0 100 30 50 N
-X +5V 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# power_GND
-#
-DEF power_GND #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -250 50 H I C CNN
-F1 "power_GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
-X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
