@@ -1,0 +1,16 @@
+core_cm4.h:1939:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
+myLibrary.c:30:6:SysTickEnable	4	static,ignoring_inline_asm
+myLibrary.c:37:6:SysTickDisable	4	static,ignoring_inline_asm
+myLibrary.c:44:6:ESP_RESET	8	static
+myLibrary.c:55:6:ESP_Server_Init	8	static
+myLibrary.c:103:6:ESP_Clear_Buffer	8	static
+myLibrary.c:116:9:string_compare	32	static
+myLibrary.c:130:5:string_contains	40	static
+myLibrary.c:142:5:getLink	16	static
+myLibrary.c:150:6:messageHandler	16	static
+myLibrary.c:306:6:sendData	16	static
+myLibrary.c:364:6:controlArm	40	dynamic
+myLibrary.c:421:6:moveServos	48	dynamic
+myLibrary.c:443:6:resetServos	40	dynamic
+myLibrary.c:458:7:readBattery	16	static
+myLibrary.c:469:10:HAL_GetTick	8	static
