@@ -46,8 +46,8 @@ battery\ level\ reading.bin \
 all: battery\ level\ reading.elf secondary-outputs
 
 # Tool invocations
-battery\ level\ reading.elf: $(OBJS) $(USER_OBJS) C:\Users\Dell\STM32CubeIDE\workspace_1.4.0\battery\ level\ reading\STM32F411VETX_FLASH.ld
-	arm-none-eabi-gcc -o "battery level reading.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Dell\STM32CubeIDE\workspace_1.4.0\battery level reading\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="battery level reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+battery\ level\ reading.elf: $(OBJS) $(USER_OBJS) C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\battery\ level\ reading\STM32F411VETX_FLASH.ld
+	arm-none-eabi-gcc -o "battery level reading.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\battery level reading\STM32F411VETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="battery level reading.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -106,26 +106,31 @@ int main(void)
 	  }
 	  float Vbatt2 = (raw / 4096.0) * 3 * 6;
 
-	  //2.4, 4.8, 7.2, 9.6, 12
-	  if (Vbatt2 > 10)
+	  //12.4, 12.8, 13.2, 13.6, 14
+	  if (Vbatt2 > 14)
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 1);
 	  else
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 
-	  if (Vbatt2 > 8)
+	  if (Vbatt2 > 13.6)
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, 1);
 	  else
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, 0);
 
-	  if (Vbatt2 > 6)
+	  if (Vbatt2 > 13.2)
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 1);
 	  else
 		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 
-	  if (Vbatt2 > 4)
-		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 1);
-	  else
-		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
+//	  if (Vbatt2 > 12.8)
+//		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 1);
+//	  else
+//		  HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
+
+//	  if (Vbatt2 > 12.4)
+		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, 1);
+//	  else
+//		  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, 0);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -234,9 +239,13 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_7, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : PD12 PD13 PD14 PD15 */
   GPIO_InitStruct.Pin = GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15;
@@ -244,6 +253,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : PC7 */
+  GPIO_InitStruct.Pin = GPIO_PIN_7;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
 }
 

@@ -24,6 +24,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\Motor"/>
+			<item value="C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\battery level reading"/>
 			<item value="C:\Users\Dell\X12_Embedded\X11_ESC (final)"/>
 		</list>
 	</section>

@@ -1,0 +1,20 @@
+17:46:09 **** Incremental Build of configuration Debug for project real_battery ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32F446xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "real_battery.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Dell\Desktop\Wall-E\workspace_1.4.0\real_battery\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="real_battery.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: real_battery.elf
+ 
+arm-none-eabi-objdump -h -S  real_battery.elf  > "real_battery.list"
+arm-none-eabi-objcopy  -O binary  real_battery.elf  "real_battery.bin"
+arm-none-eabi-size   real_battery.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16040	     20	   1908	  17968	   4630	real_battery.elf
+Finished building: default.size.stdout
+ 
+Finished building: real_battery.bin
+ 
+Finished building: real_battery.list
+ 
+
+17:46:11 Build Finished. 0 errors, 0 warnings. (took 1s.931ms)
+
