@@ -61,8 +61,8 @@ all: main-build
 main-build: micro.elf secondary-outputs
 
 # Tool invocations
-micro.elf: $(OBJS) $(USER_OBJS) C:\Users\miche\Desktop\Assignments\Senior\ Design\micro\STM32F446ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "micro.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\miche\Desktop\Assignments\Senior Design\micro\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="micro.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+micro.elf: $(OBJS) $(USER_OBJS) C:\Users\miche\Desktop\Assignments\Senior\ Design\repo\Wall-E\micro\STM32F446ZETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "micro.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\miche\Desktop\Assignments\Senior Design\repo\Wall-E\micro\STM32F446ZETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="micro.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

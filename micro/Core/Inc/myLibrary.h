@@ -9,7 +9,7 @@
 extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart5;
 extern ADC_HandleTypeDef hadc3;
-//extern UART_HandleTypeDef huart6;
+extern UART_HandleTypeDef huart1;
 //extern ADC_HandleTypeDef hadc1;
 
 #define ESP_Reset_Pin GPIO_PIN_6
@@ -35,14 +35,15 @@ float batteryVoltage;
 uint8_t buffer[2000];
 uint16_t buffer_index, timeout, messageHandlerFlag, netTimeout, value1;
 #define wifi_uart &huart3
-#define pc_uart &huart5
-//#define servos_uart &huart6
+#define pc_uart &huart1
+#define servos_uart &huart5
 #define motor_ratio(A) (int)(A / 100.0 * 5000)
 int percent;
 uint8_t speed;
 uint32_t safeCounter;
-int handle;
 int resetTime;
+int handle;
+//int resetTime;
 void SysTickEnable();
 void SysTickDisable();
 
