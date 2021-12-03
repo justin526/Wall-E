@@ -14,6 +14,9 @@ public class STM32Status extends Thread
     private boolean messageFlag = false;
     private String stm32IP;
     public boolean updateBattery = false;
+    public boolean sendPost = false;
+    public String postMessage = "";
+    public int postPeriod = 100;
 
     public STM32Status(int updatePeriodMilliSeconds, String stm32IP){
         this.updatePeriod = updatePeriodMilliSeconds;
@@ -41,12 +44,20 @@ public class STM32Status extends Thread
     {
         super.run();
         while (active) {
-            System.out.println("STM32 GET call...");
+
 //            updateBattery = false;
             try {
-                Thread.sleep(updatePeriod);
-//                if (updateBattery)
+
+                if (updateBattery) {
+                    System.out.println("STM32 GET call...");
+                    Thread.sleep(updatePeriod);
                     sendGet();
+                }
+                else if (sendPost)
+                {
+                    sendPostf(postMessage);
+                    Thread.sleep(postPeriod);
+                }
 //                    sendPost("Test");
             } catch (Exception e)
             {
@@ -76,6 +87,29 @@ public class STM32Status extends Thread
         }catch (Exception e) {
             messageFlag = false;
             e.printStackTrace();
+        }
+    }
+    public void sendPostf(String msg)
+    {
+        String url = "http://" + this.stm32IP + ":80/" + msg;
+        RequestBody formBody = new FormBody.Builder()
+                .add("message", msg)
+                .build();
+        Request post = new Request.Builder()
+                .url(url)
+                .post(formBody)
+                .build();
+        System.out.println("Sending Post");
+        try {
+            Response response = httpClient.newCall(post).execute();
+//            String stm32Message = response.body().string();
+            System.out.println("STM32 OUTPUT POST: " + stm32Message);
+            // Do something with the response.
+            messageFlag = true;
+            stm32Message = response.body().string();
+        } catch (Exception e) {
+            e.printStackTrace();
+            messageFlag = false;
         }
     }
 

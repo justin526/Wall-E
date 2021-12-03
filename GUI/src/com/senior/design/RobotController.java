@@ -22,6 +22,8 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.control.TextField;
+import okhttp3.*;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -30,37 +32,27 @@ import java.net.*;
 
 import static com.senior.design.FileManager.readOrCreateFile;
 import static com.senior.design.Variables.*;
+//import static jdk.internal.net.http.common.Utils.close;
 
 public class RobotController extends Application {
     private Pane pane;
-    private int length = 0;
     private Label androidLabel;
     private Timeline timeline, timelineSend;
-    private CameraServer myCameraServer;
-    private MyServer androidServer;
-    private ImageView imageViewCamera;
-    private Image imageCamera;
-    private boolean updateImage = false;
-    private final int cameraPort = 7770;
     private boolean forward = false;
     private boolean backward = false;
     private boolean right = false;
     private boolean left = false;
     private boolean space = false;
     private Slider slider;
-    private int speed = 51;
+    private int speed = 230;
     private Label labelSpeed;
     private Label labelDirection;
     private Label labelSTM32Status;
+    private OkHttpClient httpClient = new OkHttpClient.Builder().build();
     private String messageOut = "--,0\n";
-    private ClientSender stm32ClientRemoteControl;
-    private ImageView imageViewCarLogo;
-    private ProgressBar[] progressBarsDistance;
     private STM32Status stm32Status;
+    private STM32Status stm32Status2;
     private CheckBox checkBoxDrivingAssistance;
-    private byte [] byteArray;
-    private int count = 0;
-
     @Override
     public void start(Stage stage){
         final int width = 1600;
@@ -70,10 +62,11 @@ public class RobotController extends Application {
 
         pane = new Pane();
 
-        stm32ClientRemoteControl = new ClientSender(stringSTM32IP, 80, 1800 );
-        stm32ClientRemoteControl.start();
-
         stm32Status = new STM32Status(stm32StatusUpdatePeriod, stringSTM32IP);
+//        stm32Status.start();
+//        stm32Status2 = new STM32Status(stm32StatusUpdatePeriod, stringSTM32IP);
+//        stm32Status2.start();
+        stm32Status.sendPost = true;
         stm32Status.start();
 
         androidLabel = new Label("");
@@ -93,46 +86,13 @@ public class RobotController extends Application {
         //stage.setMaxWidth(stage.getWidth());
         //stage.setMaxHeight(stage.getHeight());
         stage.setResizable(true);
-
-//        imageViewCamera = new ImageView();
-//        imageViewCamera.setFitWidth(900);
-//        imageViewCamera.setFitHeight(1200);
-//        imageViewCamera.setRotate(270);
-//        imageViewCamera.setLayoutX(200);
-//        imageViewCamera.setLayoutY(-100);
-//        imageViewCamera.setPreserveRatio(true);
-//        pane.getChildren().add(imageViewCamera);
-
-//        myCameraServer = new CameraServer(cameraPort);
-//        myCameraServer.start();
-
-//        androidServer = new MyServer(cameraPort+1);
-//        androidServer.start();
-
-//        try{
-//            imageViewCarLogo = new ImageView(new Image("com/senior/design/images/car.jpg"));
-//            imageViewCarLogo.setPreserveRatio(true);
-//            imageViewCarLogo.setFitHeight(200);
-//            imageViewCarLogo.setFitWidth(100);
-//            imageViewCarLogo.setLayoutX(1375);
-//            imageViewCarLogo.setLayoutY(750);
-//            pane.getChildren().add(imageViewCarLogo);
-//        }
-//        catch (Exception e){
-//            e.printStackTrace();
-//            System.out.println("Couldn't load car.png");
-//        }
-//
-//        progressBarsDistance = new ProgressBar[5];
-//        for (int i=0; i<5; i++)
-//        {
-//            progressBarsDistance[i] = new ProgressBar();
-//            progressBarsDistance[i].setLayoutX(1275+50*i);
-//            progressBarsDistance[i].setLayoutY(750 - 75*Math.sin( (i)*(Math.PI/4) ));
-//            progressBarsDistance[i].setRotate(180+45*i);
-//            pane.getChildren().add(progressBarsDistance[i]);
-//        }
-
+        Label instructionText = new Label("");
+        instructionText.setLayoutY(700);
+        instructionText.setLayoutX(300);
+        instructionText.setFont(Font.font("Arial", 20));
+//        instructionText.setStyle("-fx-background-color: #FFFFFF");
+        instructionText.setText("Press WASD to move and SPACE BAR to operate the claw\n");
+        pane.getChildren().add(instructionText);
 
         slider = new Slider();
         slider.setValue(speed);
@@ -165,15 +125,31 @@ public class RobotController extends Application {
         label1.setLayoutY(100);
         pane.getChildren().add(label1);
         TextField b = new TextField(stringSTM32IP);
+        b.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent ke) {
+                if (ke.getCode().equals(KeyCode.ENTER)) {
+                    FileOutputStream fos = null;
+                    try {
+                        String text = b.getText();
+                        fos = new FileOutputStream("IP_STM32.txt");
+                        fos.write(text.getBytes("UTF-8"));
+                        fos.close();
+                    } catch (Exception e) {
+                        try {
+                            fos.close();
+                        } catch (IOException ex) {
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+            }
+        });
 //        GridPane root = new GridPane();
         b.setLayoutX(140);
         b.setLayoutY(95);
 //        root.addRow(0, label1, (Node) b);
         pane.getChildren().add(b);
-//        TextField textField = new TextField ();
-//        HBox hb = new HBox();
-//        hb.getChildren().addAll(label1, textField);
-//        hb.setSpacing(10);
 
         labelSTM32Status = new Label("");
         labelSTM32Status.setLayoutX(1300);
@@ -284,16 +260,10 @@ public class RobotController extends Application {
                 {
                     space = false;
                 }
-//                sendMessage();
             }
         });
 
         timeline = new Timeline(new KeyFrame(Duration.millis(10), event ->{
-            updateImage();
-//            if(androidServer.isMessageReceived())
-//            {
-//                androidLabel.setText(androidServer.getMessage());
-//            }
 
             labelDirection.setText("Forward: " + forward +
                     "\nBackward: " + backward +
@@ -309,25 +279,14 @@ public class RobotController extends Application {
                 String message = stm32Status.getStm32Message();
                 System.out.println("MESSAGE IS AVAILABLE: " + message);
                 labelSTM32Status.setText(message);
-//                try
-//                {
-//                    String[] strings = message.split("Distances: ");
-//                    strings[1] = strings[1].substring(0, strings[1].length()-1);
-//                    strings = strings[1].split(",");
-//                    for(int i=0; i<progressBarsDistance.length; i++)
-//                        progressBarsDistance[i].setProgress(Double.parseDouble(strings[i])/distanceProgressRange);
-//                }catch (Exception e)
-//                {
-//                    e.printStackTrace();
-//                }
             }
-//            if (checkBoxDrivingAssistance.isSelected())
-                stm32Status.updateBattery = true;
-//            else
-//                stm32Status.updateBattery = false;
-//            checkBoxDrivingAssistance.setSelected(!checkBoxDrivingAssistance.isSelected());
-//            if (!stm32Status.updateBattery)
-            sendMessage();
+            if (!checkBoxDrivingAssistance.isSelected()) {
+                sendMessage();
+                stm32Status.updateBattery = false;
+            }
+            else
+                stm32Status.updateBattery = false;
+
         }));
         timelineSend.setCycleCount(Timeline.INDEFINITE);
         timelineSend.play();
@@ -351,30 +310,16 @@ public class RobotController extends Application {
             messageOut += "-";
 
         if (space)
-            messageOut = "SPACE";
-
-//        if(checkBoxDrivingAssistance.isSelected())
-//            messageOut += "T";
-//        else
-//            messageOut += "F";
+            messageOut = "SP";
 
         messageOut += speed + "\r\n\r\n";
-//        if (checkBoxDrivingAssistance.isSelected()) {
-//            try {
-//                stop();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-        stm32ClientRemoteControl.sendPost(messageOut);
+        stm32Status.postMessage = messageOut;
+//        sendPostf(messageOut, stringSTM32IP);
     }
 
     @Override
     public void stop() throws Exception {
         super.stop();
-//        myCameraServer.stopServer();
-//        androidServer.stopServer();
-        stm32ClientRemoteControl.stopClient();
         stm32Status.stopSTM32Status();
         System.out.println("Closing the application.");
     }
@@ -382,112 +327,26 @@ public class RobotController extends Application {
     public static void main(String[] args){
         launch(args);
     }
-
-    private void changePaneColor(String color)
+    public void sendPostf(String msg, String ip)
     {
-        pane.setStyle("-fx-background-color: #" + color);
-    }
 
-    private void updateImage()
-    {
-        if(updateImage)
-        {
-            updateImage = false;
-            System.out.println("some data: " + length);
-            try{
-                BufferedImage img = ImageIO.read(new ByteArrayInputStream(byteArray));
-                imageCamera = SwingFXUtils.toFXImage(img, null);
-                imageViewCamera.setImage(imageCamera);
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+        String url = "http://" + ip + ":80/" + msg;
+        RequestBody formBody = new FormBody.Builder()
+                .add("message", msg)
+                .build();
+        Request post = new Request.Builder()
+                .url(url)
+                .post(formBody)
+                .build();
+        System.out.println("Sending Post");
+        try {
+            Response response = httpClient.newCall(post).execute();
+            String stm32Message = response.body().string();
+            System.out.println("STM32 OUTPUT POST: " + stm32Message);
+            // Do something with the response.
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    class CameraServer extends Thread{
-        private boolean active = true;
-        private int port = 0;
-        private ServerSocket ss;
-
-        public void stopServer(){
-            this.active = false;
-            try {
-                ss.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-        public CameraServer(int port){
-            this.port = port;
-        }
-
-        @Override
-        public void run() {
-            super.run();
-            ss = null;
-            try {
-                ss = new ServerSocket(port);
-            } catch (IOException e) {
-                e.printStackTrace();
-                active = false;
-            }
-
-            if (ss == null)
-            {
-                System.exit(-99);
-            }
-            System.out.println("ServerSocket awaiting connections...");
-            Socket socket = null;// = ss.accept(); // blocking call, this will wait until a connection is attempted on this port.
-            while (active)
-            {
-                try {
-                    socket = ss.accept(); // blocking call, this will wait until a connection is attempted on this port.
-                    System.out.println("Connection from " + socket + "!");
-
-                    // get the input stream from the connected socket
-                    InputStream inputStream = null;
-                    try {
-                        assert socket != null;
-                        inputStream = socket.getInputStream();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    // create a DataInputStream so we can read data from it.
-                    assert inputStream != null;
-                    DataInputStream dataInputStream = new DataInputStream(inputStream);
-
-                    // read the message from the socket
-                    try {
-                        //length = dataInputStream.read(data);
-                        length = dataInputStream.readInt();
-                        System.out.println("Got the Size");
-                        int bytesRead ;
-                        int len = 0;
-                        byte[] buffer = new byte[1000000];
-                        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                        while (len<length)
-                        {
-                            bytesRead = inputStream.read(buffer, 0, (int)Math.min(buffer.length, length-len));
-                            len = len + bytesRead;
-                            byteArrayOutputStream.write(buffer, 0, bytesRead);
-                        }
-                        byteArray = byteArrayOutputStream.toByteArray();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    if(length > 5000)
-                        updateImage = true;
-                }catch (SocketTimeoutException e)
-                {
-                    System.out.println("Socket timed out");
-                } catch (Exception e) {
-                    System.out.println("Something went wrong.");
-                    e.printStackTrace();
-                }
-            }
-            System.out.println("Server stopped successfully.");
-        }
-    }
 }
