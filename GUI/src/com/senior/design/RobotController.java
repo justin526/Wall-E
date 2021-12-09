@@ -18,6 +18,8 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -29,6 +31,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.senior.design.FileManager.readOrCreateFile;
 import static com.senior.design.Variables.*;
@@ -52,6 +56,7 @@ public class RobotController extends Application {
     private String messageOut = "--,0\n";
     private STM32Status stm32Status;
     private STM32Status stm32Status2;
+    private Circle c1 = new Circle(30,30,10);
     private CheckBox checkBoxDrivingAssistance;
     @Override
     public void start(Stage stage){
@@ -68,6 +73,10 @@ public class RobotController extends Application {
 //        stm32Status2.start();
         stm32Status.sendPost = true;
         stm32Status.start();
+        c1.setLayoutX(350);
+        c1.setLayoutY(80);
+        c1.setFill(Paint.valueOf("#ff0000"));
+        pane.getChildren().add(c1);
 
         androidLabel = new Label("");
         androidLabel.setFont(Font.font("Arial", 24));
@@ -132,6 +141,7 @@ public class RobotController extends Application {
                     FileOutputStream fos = null;
                     try {
                         String text = b.getText();
+                        stringSTM32IP = text;
                         fos = new FileOutputStream("IP_STM32.txt");
                         fos.write(text.getBytes("UTF-8"));
                         fos.close();
@@ -278,8 +288,16 @@ public class RobotController extends Application {
             {
                 String message = stm32Status.getStm32Message();
                 System.out.println("MESSAGE IS AVAILABLE: " + message);
-                labelSTM32Status.setText(message);
+                Matcher matcher = Pattern.compile("\\d+").matcher(message);
+                matcher.find();
+                int i = Integer.valueOf(matcher.group());
+                i /= 10;
+                i *= 10;
+                labelSTM32Status.setText("Battery: " + i + "%");
+                c1.setFill(Paint.valueOf("#00FF00"));
             }
+            else
+                c1.setFill(Paint.valueOf("#FF0000"));
             if (!checkBoxDrivingAssistance.isSelected()) {
                 sendMessage();
                 stm32Status.updateBattery = false;
