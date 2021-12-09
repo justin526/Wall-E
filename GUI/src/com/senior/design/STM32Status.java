@@ -67,7 +67,7 @@ public class STM32Status extends Thread
     public void sendGet()
     {
 //        updateBattery = true;
-        messageFlag = false;
+//        messageFlag = false;
         String url = "http://" + this.stm32IP + ":80/";
         Request request = new Request.Builder()
                 .url(url)
