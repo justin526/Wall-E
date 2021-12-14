@@ -45,7 +45,6 @@ public class STM32Status extends Thread
         super.run();
         while (active) {
 
-//            updateBattery = false;
             try {
 
                 if (updateBattery) {
@@ -58,7 +57,6 @@ public class STM32Status extends Thread
                     sendPostf(postMessage);
                     Thread.sleep(postPeriod);
                 }
-//                    sendPost("Test");
             } catch (Exception e)
             {
                 e.printStackTrace();
@@ -69,7 +67,7 @@ public class STM32Status extends Thread
     public void sendGet()
     {
 //        updateBattery = true;
-        messageFlag = false;
+//        messageFlag = false;
         String url = "http://" + this.stm32IP + ":80/";
         Request request = new Request.Builder()
                 .url(url)
@@ -102,11 +100,9 @@ public class STM32Status extends Thread
         System.out.println("Sending Post");
         try {
             Response response = httpClient.newCall(post).execute();
-//            String stm32Message = response.body().string();
-            System.out.println("STM32 OUTPUT POST: " + stm32Message);
-            // Do something with the response.
-            messageFlag = true;
             stm32Message = response.body().string();
+            System.out.println("STM32 OUTPUT POST: " + stm32Message);
+            messageFlag = true;
         } catch (Exception e) {
             e.printStackTrace();
             messageFlag = false;
