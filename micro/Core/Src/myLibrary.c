@@ -54,7 +54,7 @@ void ESP_Nodemcu_Init()
 	HAL_Delay(wait_time);
 	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
 	ESP_Clear_Buffer();
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"wifi.sta.config(\"MichelCel\", \"michel123\")\r\n", strlen("wifi.sta.config(\"MichelCel\", \"michel123\")\r\n"), 100);
+	HAL_UART_Transmit(wifi_uart, (uint8_t*)"wifi.sta.config(\"Mohamed\", \"12345678\")\r\n", strlen("wifi.sta.config(\"Mohamed\", \"12345678\")\r\n"), 100);
 	HAL_Delay(wait_time);
 	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
 	ESP_Clear_Buffer();
@@ -248,10 +248,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = motor_ratio(speed);
-		TIM2->CCR2 = 0;
-		TIM3->CCR1 = motor_ratio(speed);
-		TIM3->CCR2 = 0;
+		TIM2->CCR2 = motor_ratio(speed);
+		TIM2->CCR1 = 0;
+		TIM3->CCR2 = motor_ratio(speed);
+		TIM3->CCR1 = 0;
 //		memset(outputString, 0, 100);
 //		sprintf(outputString, "Battery: %d%%\n", motor_ratio(speed));
 //		HAL_UART_Transmit(pc_uart, (uint8_t*)outputString, strlen(outputString), 100);
@@ -262,10 +262,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = 0;
-		TIM2->CCR2 = motor_ratio(speed);
-		TIM3->CCR1 = 0;
-		TIM3->CCR2 = motor_ratio(speed);
+		TIM2->CCR2 = 0;
+		TIM2->CCR1 = motor_ratio(speed);
+		TIM3->CCR2 = 0;
+		TIM3->CCR1 = motor_ratio(speed);
 	}else if((position = string_contains((char*)buffer, "-R", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
@@ -273,10 +273,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 1);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = motor_ratio(speed);
-		TIM2->CCR2 = 0;
-		TIM3->CCR1 = 0;
-		TIM3->CCR2 = motor_ratio(speed);
+		TIM2->CCR2 = motor_ratio(speed);
+		TIM2->CCR1 = 0;
+		TIM3->CCR2 = 0;
+		TIM3->CCR1 = motor_ratio(speed);
 	}else if((position = string_contains((char*)buffer, "-L", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
@@ -284,10 +284,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 1);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = 0;
-		TIM2->CCR2 = motor_ratio(speed);
-		TIM3->CCR1 = motor_ratio(speed);
-		TIM3->CCR2 = 0;
+		TIM2->CCR2 = 0;
+		TIM2->CCR1 = motor_ratio(speed);
+		TIM3->CCR2 = motor_ratio(speed);
+		TIM3->CCR1 = 0;
 	}else if((position = string_contains((char*)buffer, "FR", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 1);
@@ -295,10 +295,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 1);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = motor_ratio(speed);
-		TIM2->CCR2 = 0;
-		TIM3->CCR1 = 0;
+		TIM2->CCR2 = motor_ratio(speed);
+		TIM2->CCR1 = 0;
 		TIM3->CCR2 = 0;
+		TIM3->CCR1 = 0;
 	}else if((position = string_contains((char*)buffer, "FL", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 1);
@@ -306,10 +306,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 1);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = 0;
 		TIM2->CCR2 = 0;
-		TIM3->CCR1 = motor_ratio(speed);
-		TIM3->CCR2 = 0;
+		TIM2->CCR1 = 0;
+		TIM3->CCR2 = motor_ratio(speed);
+		TIM3->CCR1 = 0;
 	}else if((position = string_contains((char*)buffer, "BR", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
@@ -317,10 +317,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 1);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = 0;
-		TIM2->CCR2 = motor_ratio(speed);
-		TIM3->CCR1 = 0;
+		TIM2->CCR2 = 0;
+		TIM2->CCR1 = motor_ratio(speed);
 		TIM3->CCR2 = 0;
+		TIM3->CCR1 = 0;
 	}else if((position = string_contains((char*)buffer, "BL", buffer_index)) != -1)
 	{
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, 0);
@@ -328,10 +328,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 1);
 		speed = atoi((char*)&buffer[position + 2]);
-		TIM2->CCR1 = 0;
 		TIM2->CCR2 = 0;
-		TIM3->CCR1 = 0;
-		TIM3->CCR2 = motor_ratio(speed);
+		TIM2->CCR1 = 0;
+		TIM3->CCR2 = 0;
+		TIM3->CCR1 = motor_ratio(speed);
 	}else if((position = string_contains((char*)buffer, "--", buffer_index)) != -1)
 	{
 //		HAL_UART_Transmit(pc_uart, "Test\r\n", strlen("Test\r\n"), 1000);
@@ -340,10 +340,10 @@ void messageHandler()
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, 0);
 //		HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, 0);
 		speed = atoi((char*)&buffer[position + 3]);
-		TIM2->CCR1 = 0;
 		TIM2->CCR2 = 0;
-		TIM3->CCR1 = 0;
+		TIM2->CCR1 = 0;
 		TIM3->CCR2 = 0;
+		TIM3->CCR1 = 0;
 	}else if(string_contains((char*)buffer, "+CWJAP:", buffer_index) != -1
 			&& (string_contains((char*)buffer, "FAIL", buffer_index) != -1
 			|| string_contains((char*)buffer, "DISCONNECT", buffer_index) != -1))
@@ -393,12 +393,12 @@ void controlArm()
 	  angles[0] = 1500;
 
 	  //Top arm servo -
-	  angles[1] = 1000;
+	  angles[1] = 700;
 	  //600 down straight
 	  //1500 right angle
 
 	  // Mid-arm servo
-	  angles[2] = 400;
+	  angles[2] = 1000;
 	  // 400 forwards down
 
 	  // Base servo
@@ -417,15 +417,17 @@ void controlArm()
 	  moveServos(servos, angles, length);
 
 	  //Grab the object
-	  angles[4] = 2250;
+	  angles[4] = 2000;
 	  moveServos(servos, angles, length);
 
 	  //Move the arm backwards
+
+	  angles[2] = 1500;
+	  moveServos(servos, angles, length);
 	  angles[3] = 1500;
 	  moveServos(servos, angles, length);
 	  angles[1] = 1500;
-	  angles[2] = 1500;
-	  angles[3] = 1500;
+	  angles[3] = 1000;
 	  angles[4] = 2000;
 	  moveServos(servos, angles, length);
 
