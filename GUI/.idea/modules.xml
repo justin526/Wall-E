@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Robot Controller.iml" filepath="$PROJECT_DIR$/Robot Controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WalleGUI.iml" filepath="$PROJECT_DIR$/WalleGUI.iml" />
     </modules>
   </component>
 </project>
