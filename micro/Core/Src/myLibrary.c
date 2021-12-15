@@ -1,16 +1,7 @@
 #include "myLibrary.h"
 
-uint16_t distance = 0, triggerTime = 0, sensor = 0, d[5];
-//GPIO_TypeDef *triggerPorts[5] = {Trigger0_GPIO_Port, Trigger1_GPIO_Port, Trigger2_GPIO_Port, Trigger3_GPIO_Port, Trigger4_GPIO_Port};
-//uint16_t triggerPins[5] = {Trigger0_Pin, Trigger1_Pin, Trigger2_Pin, Trigger3_Pin, Trigger4_Pin};
-//GPIO_TypeDef *echoPorts[5] = {Echo0_GPIO_Port, Echo1_GPIO_Port, Echo2_GPIO_Port, Echo3_GPIO_Port, Echo4_GPIO_Port};
-//uint16_t echoPins[5] = {Echo0_Pin, Echo1_Pin, Echo2_Pin, Echo3_Pin, Echo4_Pin};
-//float batteryVoltage = 8.4f;
-//uint32_t ADC_Value = 0;
 uint8_t buffer[2000];
 uint16_t buffer_index = 0, timeout = 0, messageHandlerFlag = 0, netTimeout = 0, value1 = 0;
-//uint8_t oneSecondFlag = 0;
-//float percent = 100;
 uint8_t speed = 0;
 int handle = 0;
 uint32_t safeCounter = 0;
@@ -117,68 +108,12 @@ void ESP_Nodemcu_Init()
 	resetTime = 5;
 }
 
-
-void ESP_Server_Init()
-{
-	ESP_RESET();
-//	HAL_Delay(1000);
-	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-	HAL_UART_Transmit(pc_uart, "Start\r\n", strlen( "Start\r\n"), 100);
-	ESP_Clear_Buffer();
-//	huart3.Init.BaudRate = 115200;
-//	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CIOBAUD=115200\r\n", strlen("AT+CIOBAUD=115200\r\n"), 100);
-//	huart3.Init.BaudRate = 115200;
-
-//	HAL_Delay(1000);
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+RST\r\n", strlen("AT+RST\r\n"), 100);
-	HAL_Delay(1500);
-//	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-//	HAL_UART_Transmit(pc_uart, (uint8_t*"AT+RST\r\n", strlen("AT+RST\r\n"), 100);
-	ESP_Clear_Buffer();
-
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CWMODE=1\r\n", strlen("AT+CWMODE=1\r\n"), 100);
-	HAL_Delay(100);
-//	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-	ESP_Clear_Buffer();
-
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CWDHCP=1,1\r\n", strlen("AT+CWDHCP=1,1\r\n"), 100);
-	HAL_Delay(100);
-//	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-	ESP_Clear_Buffer();
-
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CIPMUX=1\r\n", strlen("AT+CIPMUX=1\r\n"), 100);
-	HAL_Delay(100);
-//	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-	ESP_Clear_Buffer();
-
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CIPSERVER=1,80\r\n", strlen("AT+CIPSERVER=1,80\r\n"), 100);
-	HAL_Delay(100);
-//	HAL_UART_Transmit(pc_uart, buffer, strlen(buffer), 1000);
-	ESP_Clear_Buffer();
-
-	//Change your WiFi SSID credentials below
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CWJAP=\"MichelCel\",\"michel123\"\r\n", strlen("AT+CWJAP=\"MichelCel\",\"MichelCel\"\r\n"), 100);
-	HAL_UART_Transmit(pc_uart, "Connected to WiFi\r\n", strlen( "Connected to WiFi\r\n"), 100);
-	HAL_Delay(2000);
-//	HAL_UART_Transmit(pc_uart, buffer, 1000, 1000);
-//	ESP_Clear_Buffer();
-//	HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CIFSR\r\n", strlen("AT+CIFSR\r\n"), 100);
-//	HAL_Delay(2000);
-	resetTime = 2;
-}
-
 void ESP_Clear_Buffer()
 {
 	memset(buffer, 0, 2000);
 	buffer_index = 0;
 }
 
-void calculateBattery()
-{
-	percent = ((batteryVoltage-6.0f) / 2.35f)*100.0f;
-	if(percent > 100.0f)
-		percent = 100.0f;
-}
 
 uint8_t string_compare(char array1[], char array2[], uint16_t length)
 {
@@ -344,37 +279,11 @@ void messageHandler()
 		TIM2->CCR1 = 0;
 		TIM3->CCR2 = 0;
 		TIM3->CCR1 = 0;
-	}else if(string_contains((char*)buffer, "+CWJAP:", buffer_index) != -1
-			&& (string_contains((char*)buffer, "FAIL", buffer_index) != -1
-			|| string_contains((char*)buffer, "DISCONNECT", buffer_index) != -1))
-	{
-		//Change your WiFi SSID credentials below
-//		HAL_UART_Transmit(wifi_uart, (uint8_t*)"AT+CWJAP=\"MichelCel\",\"michel123\"\r\n", strlen("AT+CWJAP=\"MichelCel\",\"michel123\"\r\n"), 100);
 	}
 	handle = 0;
 
 	ESP_Clear_Buffer();
 	__HAL_UART_ENABLE_IT(wifi_uart, UART_IT_RXNE);
-}
-
-void sendData(int link)
-{
-	memset(outputString, 0, 100);
-	memset(cipsend, 0, 50);
-	memset(response, 0, 300);
-	memset(cipclose, 0, 20);
-
-	sprintf(outputString, "Battery: %i%%\n", (int)rand() % 100);
-	sprintf(response, "HTTP/1.1 200 OK\r\nContent-Length: %i\r\nContent-Type: text/plain\r\n\r\n%s", strlen(outputString), outputString);
-	sprintf(cipsend, "AT+CIPSEND=%d,%i\r\n", link, strlen(response));
-	sprintf(cipclose, "AT+CIPCLOSE=%d\r\n", link);
-
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)cipsend, strlen(cipsend), 100);
-	HAL_Delay(50);
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)response, strlen(response), 100);
-	HAL_Delay(50);
-	HAL_UART_Transmit(wifi_uart, (uint8_t*)cipclose, strlen(cipclose), 100);
-//	HAL_UART_Transmit(pc_uart, (uint8_t*)outputString, strlen(outputString), 100);
 }
 
 void controlArm()

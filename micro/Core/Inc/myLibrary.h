@@ -10,8 +10,6 @@ extern UART_HandleTypeDef huart3;
 extern UART_HandleTypeDef huart5;
 extern ADC_HandleTypeDef hadc3;
 extern UART_HandleTypeDef huart1;
-//extern ADC_HandleTypeDef hadc1;
-
 #define ESP_Reset_Pin GPIO_PIN_6
 #define ESP_Reset_GPIO_Port GPIOA
 #define ESP_ENABLE_Pin GPIO_PIN_5
@@ -43,16 +41,13 @@ uint8_t speed;
 uint32_t safeCounter;
 int resetTime;
 int handle;
-//int resetTime;
 void SysTickEnable();
 void SysTickDisable();
 
 
 void ESP_RESET();
-void ESP_Server_Init();
 void ESP_Nodemcu_Init();
 void ESP_Clear_Buffer();
-void calculateBattery();
 uint8_t string_compare(char array1[], char array2[], uint16_t length);
 int string_contains(char bufferArray[], char searchedString[], uint16_t length);
 void messageHandler();
@@ -62,7 +57,6 @@ void moveServos(uint8_t* servos, uint32_t* angles, uint8_t length);
 void resetServos();
 float readBattery();
 void setSpeed(int speed);
-//void setDirection(DIRECTIONS dir);
 uint32_t HAL_GetTick(void);
 
 #endif /* INC_MYLIBRARY_H_ */
