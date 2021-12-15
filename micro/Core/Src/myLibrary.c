@@ -6,7 +6,6 @@ uint8_t speed = 0;
 int handle = 0;
 uint32_t safeCounter = 0;
 
-char outputString[100], cipsend[50], response[300], cipclose[20];
 
 void SysTickEnable()
 {
